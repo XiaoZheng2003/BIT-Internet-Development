@@ -44,6 +44,9 @@ a:hover{
     height:515px;
     margin:8px;
 }
+.pics_in{
+    height:50%;
+}
 .intro{
     font:18px/1.5em 宋体;
     width:60%;
