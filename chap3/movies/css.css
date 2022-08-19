@@ -8,6 +8,7 @@ background:lightblue;
 #bread{border-bottom:1px black dotted;
 padding:3px;
 text-align:left;}
+#footer{font-size:small;}
 
 h1{font:36px/2em 黑体;}
 h2{width:60%;border-bottom:1px black solid;margin:40px auto 20px;}
