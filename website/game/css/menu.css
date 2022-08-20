@@ -21,7 +21,7 @@ body{
     width: 20%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
     font-size: 250%;
-    font-family: "华文行楷";
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
 }
 .btn-group button:not(:last-child) {
     border-bottom: none; /* Prevent double borders */
