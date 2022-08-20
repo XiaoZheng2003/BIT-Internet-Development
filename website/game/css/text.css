@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(42, 38, 38);
+    color:rgb(200, 212, 224);
+    line-height: 1.7em;
+}
+h1{
+    color: rgb(216, 176, 122);
+    font-family: 黑体;
+}
+p strong{
+    font-family: 楷体;
+    font-size: large;
+}
