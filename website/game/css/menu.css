@@ -2,12 +2,19 @@
     text-align: center;
 }
 #logo_pic{
-    height: 50%;
+    height: 55%;
+}
+body{
+    background: url(../asset/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 .btn-group button {
     margin: auto;
-    background-color: #4CAF50; /* Green background */
-    border: 1px solid green; /* Green border */
+    background-color: #c7c419; /* Green background */
+    border: 1px solid rgb(161, 159, 38); /* Green border */
     color: white; /* White text */
     padding: 20px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
@@ -20,7 +27,7 @@
 }
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #3e8e41;
+    background-color: #a7a739;
 }
 a{
     text-decoration: none;
