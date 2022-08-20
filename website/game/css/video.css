@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#video{
+    width: 90%;
+    height: 100%;
+}
+button{
+    position:fixed;
+    right:2%;
+    width:8%;
+    height:5%;
+    top:2%;
+    color: rgb(8, 8, 8);
+    background-color: rgb(240, 225, 145);
+    border-radius: 15px;
+    font-size: 180%;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+}
+button:hover{
+    color:red
+}
