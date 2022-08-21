@@ -19,6 +19,12 @@ a:visited{
     grid-template-columns: 25vw 50vw 15vw 10vw;
     grid-template-rows: 10vh 15vh 50vh 25vh;
     background-size:cover;
+    font-size:30px;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+}
+
+.wrapper a:hover{
+    color:red;
 }
 
 nav{
@@ -42,12 +48,13 @@ nav a{
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none;
+    cursor: pointer;
     grid-area: 4/1/5/5;
     overflow:hidden;
     line-height:20vh;
     background:url("../img/dialogbox.png");
     color:aliceblue;
-    font-family:"华文行楷","方正舒体";
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
     font-size: x-large;
 }
 
@@ -55,11 +62,24 @@ nav a{
     grid-area: 2/4/4/5;
     display:flex;
     flex-direction: column;
-    background:url("../img/dialogbox.png")
+    background:url("../img/dialogbox.png");
 }
 
-button{
-    color:black;
+#function_area > .button, #function_area > .button > a{
+    margin: 0 auto;
+    background-color: #ffffff00; /* Green background */
+    border: 0px; /* Green border */
+    color: white; /* White text */
+    padding: 5px 0px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    font-size: 30px;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+}
+
+#function_area > .button:hover, #function_area > .button > a:hover{
+    color:red;
 }
 
 .character{
