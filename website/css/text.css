@@ -31,7 +31,7 @@
     height: 65%;
 }
 body{
-    background: url(../asset/background1.jpg);
+    background: url(../img/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
