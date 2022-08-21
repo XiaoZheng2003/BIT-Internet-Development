@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    height:100vh;
+    width:100vw;
+}
+
+a{
+    color:black;
+    text-decoration:none;
+}
+
+a:visited{
+    color:black;
+}
+.wrapper{
+    height:100vh;
+    width:100vw;
+    display:grid;
+    grid-template-columns: 25vw 50vw 15vw 10vw;
+    grid-template-rows: 10vh 15vh 50vh 25vh;
+    background-size:cover;
+}
+
+nav{
+    grid-area:1/1/2/5;
+    background: url("../img/dialogbox.png");
+    line-height:10vh;
+    text-align:center;
+}
+
+nav a{
+    margin:auto 5vw;
+}
+
+#option_area{
+    background:linear-gradient(35deg,#63bbd0,#126e82);
+    
+    grid-area: 3/2/4/3;
+}
+
+#dialog_area{
+    grid-area: 4/1/5/5;
+    overflow:hidden;
+    line-height:20vh;
+    background:url("../img/dialogbox.png");
+    color:aliceblue;
+    font-family:"华文行楷","方正舒体";
+    font-size: x-large;
+}
+
+#function_area{
+    grid-area: 2/4/4/5;
+    display:flex;
+    flex-direction: column;
+    background:url("../img/dialogbox.png")
+}
+
+button{
+    color:black;
+}
+
+.character{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+nav a:link {color:white;}
+nav a:visited {color:whitesmoke;}
+nav a:hover {color:lightcyan;}
+nav a:active {color:white;}
+
+div{
+    z-index: 10;
+}
