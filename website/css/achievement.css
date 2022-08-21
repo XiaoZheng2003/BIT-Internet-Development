@@ -1,17 +1,17 @@
 .logo {
   position: relative;
-  top: 8px;
-  left: 16px;
-  /*text-align: start;*/
+  /* top: 8px;
+  left: 16px; */
+  float:left;
 }
 
 #logo_pic {
-
-  height: 55%;
+  height: 75%;
 }
 
 .bord {
   text-align: right;
+  float:left;
 }
 
 #bord_pic {
