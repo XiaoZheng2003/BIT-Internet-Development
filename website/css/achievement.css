@@ -1,8 +1,6 @@
 .logo {
   position: relative;
-  /* top: 8px;
-  left: 16px; */
-  float:left;
+  float: left;
 }
 
 #logo_pic {
@@ -10,12 +8,23 @@
 }
 
 .bord {
+  z-index: 1;
   text-align: right;
-  float:left;
+  float: left;
 }
 
 #bord_pic {
   height: 90%;
+}
+
+.achievementTable {
+  width: 57%;
+  height: 58%;
+  position: absolute;
+  left: 41%;
+  top: 8%;
+  /*background-color: #ffffff;*/
+  color: rgb(249, 5, 5);
 }
 
 body {
@@ -24,6 +33,33 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+
+.netx-btn {
+  position: relative;
+  z-index: 2;
+}
+
+#next-btn_pic {
+  position: absolute;
+  right: 15%;
+  bottom: 18%;
+  height: 10%;
+  width: 10%;
+}
+
+.last-btn {
+  position: relative;
+  z-index: 2;
+}
+
+#last-btn_pic {
+  position: absolute;
+  right: 18%;
+  bottom: 18%;
+  height: 10%;
+  width: 10%;
 }
 
 .btn-group button {
