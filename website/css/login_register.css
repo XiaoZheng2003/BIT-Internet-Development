@@ -12,14 +12,34 @@
     box-sizing: border-box;
     padding-left: 5px;
     background-color: #282c34;
-    color: #61dafb;
-    caret-color: #61dafb;
+    color: tomato;
+    caret-color:  tomato;
 }
 input::placeholder {
-    color: #61dafb;
+    color: tomato;
+    font-family: "楷体";
 }
 
-
+.btn-group button {
+    margin: auto;
+    background-color: #ffffff00; /* Green background */
+    border: 0px; /* Green border */
+    color: #ffffff; /* White text */
+    padding: 15px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 20%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    font-size: 250%;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+}
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+    /* background-color: #f40000; */
+    color:#9d0017;
+}
 .top,
 .bottom {
     left: 0px;
@@ -78,6 +98,7 @@ input:focus ~ .top {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
   }
   .container .box {
     width: 900px;
@@ -102,7 +123,7 @@ input:focus ~ .top {
   }
   
   .container .box .transtion-box h1 {
-    color: #61dafb;
+    color: #ffffff;
     margin-bottom: 35px;
   }
   .container .box .transtion-box section {
@@ -138,15 +159,16 @@ input:focus ~ .top {
     width: 50%;
     padding: 6px 0;
     text-align: center;
-    border: 3px solid #d4af7a;
+    border: 3px solid #b8000041;
     border-radius: 20px;
-    background: #d4af7a;
+    background: #570401;
     color: #fff;
-    font-size: 17px;
+    font-size: 25px;
     letter-spacing: 6px;
     text-indent: 6px;
     margin-bottom: 15px;
     cursor: pointer;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
   }
   .container .box .transtion-box .other {
     border: 3px solid #d3dae9;
@@ -159,9 +181,9 @@ input:focus ~ .top {
     height: 100%;
     background: linear-gradient(
       to bottom right,
-      #084772 0%,
-      #5f90ec 50%,
-      #301755 100%
+      #011725 0%,
+      #975047 50%,
+      #360202 100%
     );
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -186,13 +208,17 @@ input:focus ~ .top {
     border-radius: 14px;
     letter-spacing: 10px;
     text-indent: 10px;
-    font-size: 18px;
+    font-size: 19px;
     color: #fff;
     border: 3px solid #fff;
     background: transparent;
     font-weight: 700;
     cursor: pointer;
+    font-family: "楷体";
   }
   .container .box .transferToReg button:hover {
-    border: 3px solid #206dfc;
+    border: 3px solid  #975047;
   }
+  a{
+    text-decoration: none;
+}
