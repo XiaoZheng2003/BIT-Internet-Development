@@ -18,12 +18,16 @@
 }
 
 .achievementTable {
-  width: 57%;
-  height: 58%;
+  background: url(../img/bord.png) no-repeat;
+  width: 1200px;
+  height: 1000px;
+  background-size: 100%;
+
   position: absolute;
-  left: 41%;
-  top: 8%;
+  left: 35%;
+  top: 0%;
   /*background-color: #ffffff;*/
+
   color: rgb(249, 5, 5);
 }
 
@@ -63,7 +67,9 @@ body {
 }
 
 .btn-group button {
-  text-align: end;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
   background-color: #ffffff00;
   /* Green background */
   border: 0px;
