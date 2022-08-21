@@ -1,43 +1,106 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>郭荆个人介绍页面</title>
-<style>
-    body{
-        background: url(img/background.jpg);
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 50px;
-    }
-    h1{font-family: 华文中宋;font-size: 60;
-    color: white;}
-    .p1{
-        font-size: 24;
-        font-family: 微软雅黑;
-        color: white;
-    }
-    #p2{
-        color: white;
-        font-size: 18;
-        font-family: 微软雅黑;
-        text-indent: 2em;
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>郭荆个人主页</title>
+    <link rel="shortcut icon" href="img/background.jpg">
+    <meta name="theme-color" content="#ffc91d"/>
+    <link href="../../css/kico.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/paul.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <h1 align="center">郭荆</h1>
-    <hr size="4" noshade="noshade" color="white">
-    <p align="center"><img src="img/guojing.jpg" width="500"/></p>
-    <hr size="2" width="400" noshade="noshade" color="white">
-    <p class="p1" align="center"><strong>姓名：郭荆</strong></p>
-    <hr size="2" width="400" noshade="noshade" color="white">
-    <p class="p1" align="center"><strong>职位：视频剪辑、美工</strong></p>
-    <hr size="2" width="400" noshade="noshade" color="white">
-    <p class="p1" align="center"><strong>爱好：网球、游戏</strong></p>
-    <hr size="2" width="400" noshade="noshade" color="white">
-    <p class="p1" align="left"><strong>个人简介：</strong></p>
-    <hr size="4"align="left" noshade="noshade" color="white">
-    <p id="p2" align="justify">大家好，我叫郭荆，来自云南省昆明市。云南省作为我国一个知名的旅游大省，气候宜人，风景优美，除此之外，还有丰富的少数民族文化。来自这样一个迷人的省份，我也保留了云南人厚道、大方的性格特点。但在公共场合以及与陌生人交流的过程中，我比较腼腆，不太敢发表自己的言论。等到与其他人打成一片的时候，我便能成为一个活宝，给大家带来快乐。平时我比较喜欢打网球和羽毛球。有机会的话，我很愿意游山玩水，走遍祖国的大好河山，感受各地的风景和文化。在团队中与他人合作时，我会尽力将自己的部分做好，并会很乐意帮助其他人分担困难的任务，因为我很喜欢在实践中不断提升自我。</p>
+<aside class="sidebar">
+    <div class="avatar">
+        <img src="img/background.jpg"/>
+    </div>
+    <nav class="nav">
+        <a href="#info">资料</a>
+        <a href="#skills">技能</a>
+        <a href="#story">经历</a>
+        <a href="../../index.html">返回</a>
+    </nav>
+</aside>
+<main>
+    <section id="info">
+        <div class="wrap">
+            <h2 class="title">个人资料</h2>
+            <div class="row">
+                <div class="col-l-4">
+                    <p>姓名：郭荆</p>
+                    <p>性别：男</p>
+                    <p>年龄：19</p>
+                    <p>职责：视频剪辑、美工</p>
+                    <p>学校：北京理工大学</p>
+                </div>
+                <div class="col-l-4">
+                    <p>QQ：1540473000</p>
+                    <p>Gitee：<a href="https://gitee.com/guojing2003">guojing2003</a></p>
+                    <p>邮箱：<a href="mailto:13312513933@163.com">13312513933@163.com</a></p>
+                </div>
+                <div class="col-l-4">
+                    <p>大家好，我是来自北京理工大学2021级软件工程专业的郭荆，来自云南省昆明市。云南省作为我国一个知名的旅游大省，气候宜人，风景优美，除此之外，还有丰富的少数民族文化。来自这样一个迷人的省份，我也保留了云南人厚道、大方的性格特点。但在公共场合以及与陌生人交流的过程中，我比较腼腆，不太敢发表自己的言论。等到与其他人打成一片的时候，我便能成为一个活宝，给大家带来快乐。平时我比较喜欢打网球和羽毛球。有机会的话，我很愿意游山玩水，走遍祖国的大好河山，感受各地的风景和文化。在团队中与他人合作时，我会尽力将自己的部分做好，并会很乐意帮助其他人分担困难的任务，因为我很喜欢在实践中不断提升自我。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrap">
+            <h2 class="title">掌握的技能</h2>
+            <div class="row scrollable">
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-html5"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>HTML 5</h3>
+                        <p>能够进行 HTML5 网站的编写</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-css3"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>premiere</h3>
+                        <p>能够运用pr做一些有意思的视频，加一点简单的效果</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-4 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>photoshop</h3>
+                        <p>能够运用ps完成一些图片合成和素材加工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="story">
+        <div class="wrap">
+            <h2 class="title">个人经历</h2>
+            <div class="row">
+                <div class="col-m-8">
+                    <ul class="timeline">
+                        <li>2009.9-2015.6：完成小学的学业</li>
+                        <li>2015.9-2018.6：完成初中的学业</li>
+                        <li>2018.9-2021.6：完成高中的学业</li>
+                        <li>2021.8：迈进北京理工大学的校门</li>
+                        <li>2022.8：确认专业为软件工程</li>
+                        <li>现在：努力学习网页技术并制作游戏</li>
+                    </ul>
+                </div>
+                <div class="col-m-4 center-fixed">
+                    <img src="img/guojing.jpg"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2022 By 郭荆</p>
+    </footer>
+</main>
 </body>
 </html>
