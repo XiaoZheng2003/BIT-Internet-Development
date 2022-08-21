@@ -1,3 +1,15 @@
+body {
+  background: url(../img/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+
+
 .logo {
   margin: 10% 5% 0;
   width: 30%;
@@ -11,44 +23,47 @@
 }
 
 .bord {
-  z-index: 1;
-  text-align: right;
+  margin: 10% 5% 0;
+  width: 30%;
+  height: 60%;
   float: left;
+
+
 }
 
 #bord_pic {
-  height: 90%;
+  height: 140%;
 }
 
 .achievementTable {
-  background: url(../img/bord.png) no-repeat;
-  width: 1300px;
-  height: 950px;
-  background-size: 100%;
-  /*border: medium double rgb(250, 0, 255);
-*/
   position: absolute;
-  left: 35%;
-  top: 0%;
+  background: url(../img/bord.png) no-repeat;
+  width: 60%;
+  height: 85%;
+  background-size: 100%;
+
+  position: absolute;
+  left: 38%;
+  top: 8%;
 }
 
 .achievementcomments1 {
   /*border: medium double rgb(0, 81, 255);*/
   position: absolute;
-  width: 1100px;
-  height: 200px;
-  left: 35%;
-  top: 9%;
+  width: 56%;
+  height: 50%;
+  left: 41%;
+  top: 1%;
   color: rgb(249, 5, 5);
 }
 
 .achievementcomments2 {
   /*border: medium double rgb(38, 255, 0);*/
   position: absolute;
-  width: 1100px;
-  height: 200px;
-  left: 35%;
-  top: 30%;
+  width: 56%;
+  height: 50%;
+  left: 41%;
+  top: 20%;
   color:
     rgb(249, 5, 5);
 }
@@ -56,19 +71,11 @@
 .achievementcomments3 {
   /*border: medium double rgb(255, 0, 0);*/
   position: absolute;
-  width: 1100px;
-  height: 200px;
-  left: 35%;
-  top: 50%;
+  width: 56%;
+  height: 50%;
+  left: 41%;
+  top: 39%;
   color: rgb(249, 5, 5);
-}
-
-body {
-  background: url(../img/background1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 #next-btn_pic {
