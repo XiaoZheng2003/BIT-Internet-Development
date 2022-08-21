@@ -11,28 +11,28 @@
       <div class="box">
         <div class="transtion-box">
           <div class="login-box">
-            <h1>欢迎回来</h1>
+            <h1 style="color:white;font-size:50px;">夺 舍</h1>
 
             <section>
               <!-- <label for="email">用户名</label> -->
-              <input type="text" id="username" placeholder="请输入用户名"/>
+              <input style="height: 60px;" type="text" id="username" placeholder="请输入用户名"/>
             </section>
             <section>
               <!-- <label for="password">密码</label> -->
-              <input type="password" id="password" placeholder="请输入密码"/>
+              <input style="height: 60px;" type="password" id="password" placeholder="请输入密码"/>
             </section>
             <button >登录</button>
           </div>
           <div class="reg-box" style="display: none">
-            <h1>立即注册</h1>
+            <h1 style="color:white;font-size:40px;">立即注册</h1>
             <section>
-                <input type="text" id="username" placeholder="请输入用户名"/>
+                <input style="height: 50px;" type="text" id="username" placeholder="请输入用户名"/>
             </section>
             <section>
-                <input type="password" id="password" placeholder="请输入密码"/>
+                <input style="height: 50px;" type="password" id="password" placeholder="请输入密码"/>
             </section>
             <section>
-                <input type="password" id="password" placeholder="请确认密码"/>
+                <input style="height: 50px;" type="password" id="password" placeholder="请确认密码"/>
             </section>
             <button type="button">注册</button>
             
@@ -40,14 +40,15 @@
         </div>
         <div class="transferToReg">
           <h1 class="title">还未注册？</h1>
-          <span class="subTitle">立即注册，开启精彩之旅！</span>
+          <span class="subTitle">立即注册，开启奇幻之旅！</span>
           <button type="button" id="transfetBtn">注册</button>
         </div>
       </div>
-    </div>
-    <div>
-        <a href="../game/index.html"><button type="button" id="transfetBtn">返回</button></a>
+      <div class="btn-group">
+        <a href="../game/index.html"><button>返回</button></a>
       </div>
+    </div>
+    
   </body>
   <script>
     let transfer = document.getElementById('transfetBtn');
@@ -75,7 +76,7 @@
             total.style.left = 0;
             transfer.innerText = '注册';
             title.innerText = '还未注册？';
-            subTitle.innerText = '立即注册，开启精彩之旅！';
+            subTitle.innerText = '立即注册，开启奇幻之旅！';
             setTimeout(() => {
               login.style.display = 'flex';
               reg.style.display = 'none';
