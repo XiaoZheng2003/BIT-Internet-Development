@@ -64,6 +64,7 @@ button{
     left: 0;
     bottom: 0;
     z-index: 1;
+    width: 20%;
 }
 
 nav a:link {color:white;}
