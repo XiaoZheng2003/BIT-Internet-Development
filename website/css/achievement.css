@@ -1,9 +1,13 @@
 .logo {
-  text-align: left;
+  position: relative;
+  top: 8px;
+  left: 16px;
+  /*text-align: start;*/
 }
 
 #logo_pic {
-  height: 75%;
+
+  height: 55%;
 }
 
 .bord {
@@ -11,7 +15,7 @@
 }
 
 #bord_pic {
-  height: 65%;
+  height: 90%;
 }
 
 body {
