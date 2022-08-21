@@ -1,0 +1,36 @@
+.logo{
+    text-align: center;
+}
+#logo_pic{
+    height: 55%;
+}
+body{
+    background: url(../img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.btn-group button {
+    margin: auto;
+    background-color: #ffffff00; /* Green background */
+    border: 0px; /* Green border */
+    color: #ffffff; /* White text */
+    padding: 15px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 20%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    font-size: 250%;
+    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+}
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+    /* background-color: #f40000; */
+    color:#9d0017;
+}
+a{
+    text-decoration: none;
+}
