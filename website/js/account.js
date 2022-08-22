@@ -76,3 +76,15 @@ function log(){
         }
     }
 }
+
+function reset(){
+    localStorage.clear();
+    alert("登录信息重置成功！请重新登录！");
+    window.open('account.html','_self');
+}
+
+function logout(){
+    localStorage.removeItem('current-user');
+    alert("成功退出登录！即将进入登录界面！");
+    window.open('account.html','_self');
+}
