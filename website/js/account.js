@@ -1,4 +1,8 @@
 window.onload = function () {
+    if("current-user" in localStorage){
+        alert('你已经登录！即将返回首页。');
+        window.open('index.html','_self');
+    }
     let transfer = document.getElementById('transfetBtn');
     transfer.addEventListener('click', function () {
         let login = document.querySelector('.login-box');
