@@ -14,6 +14,18 @@ body{
     font: 16px/1.5 'Microsoft Yahei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
 }
 
+@media screen and (max-width: 500px){
+    html[resize] body{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1930px){
+    html[resize] body{
+        font-size: 18px;
+    }
+}
+
 *, *:before, *:after{
     box-sizing: border-box;
 }
@@ -23,6 +35,50 @@ article, aside,
 header, footer,
 nav, section, main{
     display: block;
+}
+
+/* - 选择内容 */
+::-moz-selection{
+    color: #fff;
+    background-color: rgba(0, 0, 0, .66);
+}
+
+::selection{
+    color: #fff;
+    background-color: rgba(0, 0, 0, .66);
+}
+
+/* - 滚动条 */
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover{
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .05);
+}
+
+body::-webkit-scrollbar-thumb{
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+
+body::-webkit-scrollbar-track:hover{
+    border-radius: 0;
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.bk-scroll-hover::-webkit-scrollbar{
+    display: none;
+}
+
+.bk-scroll-hover:hover::-webkit-scrollbar{
+    display: inherit;
 }
 
 /* 1 - 容器
