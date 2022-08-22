@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>游戏天地-王者荣耀-英雄介绍</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
+<script src="../bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/pages.js"></script> <!--pages.js中包括必要的Javascript代码-->
+<link rel="stylesheet" href="../css/main.css"> <!--main.css中包括网站通用的CSS代码-->
+<link rel="stylesheet" href="../css/pages.css"> <!--pages.css中包括修饰具体页面用的CSS代码-->
+</head>
+<body>
+<!--主导航-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="../index.html"><img class="logo-responsive" src="../images/logo.jpg" alt="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a class="nav-link text-light" href="#">游戏研究</a> </li>
+      <li class="nav-item active"> <a class="nav-link text-light" href="#">仙剑奇侠传</a> </li>
+      <li class="nav-item"> <a class="nav-link text-light" href="古剑奇谭-首页.html">古剑奇谭</a> </li>    
+	  <li class="nav-item" id="current"> <a class="nav-link text-light" href="#">王者荣耀</a> </li>    
+	  <li class="nav-item"> <a class="nav-link text-light" href="#">隐形守护者</a> </li>    
+    </ul>
+  </div>
+ </nav>
+<!--面包屑&二级导航-->
+<div class="container-fluid padding" id="bread">
+	<a href="../index.html">首页</a> &gt; <a href="#">王者荣耀</a> &gt; <span id="second-nav"><a href="#"><button>新手指南</button></a> | <button><strong>英雄介绍</strong></button> | <a href="#"><button>英雄攻略</button></a> | <a href="#"><button>成瘾机制</button></a></span>
+</div>
+<div class="container" id="page-nav">         
+  <ul class="pagination">
+    <li class="page-item disabled"><a class="page-link" href="#"> &lt; </a></li>
+    <li class="page-item disabled current"><a class="page-link" href="#">射手</a></li>
+    <li class="page-item"><a class="page-link" href="#">法师</a></li>
+    <li class="page-item"><a class="page-link" href="#">战士</a></li>
+	<li class="page-item"><a class="page-link" href="#">坦克</a></li>
+	<li class="page-item"><a class="page-link" href="#">刺客</a></li>
+	<li class="page-item"><a class="page-link" href="#">辅助</a></li>
+    <li class="page-item"><a class="page-link" href="#"> &gt; </a></li>
+  </ul>
+</div>
+<!--页面主体内容-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6"> <!--左边列为折叠栏accordion-->
+		<div id="accordion">
+    	<div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne"> 英雄背景 </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">   <p class="card-text m-0">只有一个词汇，拥有荣幸冠名于鲁班大师的大名之前——天才天才天才天天天天天天……才！</p> <!--Bootstrap类m-0用于消除margin-->
+　　<p class="card-text m-0">鲁班大师的年龄？秘密！鲁班大师的身高？秘密！鲁班大师的性别？男！——少女崇拜者的情书，请尽情飞过来吧！鲁班大师每天会抽出宝贵的一小时回信，由机关鸟寄达！</p>
+　　<p class="card-text m-0">鲁班大师的真实面目？秘密！请忘记你眼前看到的样子！青春！潇洒！风趣！讨人喜欢！每一个毛孔都彰显出碾压凡人的高等智商！鲁班大师，就是这么自信！（针对崇拜者的重要说明：发际线也是很低的！）</p>   </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">技能介绍</a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">  
+		  <div id="skills"> <!--悬停效果-->
+			  <a href="#" onmouseover="showHide(1)"><img src="../images/鲁班skill-1.jpg" id="skillimage1"><img src="../images/鲁班skill-1-over.jpg" id="skillimageover1"></a>
+			  <a href="#" onmouseover="showHide(2)"><img src="../images/鲁班skill-2.jpg" id="skillimage2"><img src="../images/鲁班skill-2-over.jpg" id="skillimageover2"></a>
+			  <a href="#" onmouseover="showHide(3)"><img src="../images/鲁班skill-3.jpg" id="skillimage3"><img src="../images/鲁班skill-3-over.jpg" id="skillimageover3"></a> 
+			  <a href="#" onmouseover="showHide(4)"><img src="../images/鲁班skill-4.jpg" id="skillimage4"><img src="../images/鲁班skill-4-over.jpg" id="skillimageover4"></a></div>
+		<div id="skill1"><strong><big>火力压制</big></strong> 冷却值：0 消耗：0
+<p>被动：鲁班七号连续使用普通攻击时，第5次普通攻击会掏出机关枪进行扫射，扫射会造成3次伤害，对敌人英雄每次造成其最大生命6%的物理伤害（每100点额外物理攻击提升1%），对小兵野怪防御塔造成120（+50%物理加成）点物理伤害；使用技能后鲁班七号下一次普通攻击变更为扫射。</p></div>
+		<div id="skill2"><strong><big>河豚手雷</big></strong> 冷却值：7 消耗：50
+<p>鲁班向指定位置投掷一枚河豚手雷，对范围内的敌人造成450/500/550/600/650/700（+75%物理加成）点物理伤害并减少其25%移动速度，持续2秒。</p></div>
+		<div id="skill3"><strong><big>无敌鲨嘴炮</big></strong> 冷却值：15/14/13/12/11/10 消耗：70
+<p>鲁班向指定方向发射火箭炮击退身前敌人，命中英雄后造成400/450/500/550/600/650（+70%物理加成）点物理伤害，并附带目标已损生命5/6/7/8/9/10%法术伤害。</p></div>
+		<div id="skill4"><strong><big>空中支援</big></strong> 冷却值：40/30/20 消耗：100
+<p>鲁班召唤河豚飞艇向指定方向进行空中支援，支援持续14秒，河豚飞艇可照亮视野且每秒对范围内随机一个敌人投掷炸弹，炸弹会在0.75秒落下，对于目标范围内的敌人造成500/625/750（+75%物理加成）点物理伤害。</p></div>
+		  </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">使用建议</a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">  
+		  	<h2>技能加点</h2>
+			<ul><li>主升：河豚手雷</li><li>副升：无敌鲨嘴炮</li><li>召唤师技能：疾跑/狂暴</li></ul>
+			<h2>铭文搭配</h2>
+			<ul><li>异变：物理攻击力+2，物理穿透+3.6</li>
+				<li>鹰眼：物理攻击+0.9，物理穿透+6.4</li>
+				<li>隐匿：物理攻击力+1.6，移速+1%</li>
+			</ul>
+			<h2>出装</h2>
+			<ul>
+				<li>极速战靴：+30%攻速，唯一被动：+60移速</li>
+				<li>闪电匕首：+35%攻速，+35%暴击率，+8%移速，唯一被动：电弧</li>
+				<li>无尽战刃：+130物理攻击，+20%暴击率，唯一被动：+40%暴击效果</li>
+				<li>泣血之刃：+100物理攻击，+25%物理吸血</li>
+				<li>破晓：+50物理攻击，+35%攻速，+10%暴击率，唯一被动：破甲（远程效果翻倍），唯一被动：普攻+50（远程翻倍）</li>
+				<li>名刀·司命：+60物理攻击，+5%冷却缩减，唯一被动：暗幕</li>
+			</ul>
+		  </div>
+      </div>
+    </div>
+  </div></div>	
+		<div class="col-lg-6"> <!--右边为一个响应式图片（设置类为img-fluid）-->
+		<div class="image-right"><img src="../images/电玩小子.jpg" class="img-fluid"></div>
+		</div>
+ </div>
+</div>
+<footer class="bg-dark text-light text-center">
+	Game World. &copy;2020
+</footer>
+</body>
+</html>
+

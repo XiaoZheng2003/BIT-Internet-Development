@@ -1,0 +1,17 @@
+<html>
+<head><title>属性检查器</title>
+<style>
+[title~=flower] { border:5px solid yellow; }
+[title*=flower] { border:5px solid red; }
+[lang|=en] { color:red; }
+</style>
+</head>
+<body>
+<img src="tulip.jpg" title="tulip flower" /> 
+<img src="tulip.jpg" title="tulip flower1" />
+<p lang="en">Hello!</p> <p lang="en-us">Hi!</p>
+<p lang="en-gb">Ello!</p>
+<p lang="en weird">Weird!</p> 
+<p lang="end">Hello!</p>
+</body>
+</html>

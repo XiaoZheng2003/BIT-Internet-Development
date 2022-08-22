@@ -1,0 +1,23 @@
+<html>
+<head><title>样式的优先级</title>
+<style>
+#box{ width:800px;height:400px;margin:0 auto; font:24px 楷体; color:red;}
+p{color:violet;}
+#sidebar{width:200px;height:400px;background:lightblue;float:left;color:gray; }
+#main{ width:600px;height:400px;background:lightgreen; float:left; }
+#main p{color:black;}
+h1{color:brown;}
+</style>
+</head>
+<body>
+<div id="box">
+<div id="sidebar">
+<h1>左边栏中的标题</h1>
+<p>左边栏中的段落</p><ul><li>列表文本</li><li>列表文本</li></ul>
+</div>
+<div id="main"><h1>正文中的标题1</h1><h2>正文中的标题2</h2>
+<p>正文中的段落</p></div>
+
+</div>
+</body>
+</html>

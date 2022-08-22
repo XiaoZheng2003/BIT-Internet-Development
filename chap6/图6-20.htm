@@ -1,0 +1,29 @@
+<html>
+<head><title>transition属性示例</title>
+<style>
+#trans1
+{
+width:100px;height:100px;margin:10px;
+background:lightblue;float:left;
+transition:width 2s linear;}
+#trans1:hover{width:200px;}
+#trans2
+{
+width:100px;height:100px;margin:10px;
+background:lightblue;float:left;
+transition:width 2s,height 2s,background 2s;}
+#trans2:hover{width:200px;height:200px;background:pink;}
+#trans3
+{
+width:100px;height:100px;margin:10px;
+background:lightblue;float:left;
+transition:transform 2s;}
+#trans3:hover{transform:scale(2,1.5);}
+</style>
+</head>
+<body>
+<div id="trans1">过渡1</div>
+<div id="trans2">过渡2</div>
+<div id="trans3">过渡3</div>
+</body>
+</html>

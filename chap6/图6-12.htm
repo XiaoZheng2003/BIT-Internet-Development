@@ -1,0 +1,28 @@
+<html>
+<head><title>固定定位布局</title>
+<style>
+#fixedbar{ width:100%;height:80px;background:black; color:white;z-index:1000; position:fixed; top:0px; left:0px; }
+#box{ width:800px;height:700px;margin:100px auto 0px; }
+#header{ width:800px;height:100px;background:orange; }
+#container{position:relative;}
+#container{position:relative;}
+#sidebar{ width:200px;height:1000px;background:lightblue;}
+#main{ width:600px;height:1000px;background:lightgreen; 
+position:absolute;top:0px;left:200px;}
+#footer{ width:800px;height:100px;background:yellow;clear:both; }
+#totop{ width:30px;height:30px;background:black;color:white;z-index:1000; position:fixed; right:30px; bottom:30px;}
+</style>
+</head>
+<body>
+<div id="fixedbar">此框中的内容永远在顶部</div>
+<div id="box">
+<div id="header">header</div>
+<div id="container">
+ <div id="sidebar">sidebar</div>
+ <div id="main"> main content</div>
+</div>
+<div id="footer">footer</div>
+</div>
+<div id="totop">top</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<head><style>li + li {font-weight:bold;}
+h1 + p{background:red;}
+#box > #container table + ul {margin-top:20px;background:yellow;}
+</style></head>
+<body>
+<h1>标题1</h1>
+<p>段落<p>
+<p>段落</p>
+<div>
+  <ul>
+    <li>列表项 1</li>
+    <li>列表项 2</li>
+    <li>列表项 3</li>
+  </ul>
+  <ol>
+    <li>列表项 1</li>
+    <li>列表项 2</li>
+    <li>列表项 3</li>
+  </ol>
+</div>
+<div id="box">
+  <div id="container">
+    <table></table>
+    <ul>这个元素是受影响的元素</ul>
+    <ul>本元素不受影响</ul>
+  </div>
+</div>
+</body>
