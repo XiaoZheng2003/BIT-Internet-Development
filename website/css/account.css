@@ -1,218 +1,240 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  input {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    padding-left: 5px;
-    background-color: #282c34;
-    color: tomato;
-    caret-color:  tomato;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 5px;
+  background-color: #282c34;
+  color: tomato;
+  caret-color: tomato;
+}
+
 input::placeholder {
-    color: tomato;
-    font-family: "楷体";
+  color: tomato;
+  font-family: "楷体";
 }
 
 .top,
 .bottom {
-    left: 0px;
-    right: 0px;
-    height: 2px;
+  left: 0px;
+  right: 0px;
+  height: 2px;
 }
+
 .left,
 .right {
-    top: 0px;
-    bottom: 0px;
-    width: 2px;
-    transform: scaleY(0);
+  top: 0px;
+  bottom: 0px;
+  width: 2px;
+  transform: scaleY(0);
 }
-.top {
-    top: 0px;
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition-delay: .2s;
-}
-.left {
-    left: 0px;
-    transform-origin: bottom center;
-    transition-delay: .3s;
-}
-.bottom {
-    bottom: 0px;
-}
-.right {
-    right: 0px;
-    transform-origin: top center;
-    transition-delay: .1s;
-}
-input:focus ~ .right {
-    transform: scaleY(1);
-    transform-origin: bottom center;
-}
-input:focus ~ .left {
-    transform: scaleY(1);
-    transform-origin: top center;
-}
-input:focus ~ .top {
-    transform: scaleY(1);
-    transform-origin: right center;
-}
-  body {
-    background: url(../img/background1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .container {
-    width: 100%;
-    height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
-  }
-  .container .box {
-    width: 900px;
-    height: 550px;
-    background: #282c34;
-    border-radius: 4px;
-    position: relative;
-  }
-  .container .box .transtion-box {
-    position: absolute;
-    left: 0;
-    transition: 0.5s all ease-in-out;
-  }
-  .container .box .transtion-box .login-box,
-  .reg-box {
-    width: 640px;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 50px 30px;
-  }
-  
-  
-  .container .box .transtion-box h1 {
-    color: #ffffff;
-    margin-bottom: 35px;
-  }
-  .container .box .transtion-box section {
-    display: flex;
-    flex-flow: inherit;
-    align-items: inherit;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .container .box .transtion-box section label {
-    font-size: 14px;
-    color: #61dafb;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .container .box .transtion-box section input {
-    width: 50%;
-    outline: 0;
-    border: none;
-    font-size: 18px;
-    color: tomato;
-    text-align: center;
-    padding: 4px 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  }
-  .container .box .transtion-box section span {
-    color: rgb(80, 80, 77);
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 18px;
-  }
-  .container .box .transtion-box button {
-    width: 50%;
-    padding: 6px 0;
-    text-align: center;
-    border: 3px solid #b8000041;
-    border-radius: 20px;
-    background: #570401;
-    color: #fff;
-    font-size: 25px;
-    letter-spacing: 6px;
-    text-indent: 6px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
-  }
-  .container .box .transtion-box .other {
-    border: 3px solid #d3dae9;
-    background: #fff;
-    color: rgb(124, 145, 184);
-    font-weight: 600;
-  }
-  .container .box .transferToReg {
-    width: 260px;
-    height: 100%;
-    background: linear-gradient(
-      to bottom right,
+.top {
+  top: 0px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition-delay: .2s;
+}
+
+.left {
+  left: 0px;
+  transform-origin: bottom center;
+  transition-delay: .3s;
+}
+
+.bottom {
+  bottom: 0px;
+}
+
+.right {
+  right: 0px;
+  transform-origin: top center;
+  transition-delay: .1s;
+}
+
+input:focus~.right {
+  transform: scaleY(1);
+  transform-origin: bottom center;
+}
+
+input:focus~.left {
+  transform: scaleY(1);
+  transform-origin: top center;
+}
+
+input:focus~.top {
+  transform: scaleY(1);
+  transform-origin: right center;
+}
+
+body {
+  background: url(../img/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+}
+
+.container .box {
+  width: 900px;
+  height: 550px;
+  background: #282c34;
+  border-radius: 4px;
+  position: relative;
+}
+
+.container .box .transtion-box {
+  position: absolute;
+  left: 0;
+  transition: 0.5s all ease-in-out;
+}
+
+.container .box .transtion-box .login-box,
+.reg-box {
+  width: 640px;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 50px 30px;
+}
+
+
+.container .box .transtion-box h1 {
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.container .box .transtion-box section {
+  display: flex;
+  flex-flow: inherit;
+  align-items: inherit;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.container .box .transtion-box section label {
+  font-size: 14px;
+  color: #61dafb;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.container .box .transtion-box section input {
+  width: 50%;
+  outline: 0;
+  border: none;
+  font-size: 18px;
+  color: tomato;
+  text-align: center;
+  padding: 4px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.container .box .transtion-box section span {
+  color: rgb(80, 80, 77);
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.container .box .transtion-box button {
+  width: 50%;
+  padding: 6px 0;
+  text-align: center;
+  border: 3px solid #b8000041;
+  border-radius: 20px;
+  background: #570401;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 6px;
+  text-indent: 6px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+}
+
+.container .box .transtion-box .other {
+  border: 3px solid #d3dae9;
+  background: #fff;
+  color: rgb(124, 145, 184);
+  font-weight: 600;
+}
+
+.container .box .transferToReg {
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(to bottom right,
       #011725 0%,
       #975047 50%,
-      #360202 100%
-    );
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    position: absolute;
-    left: 640px;
-    top: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 50px 0;
-    color: white;
-    transition: all 1s ease-in-out;
-  }
-  .container .box .transferToReg .title {
-    margin-bottom: 10px;
-    transition: all 0.3s ease-in-out;
-  }
-  .container .box .transferToReg button {
-    margin-top: 260px;
-    width: 50%;
-    padding: 8px 0;
-    border-radius: 14px;
-    letter-spacing: 10px;
-    text-indent: 10px;
-    font-size: 19px;
-    color: #fff;
-    border: 3px solid #fff;
-    background: transparent;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: "楷体";
-  }
-  .container .box .transferToReg button:hover {
-    border: 3px solid  #975047;
-  }
-  .text{
-    height: 50px;
-  }
-  .duo{
-    color:rgb(136, 0, 0);
-    font-size:100px;
-  }
-  .she{
-    color:rgb(136, 0, 0);
-    font-size:40px;
-    align:right;
-  }
+      #360202 100%);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 50px 0;
+  color: white;
+  transition: all 1s ease-in-out;
+}
 
-  a{
-    text-decoration: none;
+.container .box .transferToReg .title {
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .box .transferToReg button {
+  margin-top: 260px;
+  width: 50%;
+  padding: 8px 0;
+  border-radius: 14px;
+  letter-spacing: 10px;
+  text-indent: 10px;
+  font-size: 19px;
+  color: #fff;
+  border: 3px solid #fff;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "楷体";
+}
+
+.container .box .transferToReg button:hover {
+  border: 3px solid #975047;
+}
+
+.text {
+  height: 50px;
+}
+
+.duo {
+  color: rgb(136, 0, 0);
+  font-size: 100px;
+}
+
+.she {
+  color: rgb(136, 0, 0);
+  font-size: 40px;
+  align-items: right;
 }

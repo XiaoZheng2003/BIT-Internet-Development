@@ -1,89 +1,99 @@
-body{
+body {
     margin: 0;
-    height:100vh;
-    width:100vw;
+    height: 100vh;
+    width: 100vw;
 }
 
-a{
-    color:black;
-    text-decoration:none;
+a {
+    color: black;
+    text-decoration: none;
 }
 
-a:visited{
-    color:black;
+a:visited {
+    color: black;
 }
-.wrapper{
-    height:100vh;
-    width:100vw;
-    display:grid;
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
     grid-template-columns: 25vw 50vw 15vw 10vw;
     grid-template-rows: 10vh 15vh 50vh 25vh;
-    background-size:cover;
-    font-size:30px;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+    background-size: cover;
+    font-size: 30px;
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
 }
 
-.wrapper a:hover{
-    color:red;
+.wrapper a:hover {
+    color: red;
 }
 
-nav{
-    grid-area:1/1/2/5;
+nav {
+    grid-area: 1/1/2/5;
     background: url("../img/dialogbox.png");
-    line-height:10vh;
-    text-align:center;
+    line-height: 10vh;
+    text-align: center;
 }
 
-nav a{
-    margin:auto 5vw;
+nav a {
+    margin: auto 5vw;
 }
 
-#option_area{
-    background:linear-gradient(35deg,#63bbd0,#126e82);
-    
+#option_area {
+    background: linear-gradient(35deg, #63bbd0, #126e82);
+
     grid-area: 3/2/4/3;
 }
 
-#dialog_area{
+#dialog_area {
     text-indent: 2em;
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none;
     cursor: pointer;
     grid-area: 4/1/5/5;
-    overflow:hidden;
-    line-height:20vh;
-    background:url("../img/dialogbox.png");
-    color:aliceblue;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+    overflow: hidden;
+    line-height: 20vh;
+    background: url("../img/dialogbox.png");
+    color: aliceblue;
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
     font-size: x-large;
 }
 
-#function_area{
+#function_area {
     grid-area: 2/4/4/5;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background:url("../img/dialogbox.png");
+    background: url("../img/dialogbox.png");
 }
 
-#function_area > .button, #function_area > .button > a{
+#function_area>.button,
+#function_area>.button>a {
     margin: 0 auto;
-    background-color: #ffffff00; /* Green background */
-    border: 0px; /* Green border */
-    color: white; /* White text */
-    padding: 5px 0px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+    background-color: #ffffff00;
+    /* Green background */
+    border: 0px;
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 5px 0px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
     font-size: 30px;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
 }
 
-#function_area > .button:hover, #function_area > .button > a:hover{
-    color:red;
+#function_area>.button:hover,
+#function_area>.button>a:hover {
+    color: red;
 }
 
-.character{
+.character {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -91,11 +101,22 @@ nav a{
     width: 20%;
 }
 
-nav a:link {color:white;}
-nav a:visited {color:whitesmoke;}
-nav a:hover {color:lightcyan;}
-nav a:active {color:white;}
+nav a:link {
+    color: white;
+}
 
-div{
+nav a:visited {
+    color: whitesmoke;
+}
+
+nav a:hover {
+    color: lightcyan;
+}
+
+nav a:active {
+    color: white;
+}
+
+div {
     z-index: 10;
 }

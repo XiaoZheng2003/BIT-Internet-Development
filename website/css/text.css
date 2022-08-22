@@ -1,14 +1,16 @@
-.logo{
-    margin:10% 5% 0;
-    width:30%;
-    height:60%;
+.logo {
+    margin: 10% 5% 0;
+    width: 30%;
+    height: 60%;
     text-align: left;
-    float:left;
+    float: left;
 }
-#logo_pic{
+
+#logo_pic {
     width: 100%;
 }
-.text{
+
+.text {
     /* background: rgb(255, 255, 255); */
     color: #ffffff;
     float: left;
@@ -17,55 +19,19 @@
     margin-top: 5%;
     margin-right: 5%;
 }
-.text h1{
+
+.text h1 {
     text-align: center;
     font-family: "黑体";
     font-size: 250%;
     line-height: 200%;
     color: #9d0017;
 }
-.text p{
+
+.text p {
     text-align: left;
     text-indent: 2em;
     font-family: "楷体";
     font-size: 150%;
     line-height: 200%;
-} 
-#bord_pic{
-    height: 65%;
-}
-body{
-    background: url(../img/background1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-.btn-group{
-    float: left;
-    margin: 0 auto;
-    width: 40%;
-}
-.btn-group button {
-    margin:auto;
-    background-color: #ffffff00; /* Green background */
-    border: 0px; /* Green border */
-    color: #ffffff; /* White text */
-    padding: 15px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 40%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
-    font-size: 250%;
-    font-family: "华文行楷","方正舒体","华文新魏","楷体";
-}
-.btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
-}
-/* Add a background color on hover */
-.btn-group button:hover {
-    /* background-color: #f40000; */
-    color:#9d0017;
-}
-a{
-    text-decoration: none;
 }
