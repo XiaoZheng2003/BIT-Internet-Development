@@ -1,6 +1,9 @@
 #忽略vscode配置文件
 .vscode/
 
+#忽略测试文件
+website/test/
+
 #忽略压缩文件
 *.zip
 *.rar
