@@ -42,3 +42,7 @@
 .card-text{
 	text-indent: 2em;
 }
+
+#element{
+	max-width: 100px;
+}
