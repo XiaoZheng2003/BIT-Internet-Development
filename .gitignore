@@ -3,6 +3,7 @@
 
 #忽略测试文件
 website/test/
+test/
 
 #忽略压缩文件
 *.zip
