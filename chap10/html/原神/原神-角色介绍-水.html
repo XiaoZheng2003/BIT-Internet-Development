@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>游戏天地-原神-角色介绍</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <script src="../../bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/pages_gi.js"></script>
+    <!--pages.js中包括必要的Javascript代码-->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!--main.css中包括网站通用的CSS代码-->
+    <link rel="stylesheet" href="../../css/pages.css">
+    <!--pages.css中包括修饰具体页面用的CSS代码-->
+</head>
+
+<body>
+    <!--主导航-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="../../index.html"><img class="logo-responsive" src="../../images/logo.jpg"
+                alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span
+                class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link text-light" href="#">游戏研究</a> </li>
+                <li class="nav-item active"> <a class="nav-link text-light" href="#">仙剑奇侠传</a> </li>
+                <li class="nav-item"> <a class="nav-link text-light" href="../古剑奇谭-首页.html">古剑奇谭</a> </li>
+                <li class="nav-item" id="current"> <a class="nav-link text-light" href="#">王者荣耀</a> </li>
+                <li class="nav-item"> <a class="nav-link text-light" href="#">隐形守护者</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <!--面包屑&二级导航-->
+    <div class="container-fluid padding" id="bread">
+        <a href="../../index.html">首页</a> &gt; <a href="#">原神</a> &gt; <span id="second-nav"><a
+                href="#"><button>新手指南</button></a> | <button><strong>角色介绍</strong></button> | <a
+                href="#"><button>英雄攻略</button></a> | <a href="#"><button>成瘾机制</button></a></span>
+    </div>
+    <div class="container" id="page-nav">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-岩.html"> &lt; </a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-风.html">风</a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-火.html">火</a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-雷.html">雷</a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-岩.html">岩</a></li>
+            <li class="page-item disabled current"><a class="page-link" href="#">水</a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-冰.html">冰</a></li>
+            <li class="page-item"><a class="page-link" href="原神-角色介绍-冰.html"> &gt; </a></li>
+        </ul>
+    </div>
+    <!--页面主体内容-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <!--左边列为折叠栏accordion-->
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne"> 角色详情 </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="card-text m-0">尽管已经进入愚人众最顶层的「执行官」之列，但「公子」达达利亚的外表，似乎还是一位稚气未脱的青年。</p>
+                                <p class="card-text m-0">就如天鹅绒包裹的白银利刃一般，在他开朗自信的外表之下，是锤炼到极致的剑客之躯。</p>
+                                <p class="card-text m-0">他是最年轻的愚人众执行官，也是最危险的愚人众执行官之一。</p>
+                                <p class="card-text m-0">然而，「公子」似乎永远与他的同僚们不太合得来。</p>
+                                <p class="card-text m-0">作为最纯粹的战士，他在这个充满阴谋的集体中显得格格不入。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">技能介绍</a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div id="skills">
+                                    <!--悬停效果-->
+                                    <a href="#" onmouseover="showHide(1)"><img src="../../images/鲁班skill-1.jpg"
+                                            id="skillimage1"><img src="../../images/鲁班skill-1-over.jpg"
+                                            id="skillimageover1"></a>
+                                    <a href="#" onmouseover="showHide(2)"><img src="../../images/鲁班skill-2.jpg"
+                                            id="skillimage2"><img src="../../images/鲁班skill-2-over.jpg"
+                                            id="skillimageover2"></a>
+                                    <a href="#" onmouseover="showHide(3)"><img src="../../images/鲁班skill-3.jpg"
+                                            id="skillimage3"><img src="../../images/鲁班skill-3-over.jpg"
+                                            id="skillimageover3"></a>
+                                </div>
+                                <div id="skill1"><strong><big>普通攻击·断雨</big></strong>
+                                    <p><strong>普通攻击</strong>：进行至六段的连续弓箭射击。</p>
+                                    <p><strong>重击</strong>：进行伤害更高、更为精准的瞄准射击。</p>
+                                    <p>瞄准时，水元素之力会在箭矢上持续积聚。聚满了激流的箭矢会在命中敌人时造成水元素伤害施加断流效果。</p>
+                                    <p><strong>断流</strong>：处于断流影响下的敌人受到达达利亚的各种攻击时，将产生水元素范围伤害效果。这些效果造成的伤害视为普通攻击伤害。</p>
+                                    <ul>
+                                        <li>断流·闪：满蓄力瞄准射击命中处于断流影响下的敌人时，会引发连续范围伤害。断流·闪每0.7秒至多触发一次。</li>
+                                        <li>断流·破：击败处于断流影响下的敌人时会引发水之绽放，对附近的敌人施加断流效果。</li>
+                                    </ul>
+                                    <p><strong>下落攻击</strong>：从空中射出箭雨，并迅速下坠冲击地面，在落地时造成范围伤害。</p>
+                                    <p>处于魔王武装·狂澜的近战状态下时，无法施展下落攻击。</p>
+                                </div>
+                                <div id="skill2"><strong><big>魔王武装·狂澜</big></strong>
+                                    <p>解放纯水结构的武装，对周围的敌人造成水元素伤害，并进入近战状态。</p>
+                                    <p>在此状态下，达达利亚的普通攻击与重击将转为无法被附魔覆盖的水元素伤害，并发生以下变化：</p>
+                                    <p><strong>普通攻击</strong>：进行至多六次的连续水元素斩击。
+                                    <p><strong>重击</strong>：消耗体力，瞬间向前挥出两剑，造成水元素伤害。
+                                    <p><strong>断流·斩</strong>：近战攻击命中处于断流影响下的敌人时，将引发一次断流·斩，造成水元素范围伤害。断流·斩造成的伤害视为元素战技伤害，每1.5秒至多触发一次。
+                                    <p>30秒后或再次释放时效果将会解除，回到远程状态，并使技能进入冷却。近战状态下持续的时间越长，冷却时间越长。</p>
+                                    <p>若持续30秒后自动回到远程状态，技能将进入更长的冷却周期。</p>
+                                    <i>为了克服自己不擅使弓的弱点，他才选择弓作为自己的武器。但在真正的战斗中，不得不拿出真正的实力…</i>
+                                </div>
+                                <div id="skill3"><strong><big>极恶技·尽灭闪</big></strong>
+                                    <p>依据达达利亚当前所处的状态，进行不同的攻击：</p>
+                                    <p><strong>远程状态·魔弹一闪</strong>：向前方快速射出一发饱含水元素的魔箭，造成水元素范围伤害，并施加断流效果。</p>
+                                    <p>释放后，返还20点元素能量。</p>
+                                    <p><strong>近战状态·尽灭水光</strong>：进行一次大范围斩击，对附近所有敌人造成大量水元素伤害，并能引发断流·爆。</p>
+                                    <p><strong>断流·爆</strong>：尽灭水光命中处于断流状态下的敌人时，会消耗断流效果并引发水爆，造成水元素范围伤害。断流·爆造成的伤害视为元素爆发伤害。
+                                    </p>
+                                    <i>湍流的水，在他的雪国故土并不常见。或许能将流水握在手中，正是因为明白流水的珍贵吧。</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">使用建议</a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <h2>武器推荐</h2>
+                                <ul>
+                                    <li>冬极白星：提升暴击率和攻击力，并提供元素战技/元素爆发伤害加成，有效提升公子伤害输出。</li>
+                                    <li>若水：提供高额暴击伤害和通用的伤害加成，有效提升公子伤害输出。</li>
+                                    <li>飞雷之弦振：提供暴击伤害加成、攻击力加成和普通攻击伤害加成。对达达利亚使用元素战技附魔后的普通攻击伤害提升显著。</li>
+                                    <li>天空之翼：提升暴击率和暴击伤害，能够较有效地提升公子伤害输出。</li>
+                                    <li>弓藏：提供高额普通攻击伤害加成。对达达利亚使用元素战技附魔后的普通攻击伤害提升比较显著。</li>
+                                    <li>绝弦：提供元素战技/元素爆发伤害加成和元素精通。对触发蒸发反应的元素爆发伤害有相当大提升。</li>
+                                    <li>苍翠猎弓：达达利亚是一位对群效率极高的角色，该武器特效的聚怪效果虽然不显著，但对小怪时还是有不错的表现，有时还能触发较为可观的摔伤。副词缀暴击率也能缓解圣遗物的词缀压力，是达达利亚四星武器中一个不错的选择。
+                                    </li>
+                                    <li>破魔之弓：提供普通攻击/重击伤害加成。对达达利亚使用元素战技附魔后的普通攻击/重击伤害提升比较显著。同时，作为锻造武器，其获取难度较低，适合过渡期使用。
+                                    </li>
+                                </ul>
+                                <h2>圣遗物推荐</h2>
+                                <ul>
+                                    <li>沉沦之心：目前最合适的圣遗物。</li>
+                                    <li>沉沦之心4件套 主词条</li>
+                                    <ul>
+                                        <li>时之沙：攻击力</li>
+                                        <li>空之杯：水元素伤害加成</li>
+                                        <li>理之冠：暴击率/暴击伤害</li>
+                                        <li>副词条：攻击力/元素精通/暴击率/暴击伤害</li>
+                                    </ul>
+                                    <li>战狂：新手过渡用。</li>
+                                    <li>主词条</li>
+                                    <ul>
+                                        <li>时之沙：攻击力</li>
+                                        <li>空之杯：水元素伤害加成</li>
+                                        <li>理之冠：暴击率/暴击伤害</li>
+                                        <li>副词条：攻击力/元素精通/暴击率/暴击伤害</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--右边为一个响应式图片（设置类为img-fluid）-->
+                <div class="image-right"><img src="../../images/达达利亚.png" class="img-fluid mx-auto d-block"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light text-center">
+        Game World. &copy;2022
+    </footer>
+</body>
+
+</html>
