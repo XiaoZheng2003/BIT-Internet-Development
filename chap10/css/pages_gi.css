@@ -1,0 +1,13 @@
+#skillimage1{
+    display: inline;
+}
+
+#skillimage1,#skillimage2,#skillimage3{
+    margin:5px;
+    width:80px;
+    height:80px;
+}
+
+#skillimage1:hover,#skillimage2:hover,#skillimage3:hover{
+    filter: brightness(70%);
+}

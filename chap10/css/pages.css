@@ -36,7 +36,8 @@
 }
 
 #skillimage1,#skillimageover2,#skillimageover3,#skillimageover4{ /*默认时显示第一个按钮的高亮状态和其他按钮的默认状态*/
-	display:none;
+	display:
+	none;
 }
 
 .card-text{
