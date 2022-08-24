@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var a,b,c;
+    var a,b;
     a = $(window).height();    //浏览器窗口高度
     $(window).scroll(function(){
         b = $(this).scrollTop();   //页面滚动的高度
