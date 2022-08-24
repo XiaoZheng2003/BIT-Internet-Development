@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>游戏天地-王者荣耀-英雄介绍</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <script src="../../bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/pages.js"></script>
+    <!--pages.js中包括必要的Javascript代码-->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!--main.css中包括网站通用的CSS代码-->
+    <link rel="stylesheet" href="../../css/pages.css">
+    <!--pages.css中包括修饰具体页面用的CSS代码-->
+</head>
+
+<body>
+    <!--主导航-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="../../index.html"><img class="logo-responsive" src="../../images/logo.jpg"
+                alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span
+                class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link text-light" href="#">游戏研究</a> </li>
+                <li class="nav-item active"> <a class="nav-link text-light" href="#">仙剑奇侠传</a> </li>
+                <li class="nav-item"> <a class="nav-link text-light" href="../古剑奇谭-首页.html">古剑奇谭</a> </li>
+                <li class="nav-item" id="current"> <a class="nav-link text-light" href="#">王者荣耀</a> </li>
+                <li class="nav-item"> <a class="nav-link text-light" href="#">隐形守护者</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <!--面包屑&二级导航-->
+    <div class="container-fluid padding" id="bread">
+        <a href="../../index.html">首页</a> &gt; <a href="#">王者荣耀</a> &gt; <span id="second-nav"><a
+                href="#"><button>新手指南</button></a> | <button><strong>英雄介绍</strong></button> | <a
+                href="#"><button>英雄攻略</button></a> | <a href="#"><button>成瘾机制</button></a></span>
+    </div>
+    <div class="container" id="page-nav">
+        <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="#"> &lt; </a></li>
+            <li class="page-item"><a class="page-link" href="王者荣耀-英雄介绍-射手.html">射手</a></li>
+            <li class="page-item"><a class="page-link" href="王者荣耀-英雄介绍-法师.html">法师</a></li>
+            <li class="page-item disabled current"><a class="page-link" href="#">战士</a></li>
+            <li class="page-item"><a class="page-link" href="王者荣耀-英雄介绍-坦克.html">坦克</a></li>
+            <li class="page-item"><a class="page-link" href="王者荣耀-英雄介绍-刺客.html">刺客</a></li>
+            <li class="page-item"><a class="page-link" href="王者荣耀-英雄介绍-辅助.html">辅助</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#"> &gt; </a></li>
+        </ul>
+    </div>
+    <!--页面主体内容-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <!--左边列为折叠栏accordion-->
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne"> 英雄背景 </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="card-text m-0">天地孕育而生的<strong>食梦一族</strong>，是远离人类世界的幻想生物。它们居住在幻梦森林，只有在成年时才会去人间进行一次独立的寻梦环游。</p>
+                                <p class="card-text m-0">某个小家伙在成年礼时，闯进了神祇的梦境。孤独的神祇将它抓了个正着，并以“梦奇”来称呼它。不知不觉，他们缔结了珍贵的友谊。但好景不长，神之时代很快逝去。大战之后，神祇不知所踪，只给它留下了保管的信物。</p>
+                                <p class="card-text m-0">数不清的岁月过去了，梦奇仍旧在这片大陆上旅行。它铭记着伙伴的嘱托，好好保管着信物，等到重逢时交还给祂……</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">技能介绍</a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div id="skills">
+                                    <!--悬停效果-->
+                                    <a href="#" onmouseover="showHide(1)"><img src="../../images/skill/梦奇被动.png"
+                                            id="skillimage1"><img src="../../images/skill/梦奇被动.png"
+                                            id="skillimageover1"></a>
+                                    <a href="#" onmouseover="showHide(2)"><img src="../../images/skill/梦奇一技能.png"
+                                            id="skillimage2"><img src="../../images/skill/梦奇一技能.png"
+                                            id="skillimageover2"></a>
+                                    <a href="#" onmouseover="showHide(3)"><img src="../../images/skill/梦奇二技能.png"
+                                            id="skillimage3"><img src="../../images/skill/梦奇二技能.png"
+                                            id="skillimageover3"></a>
+                                    <a href="#" onmouseover="showHide(4)"><img src="../../images/skill/梦奇三技能.png"
+                                            id="skillimage4"><img src="../../images/skill/梦奇三技能.png"
+                                            id="skillimageover4"></a>
+                                </div>
+                                <div id="skill1"><strong><big>食梦</big></strong> 冷却值：0消耗：0
+                                    <p>被动：梦奇释放技能会获得质量，每10点质量增加6点物理攻击、8点物理和法术防御。梦奇在战斗/非战斗状态下每秒消耗5/15点质量
+                                    </p>
+                                </div>
+                                <div id="skill2"><strong><big>梦境萦绕</big></strong> 冷却值：6 消耗：0
+                                    <p>梦奇操纵梦力获得175(+150%物理攻击)点护盾，持续4秒，对周围敌人造成250( +60%物理攻击)法术伤害，并增加30点质量。梦奇普攻命中敌人可减少[梦境萦绕) 0.5~1秒冷却时间。
+                                    </p>
+                                </div>
+                                <div id="skill3"><strong><big>梦力泡泡</big></strong> 冷却值：10消耗：0
+                                    <p>梦奇扔出一个梦力泡泡，并增加30%移速，持续2秒。泡泡首次回到身边时，梦奇会将其再次击向附近敌人。梦力泡泡对路径上的敌人造成130(+20%法术攻击)法术伤害和减速效果(每25点物理攻击提升1%减速)持续2秒，减速效果最多叠加4层。梦奇回收梦力泡泡后获得30点质量，泡泡变成梦力爆弹，扔出后对命中的敌人造成100(+24%法术攻击)~550(+ 132%法术攻击)法术伤害。 梦力泡泡飞行时间越久，爆弹伤害越高，积蓄5.5秒可达到最高伤害
+                                    </p>
+                                </div>
+                                <div id="skill4"><strong><big>梦境环游</big></strong> 冷却值：40 消耗：0
+                                    <p>梦奇进行一-次梦境环游， 期间持续获得质量，对路径上的敌人造成150(+30%物理攻击)(+30%法术攻击)法术伤害。开始环游时获得短暂霸体，再次使用该技能可以立即停止环游，环游停止时对周围敌人造成150(+30%物理攻击)(+30%法术攻击)法术伤害和0.75秒击飞。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">使用建议</a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <h2>技能加点</h2>
+                                <ul>
+                                    <li>主升：梦力泡泡</li>
+                                    <li>副升：梦境萦绕</li>
+                                    <li>召唤师技能：闪现/狂暴</li>
+                                </ul>
+                                <h2>铭文搭配</h2>
+                                <ul>
+                                    <li>梦魇：法术攻击力+4.2，法术穿透+2.4</li>
+                                    <li>心眼：攻速加成+0.6%，法术穿透+6.4</li>
+                                    <li>狩猎：攻速加成+1%，移速+1%</li>
+                                </ul>
+                                <h2>出装</h2>
+                                <ul>
+                                    <li>抵抗之靴：+110法术防御，唯一被动：+60移速，唯一被动：+35韧性</li>
+                                    <li>巫术法杖：+400最大法力，+400最大生命，+140法术攻击，+8%移速，唯一被动：咒刃：使用技能后，下一次普通攻击附加高额法术伤害，这个效果有2秒的冷却时间</li>
+                                    <li>回响之杖：+240法术攻击，+7%移速，唯一被动：回响：技能命中会触发小范围爆炸造成50（+50%法术加成）法术伤害，这个效果有5秒CD</li>
+                                    <li>博学者之怒：+240法术攻击，唯一被动 毁灭：法术强度提升35%</li>
+                                    <li>虚无法杖：+180法术攻击，+500最大生命，唯一被动 ：45%法术穿透</li>
+                                    <li>贤者之书：+400法术攻击，+10%冷却缩减，唯一被动 刻印：每增加100点法强，增加0.8%伤害</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--右边为一个响应式图片（设置类为img-fluid）-->
+                <div class="image-right"><img src="../../images/梦奇.jpeg" class="img-fluid mx-auto d-block"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light text-center">
+        Game World. &copy;2022
+    </footer>
+</body>
+
+</html>
