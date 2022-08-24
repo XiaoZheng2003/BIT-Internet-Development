@@ -13,42 +13,6 @@
   position: absolute;
   background: url(../img/bord.png) no-repeat;
   width: 60%;
-  height: 85%;
-  background-size: 100%;
-  position: absolute;
-  left: 38%;
-  top: 8%;
-}
-
-.achievementcomments1 {
-  /*border: medium double rgb(0, 81, 255);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 1%;
-  color: rgb(249, 5, 5);
-}
-
-.achievementcomments2 {
-  /*border: medium double rgb(38, 255, 0);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 20%;
-  color:
-    rgb(249, 5, 5);
-}
-
-.achievementcomments3 {
-  /*border: medium double rgb(255, 0, 0);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 39%;
-  color: rgb(249, 5, 5);
 }
 
 #next-btn_pic {
