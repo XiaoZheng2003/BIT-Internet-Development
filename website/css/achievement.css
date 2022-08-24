@@ -1,54 +1,15 @@
-.bord {
-  margin: 10% 5% 0;
-  width: 30%;
-  height: 60%;
-  float: left;
+/*设置电视机内显示块的属性*/
+#table1{
+  position: absolute;left: 40%;top: 25%;z-index: 2;
+  width: 800px;
+  height: 450px;
+  overflow-y: scroll;
 }
 
-#bord_pic {
-  height: 140%;
-}
-
-.achievementTable {
-  position: absolute;
-  background: url(../img/bord.png) no-repeat;
+/*设置电视机图片属性*/
+#bord {
+  position: absolute;left: 31%;top: 10%;
   width: 60%;
-  height: 85%;
-  background-size: 100%;
-  position: absolute;
-  left: 38%;
-  top: 8%;
-}
-
-.achievementcomments1 {
-  /*border: medium double rgb(0, 81, 255);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 1%;
-  color: rgb(249, 5, 5);
-}
-
-.achievementcomments2 {
-  /*border: medium double rgb(38, 255, 0);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 20%;
-  color:
-    rgb(249, 5, 5);
-}
-
-.achievementcomments3 {
-  /*border: medium double rgb(255, 0, 0);*/
-  position: absolute;
-  width: 56%;
-  height: 50%;
-  left: 41%;
-  top: 39%;
-  color: rgb(249, 5, 5);
 }
 
 #next-btn_pic {
@@ -72,4 +33,77 @@
   bottom: 5%;
   width: 40%;
   /* Set a width if needed */
+}
+
+/*设置所有奖杯的格式*/
+.trophy_locked {
+  position:absolute;left: 30px;z-index: 3;
+ width: 100px;
+ }
+
+#trophy1{
+  position: absolute;left: 30px;
+  z-index: 100;
+  width: 100px;
+  visibility: visible;
+}
+
+#trophy2{
+  position: absolute;left: 30px;
+  z-index: 100;
+  width: 100px;
+  visibility: hidden;
+}
+
+#trophy3{
+  position: absolute;left: 30px;
+ z-index: 100;
+  width: 100px;
+  visibility: visible;
+}
+
+#trophy4{
+  position: absolute;left: 30px;
+ z-index: 100;
+  width: 100px;
+  visibility: hidden;
+}
+
+.trophy{
+  position: relative;left: 30px;
+}
+
+/*设置成就字体下方框线卡片属性*/
+.card{
+  position: absolute;top: 10px;left: 180px;z-index: 20;
+  width: 400px;
+}
+
+/*设置成就字体属性*/
+.p1{
+  position:absolute;left: 350px;z-index: 50;
+  font: bold 38px youshebiaotihei;
+}
+
+/*设置单行成就格式*/
+.line{
+  position: relative;
+  padding-bottom: 200px;
+}
+
+/*设置成就提示的格式*/
+.note{
+  position: absolute;top: 20px;left: 270px;z-index: 19;
+  width: 150px;
+  transition: transform 2s;
+}
+.line:hover .note{transform: translateY(90px);}
+.reminder{
+  position: absolute;left: 50px; z-index: 12;
+  font: bold 24px 微软雅黑;
+}
+.paper{
+  position: absolute;top: 5px;z-index: 10;
+  width: 250px;
+  transition: transform 2s;
 }
