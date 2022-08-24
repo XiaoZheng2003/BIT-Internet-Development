@@ -15,3 +15,19 @@
 #banner{
     max-width: 80%;
 }
+
+#catalog_float{
+    top: 120px;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 75%;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 1;
+    float: right;
+}
+
+@media screen and (max-width:992px) {
+    #catalog_float, #catalog_normal {
+        display: none;
+    }
+}

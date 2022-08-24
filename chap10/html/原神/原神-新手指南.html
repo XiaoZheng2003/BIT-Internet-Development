@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>游戏天地-原神-新手指南</title>
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-    <script src="../../bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../bootstrap/js/jquery-3.4.1.min.js"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../js/pages_gi.js"></script>
+    <script src="../../js/catalog.js"></script>
     <!--pages.js中包括必要的Javascript代码-->
     <link rel="stylesheet" href="../../css/main.css">
     <!--main.css中包括网站通用的CSS代码-->
@@ -46,20 +47,6 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
-                <h1>目录</h1>
-                <p><a href="#p1">原神简介</a></p>
-                <p><a href="#p2">框架梗概</a></p>
-                <p><a href="#p3">角色培养</a></p>
-                <p><a href="#p4">角色定位</a></p>
-                <p><a href="#p5">等级</a></p>
-                <p><a href="#p6">武器</a></p>
-                <p><a href="#p7">圣遗物</a></p>
-                <p><a href="#p8">命之座</a></p>
-                <p><a href="#p9">天赋</a></p>
-                <p><a href="#p10">元素反应</a></p>
-                <p><a href="#p11">祈愿</a></p>
-            </div>
             <div class="col-lg-8">
                 <a name="p1"></a><h1>原神简介</h1>
                 <p>上海米哈游制作发行的一款开放世界冒险游戏，于2017年1月底立项，原初测试于2019年6月21日开启，再临测试于2020年3月19日开启，启程测试于2020年6月11日开启，PC版技术性开放测试于9月15日开启，公测于2020年9月28日开启。</p>
@@ -76,7 +63,7 @@
                     <li>天赋（冒险等级15级解锁）：普攻与重击、元素战技、元素爆发、固有天赋1、固有天赋2、固有天赋3</li>
                     <li>好感度</li>
                 </ol>
-                <a name="p4"></a><h1>角色定位</h1>
+                <a name="p4" id="change"></a><h1>角色定位</h1>
                 <ul>
                     <li>主C：技能全输出且伤害高，多为需要持续站场才能打出伤害的角色，为四人小分队核心战斗力。（比如雷泽就属于站场持续输出型混伤主C）</li>
                     <li>副C：做主C伤害不够或CD过长，当辅助又浪费了自身输出机制，常用来打元素反应或上场打一套就下，技能最好可脱手。（比如行秋开启技能后可立即切回后台，换主C继续站场输出）</li>
@@ -247,6 +234,21 @@
                 </ul>
                 <p>特殊名词：小保底，即90/80抽五星保底；大保底，即180/160抽当期五星up保底</p>
                 <p>另外：大保底和小保底在同一类型卡池是可以累积的，即假如你在温迪up池抽了89次没出五星，而温迪up池活动结束，换成了达达利亚up池，没有问题，同一类型up池次数是连续的，你在达达利亚池的第1发触发小保底，必出五星（弊端就是温迪已绝版，因为温迪池活动结束了，虽然保底还在，但是肯定抽不出温迪了），然后如果你这发五星没出达达利亚，那你在达达利亚up池再抽最多90发，会触发大保底，必出当期up角色达达利亚。</p>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3" id="catalog_normal">
+                <h1>目录</h1>
+                <p><a href="#p1">原神简介</a></p>
+                <p><a href="#p2">框架梗概</a></p>
+                <p><a href="#p3">角色培养</a></p>
+                <p><a href="#p4">角色定位</a></p>
+                <p><a href="#p5">等级</a></p>
+                <p><a href="#p6">武器</a></p>
+                <p><a href="#p7">圣遗物</a></p>
+                <p><a href="#p8">命之座</a></p>
+                <p><a href="#p9">天赋</a></p>
+                <p><a href="#p10">元素反应</a></p>
+                <p><a href="#p11" id="catalog_end">祈愿</a></p>
             </div>
         </div>
     </div>
