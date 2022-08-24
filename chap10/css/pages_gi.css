@@ -16,18 +16,6 @@
     max-width: 80%;
 }
 
-#catalog_float{
-    top: 50px;
-    box-sizing: border-box;
-    margin: 0px 0px 0px 75%;
-    padding-bottom: 20px;
-    position: fixed;
-    z-index: 1;
-    float: right;
-}
-
-@media screen and (max-width:992px) {
-    #catalog_float, #catalog_normal {
-        display: none;
-    }
+#page-nav{ /*内容导航居中对齐*/
+	width:375px;
 }
