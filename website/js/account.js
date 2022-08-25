@@ -1,7 +1,7 @@
 window.onload = function () {
     if("current-user" in localStorage){
         alert('你已经登录！即将返回首页。');
-        window.open('index.html','_self');
+        window.open('../index.html','_self');
     }
     let transfer = document.getElementById('transfetBtn');
     transfer.addEventListener('click', function () {
@@ -64,7 +64,7 @@ function log(){
             if(pw===pw_crt){
                 alert("登录成功！");
                 localStorage.setItem("current-user",un);
-                window.open('index.html','_self');
+                window.open('../index.html','_self');
             }
             else{
                 alert("密码错误！");
@@ -80,11 +80,11 @@ function log(){
 function reset(){
     localStorage.clear();
     alert("登录信息重置成功！请重新登录！");
-    window.open('account.html','_self');
+    window.open('html/account.html','_self');
 }
 
 function logout(){
     localStorage.removeItem('current-user');
     alert("成功退出登录！即将进入登录界面！");
-    window.open('account.html','_self');
+    window.open('html/account.html','_self');
 }

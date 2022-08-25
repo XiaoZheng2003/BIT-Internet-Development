@@ -1,5 +1,8 @@
 /* CSS Document */
 /*主导航*/
+body,html{
+	scroll-behavior: smooth;
+}
 nav a:hover{ /*增加悬停加下划线效果*/
 	border-bottom:2px #f8f9fa solid;
 }

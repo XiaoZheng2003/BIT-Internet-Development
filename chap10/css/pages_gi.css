@@ -15,3 +15,7 @@
 #banner{
     max-width: 80%;
 }
+
+#page-nav{ /*内容导航居中对齐*/
+	width:375px;
+}
