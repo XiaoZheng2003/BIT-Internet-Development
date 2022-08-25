@@ -11,3 +11,11 @@
 #skillimage1:hover,#skillimage2:hover,#skillimage3:hover{
     filter: brightness(70%);
 }
+
+#banner{
+    max-width: 80%;
+}
+
+#page-nav{ /*内容导航居中对齐*/
+	width:375px;
+}
