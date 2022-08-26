@@ -41,38 +41,51 @@ function reg(){
     let un =document.getElementById('reg_un').value;
     let pw1=document.getElementById('reg_pw').value;
     let pw2=document.getElementById('reg_cf').value;
-    if(un===''){alert('请输入你的用户名！');}
-    else if(pw1===''){alert('请输入密码！');}
-    else if(pw2===''){alert('请再次输入密码！');}
+    if(!un){alert('请输入你的用户名！');}
+    else if(!pw1){alert('请输入密码！');}
+    else if(pw1.length<6){alert('密码长度过短，请重新输入！');}
+    else if(!pw2){alert('请再次输入密码！');}
     else if(pw1!==pw2){alert('两次输入的密码不一致！');}
-    else if("gv"+un in localStorage){alert('该用户名已存在，请重新输入！');}
     else{
-        localStorage.setItem("gv"+un,pw1);
-        alert("注册成功！");
-        document.getElementById('transfetBtn').click()
+        if(localStorage.getItem("gv_"+un)){
+            alert("该用户名已存在，请重新输入！")
+        }
+        else{
+            var user_data=new Object();
+            user_data["un"]=un;
+            user_data["pw"]=pw1;
+            //注册成就信息
+            var achievement_tmp=new Array();
+            for(let i=0;i<20;i++){
+                achievement_tmp[i]=0;
+            }
+            let achievement_data=JSON.stringify(achievement_tmp);
+            user_data.achievement_data=achievement_data;
+            localStorage.setItem("gv_"+un,JSON.stringify(user_data));
+            alert("注册成功！你的用户名为"+user_data["un"]);
+            document.getElementById('transfetBtn').click()
+        }
     }
 }
 
 function log(){
     let un=document.getElementById('log_un').value;
     let pw=document.getElementById('log_pw').value;
-    if(un===''){alert('请输入你的用户名！');}
-    else if(pw===''){alert('请输入密码！');}
+    if(!un){alert('请输入你的用户名！');}
+    else if(!pw){alert('请输入密码！');}
     else{
-        if("gv"+un in localStorage){
-            let pw_crt=localStorage["gv"+un];
-            if(pw===pw_crt){
-                alert("登录成功！");
-                localStorage.setItem("current-user",un);
-                window.open('../index.html','_self');
-            }
-            else{
-                alert("密码错误！");
-                document.getElementById('log_pw').value="";
-            }
+        var user_data=JSON.parse(localStorage.getItem("gv_"+un));
+        if(!user_data){
+            alert('该用户不存在，请检查是否输入错误！');
+        }
+        else if(pw!=user_data["pw"]){
+            alert("密码错误！");
+            document.getElementById('log_pw').value="";
         }
         else{
-            alert("该用户不存在，请检查是否输入错误！");
+            alert("登录成功！");
+            localStorage.setItem("current-user",un);
+            window.open('../index.html','_self');
         }
     }
 }
