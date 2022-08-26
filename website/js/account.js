@@ -43,6 +43,7 @@ function reg(){
     let pw2=document.getElementById('reg_cf').value;
     if(un===''){alert('请输入你的用户名！');}
     else if(pw1===''){alert('请输入密码！');}
+    else if(pw1.length<6){alert('密码长度过短，请重新输入！');}
     else if(pw2===''){alert('请再次输入密码！');}
     else if(pw1!==pw2){alert('两次输入的密码不一致！');}
     else if("gv"+un in localStorage){alert('该用户名已存在，请重新输入！');}
