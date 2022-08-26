@@ -2,7 +2,6 @@
 
 <head>
 	<title>反转迷局</title>
-	<base href='https://www.webhek.com/apps/inverter/'>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +10,13 @@
 	<meta name="description"
 		content="这是一个用HTML5制作的智力游戏，有相当的难度。每个方块一面橙色，一面蓝色。点击一个方块，这个方块的颜色会翻转，并且，与它邻接的方块的颜色也会翻转。使拼板全部变成蓝色， 你就算过关了。" />
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://www.webhek.com/apps/inverter/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://www.webhek.com/apps/inverter/css/style.css">
 
-	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/viewmodel.js"></script>
-	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/viewmodel.js"></script>
+	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/controller.js"></script>
 	<script>
 		function restart(){
 			document.querySelector('#newGameConfirm').click()
@@ -29,7 +28,7 @@
 			let cur = document.getElementsByClassName('currLevel')[0]
 			let text = cur.innerHTML
 			if (text[text.length - 5] == '5') {
-				history.back()
+				window.open('../chap1/1-2.html','_self')
 			}
 		}
 	</script>
