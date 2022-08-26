@@ -8,8 +8,12 @@
     margin-right: 5%;
     font-family:  "华文行楷";
 }
-.save{
-
+.logo1{
+   
+        height: 250px;
+        text-align: left;
+        float: left;
+    
 }
 a {
     text-decoration: none;
