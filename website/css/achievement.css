@@ -1,3 +1,9 @@
+/*添加自定义字体*/
+@font-face {
+  font-family: myfont;
+  src: url(../font/YSBTH.TTF);
+}
+
 /*设置电视机内显示块的属性*/
 .table{
   margin-top: 5%;
@@ -89,7 +95,7 @@
   padding-top: 5%;
   text-align: center;
   height: 70%;
-  font: 38px youshebiaotihei;
+  font: 38px myfont;
 }
 
 @media (max-width:700px) {
@@ -97,6 +103,6 @@
     height:150px;
   }
   .words{
-    font: 20px youshebiaotihei;
+    font: 20px myfont;
   }
 }
