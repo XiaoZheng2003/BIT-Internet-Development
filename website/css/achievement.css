@@ -1,8 +1,10 @@
-/*设置电视机内显示块的属性*/
+/*添加自定义字体*/
 @font-face {
   font-family: myfont;
   src: url(../font/YSBTH.TTF);
 }
+
+/*设置电视机内显示块的属性*/
 .table{
   margin-top: 5%;
   z-index: 2;
