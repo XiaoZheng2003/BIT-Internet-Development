@@ -1,23 +1,10 @@
-.logo {
-    margin: 10% 5% 0;
-    /* width: 20%; */
-    /* height: 20%; */
-    text-align: left;
-    float: left;
-}
-
 #logo_pic {
     width: 100%;
 }
 
 .text {
-    /* background: rgb(255, 255, 255); */
-    color: #ffffff;
-    float: left;
-    width: 50%;
-    height: 80%;
-    margin-top: 5%;
-    margin-right: 5%;
+    color: white;
+    margin:auto;
 }
 
 .text h1 {
