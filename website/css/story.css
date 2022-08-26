@@ -13,12 +13,16 @@ a:visited {
     color: black;
 }
 
-.wrapper {
+#wrapper {
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 25vw 50vw 15vw 10vw;
     grid-template-rows: 10vh 15vh 50vh 25vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     font-size: 30px;
     font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
@@ -40,35 +44,56 @@ nav a {
 }
 
 #option_area {
-    background: linear-gradient(35deg, #63bbd0, #126e82);
-
     grid-area: 3/2/4/3;
+    display: grid;
+    background-color: #777;
+    grid-template-rows: 1fr auto 1fr;
+    border-radius: 5%;
 }
 
 #dialog_area {
     text-indent: 2em;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
     cursor: pointer;
     grid-area: 4/1/5/5;
+    display: grid;
     overflow: hidden;
-    line-height: 20vh;
     background: url("../img/dialogbox.png");
     color: aliceblue;
     font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
-    font-size: x-large;
+    font-size: xx-large;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    padding: 3vh 3vw;
+    line-height: 50px;
+}
+
+#name_area {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2vw;
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    color: white;
+    position: absolute;
+    text-align: center;
+    height: 10vh;
+    /*就是这两个属性*/
+    width: 10vw;
+    /*这两个加上后显示会出问题*/
+    line-height: 10vh;
+    bottom: 25vh;
 }
 
 #function_area {
-    grid-area: 2/4/4/5;
+    grid-area: 1/4/4/5;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     background: url("../img/dialogbox.png");
 }
 
-#function_area>.button,
-#function_area>.button>a {
+button {
     margin: 0 auto;
     background-color: #ffffff00;
     /* Green background */
@@ -88,35 +113,58 @@ nav a {
     font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
 }
 
-#function_area>.button:hover,
-#function_area>.button>a:hover {
+button:hover {
     color: red;
 }
 
-.character {
+#character1 {
     position: absolute;
     left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 20%;
+}
+
+#character2 {
+    position: absolute;
+    opacity: 0;
+    right: 10%;
     bottom: 0;
     z-index: 1;
     width: 20%;
 }
 
-nav a:link {
-    color: white;
-}
-
-nav a:visited {
-    color: whitesmoke;
-}
-
-nav a:hover {
-    color: lightcyan;
-}
-
-nav a:active {
-    color: white;
-}
-
 div {
     z-index: 10;
+}
+
+#index-btn {
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 1vw 2vw;
+}
+
+#prompt_area {
+    z-index: -100000;
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    margin: 25vh 25vw;
+    background: #fff;
+    box-shadow: 1vh 1vw 1vw rgba(0, 0, 0, .5);
+    border-radius: .5vw;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    font-family: "zhuangbi", "SimSun";
+    font-size: 2vw;
+    color: black;
+}
+
+#prompt_area button {
+    margin: 0 5vw;
+    font-family: "zhuangbi", "SimSun";
+    font-size: 2vw;
 }
