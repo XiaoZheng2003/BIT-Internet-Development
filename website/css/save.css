@@ -1,16 +1,16 @@
 .title {
     /* background: rgb(255, 255, 255); */
     color: #ffffff;
-    float: left;
-    width: 95%;
-    height: 80%;
+    float: right;
+    width: 70%;
+    height: 100%;
     margin-top: 5%;
-    margin-right: 5%;
+    margin-right: 3%;
     font-family:  "华文行楷";
 }
 .logo1{
-   
-        height: 250px;
+        width :20%;
+        height: 500px;
         text-align: left;
         float: left;
     
@@ -46,6 +46,27 @@ a {
 }
 
 /* Add a background color on hover */
-.btn-group button:hover {
+.btn-group1 button{
+    float: left;
+    margin: auto;
+    background-color: #ffffff00;
+    /* Green background */
+    border: 0px;
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 15px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+    font-size: 250%;
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    
+}
+.btn-group1 button:hover {
     color: #9d0017;
 }
