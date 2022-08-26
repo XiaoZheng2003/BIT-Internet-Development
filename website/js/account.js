@@ -61,6 +61,13 @@ function reg(){
             }
             let achievement_data=JSON.stringify(achievement_tmp);
             user_data.achievement_data=achievement_data;
+            //注册存档信息
+            var save_tmp=new Array();
+            for(let i=0;i<6;i++){
+                save_tmp[i]=0;
+            }
+            let save_data=JSON.stringify(save_tmp);
+            user_data.save_data=save_data;
             localStorage.setItem("gv_"+un,JSON.stringify(user_data));
             alert("注册成功！你的用户名为"+user_data["un"]);
             document.getElementById('transfetBtn').click()
