@@ -70,9 +70,12 @@
 
 .note{
   background: url(../img/card.png) no-repeat;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
   text-align: center;
   width: 100%;
+  height: 100%;
 }
 
 .reminder{
