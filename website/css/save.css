@@ -1,14 +1,24 @@
-.save {
+.title {
     /* background: rgb(255, 255, 255); */
     color: #ffffff;
     float: left;
-    width: 50%;
+    width: 95%;
     height: 80%;
     margin-top: 5%;
     margin-right: 5%;
+    font-family:  "华文行楷";
+}
+.save{
+
 }
 a {
     text-decoration: none;
+}
+.head{
+     background-color :#9d0017
+}
+.body{
+    background-color :#6d6d6d81
 }
 
 .btn-group button {
