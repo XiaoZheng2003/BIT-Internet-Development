@@ -17,7 +17,7 @@ Date.prototype.Format = function (fmt) {
 
 function autosave(present,text)
 {
-    //存档函数，0为自动存档
+    //自动存档函数
     let un=localStorage['current-user'];
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data'])
@@ -30,17 +30,19 @@ function autosave(present,text)
 }
 
 function save(id){
+    //存档函数，id代表存档位置
     let un=localStorage['current-user'];
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data'])
     let auto_save=save_data[0].split('@');
-    auto_save[2]=new Date().Format("yyyy年MM月dd日   hh:mm:ss"); 
+    auto_save[2]=new Date().Format("yyyy年MM月dd日 hh:mm:ss"); 
     save_data[id]=auto_save[0]+'@'+auto_save[1]+'@'+auto_save[2]+'@'+auto_save[3];
     user_data['save_data']=JSON.stringify(save_data);
     localStorage["gv_"+un]=JSON.stringify(user_data);
 }
 
 function rtn(){
+    //返回上一页
     let un=localStorage['current-user'];
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data']);
