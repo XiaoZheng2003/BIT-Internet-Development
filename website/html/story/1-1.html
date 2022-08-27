@@ -28,15 +28,18 @@
         
         let present = getQueryString('p');
         if(!present) present=0;
-        let c=['你','你','你','你','你','你','你','你','你','你','你','你','你','你','']
+        let c=['你','你','你','你','你','你','你','你','你','你','你','你','你','你'];
 
         function run() {
             dialog(t,c,present);
-            save(present,0,t[parseInt((present)/2)]);
-            present++;
-            changeCharacter(present,3,'character2','../../images/character/steward.png',1)
-            if (present > 2*t.length) {
+            autosave(present,t[parseInt((present)/2)]);
+            if(present<2*t.length){
+                present++;
+            }
+            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+            if (present==2*t.length) {
                 document.getElementById('dialog_area').style.opacity = 0;
+                document.getElementById('name_area').style.opacity = 0;
                 document.getElementById('option_area').style.opacity = 1;
             }
         }
@@ -59,8 +62,8 @@
         <div id="dialog_area" onclick="run()">
         </div>
         <div id="function_area">
-            <button onclick=save()>存档</button>
-            <button onclick="location='../save.html'">读档</button>
+            <button onclick="location='../save.html'">存档</button>
+            <button onclick="location='../load.html'">读档</button>
             <button onclick="location='../../index.html'">主页</button>
         </div>
         <div id="prompt_area">

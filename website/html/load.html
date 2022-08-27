@@ -8,7 +8,7 @@
 
     <!--页面窗口设置，宽度为设备实际宽度；缩放比例为1 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>存档</title>
+    <title>读档</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
@@ -21,7 +21,7 @@
     <link type="text/css" rel="styleSheet" href="../css/save.css" />
 </head>
 
-<body onpageshow="showsave(0)">
+<body onpageshow="showsave(1)">
     <div class="container-fluid accordion">
         <div class="row">
             <div class="col-sm-3">
@@ -33,13 +33,13 @@
                 </div>
             </div>
             <div class="col-sm-9 title">
-                <h1>存档</h1>
+                <h1>读档</h1>
                 <div class="list-group">
                     <a class="list-group-item active">
                         <h4 class="list-group-item-heading">自动存档</h4>
                     </a>
 
-                    <a href="#" onclick="alert('自动存档不可用于手动存档！')" class="list-group-item save" id="save_0">
+                    <a href="#" class="list-group-item save" id="save_0">
                         <h4 class="list-group-item-heading">自动保存的时间</h4>
                         <p class="list-group-item-text">自动保存的游戏进度</p>
                     </a>
@@ -49,7 +49,7 @@
                     <a class="list-group-item active">
                         <h4 class="list-group-item-heading">存档1</h4>
                     </a>
-                    <a href="#" onclick="save(1);location.reload();" class="list-group-item save" id="save_1">
+                    <a href="#" class="list-group-item save" id="save_1">
                         <h4 class="list-group-item-heading">存档1时间</h4>
                         <p class="list-group-item-text">存档1内容</p>
                     </a>
@@ -59,7 +59,7 @@
                     <a class="list-group-item active">
                         <h4 class="list-group-item-heading">存档2</h4>
                     </a>
-                    <a href="#" onclick="save(2);location.reload();" class="list-group-item save" id="save_2">
+                    <a href="#" class="list-group-item save" id="save_2">
                         <h4 class="list-group-item-heading">存档2时间</h4>
                         <p class="list-group-item-text">存档2内容</p>
                     </a>
@@ -69,7 +69,7 @@
                     <a class="list-group-item active">
                         <h4 class="list-group-item-heading">存档3</h4>
                     </a>
-                    <a href="#" onclick="save(3);location.reload();" class="list-group-item save" id="save_3">
+                    <a href="#" class="list-group-item save" id="save_3">
                         <h4 class="list-group-item-heading">存档3时间</h4>
                         <p class="list-group-item-text">存档3内容</p>
                     </a>

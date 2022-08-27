@@ -15,7 +15,7 @@ Date.prototype.Format = function (fmt) {
             return fmt;
 }
 
-function save(present,id,text)
+function autosave(present,text)
 {
     //存档函数，0为自动存档
     let un=localStorage['current-user'];
@@ -23,23 +23,43 @@ function save(present,id,text)
     let save_data=JSON.parse(user_data['save_data'])
     let locate=location.href.split('/');
     locate=locate[locate.length-1].split('?');
-    let time = new Date().Format("yyyy-MM-dd hh:mm:ss"); 
-    save_data[id]=locate[0]+'@'+present+'@'+time+'@'+text;
+    let time = new Date().Format("yyyy年MM月dd日 hh:mm:ss"); 
+    save_data[0]=locate[0]+'@'+present+'@'+time+'@'+text;
     user_data['save_data']=JSON.stringify(save_data);
     localStorage["gv_"+un]=JSON.stringify(user_data);
 }
 
-function showsave(){
+function save(id){
+    let un=localStorage['current-user'];
+    let user_data=JSON.parse(localStorage.getItem("gv_"+un));
+    let save_data=JSON.parse(user_data['save_data'])
+    let auto_save=save_data[0].split('@');
+    auto_save[2]=new Date().Format("yyyy年MM月dd日   hh:mm:ss"); 
+    save_data[id]=auto_save[0]+'@'+auto_save[1]+'@'+auto_save[2]+'@'+auto_save[3];
+    user_data['save_data']=JSON.stringify(save_data);
+    localStorage["gv_"+un]=JSON.stringify(user_data);
+}
+
+function rtn(){
+    let un=localStorage['current-user'];
+    let user_data=JSON.parse(localStorage.getItem("gv_"+un));
+    let save_data=JSON.parse(user_data['save_data']);
+    let auto_save=save_data[0].split('@');
+    window.location.href="story/"+auto_save[0]+"?p="+auto_save[1];
+}
+
+function showsave(mode){
     //展示存档函数
     let un=localStorage['current-user'];
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data']);
-    
     for(let i=0;i<4;i++){
         if(save_data[i]){
             let now_save=save_data[i].split('@');
-            let object=document.getElementById("save_0");
-            object.href="story/"+now_save[0]+"?p="+now_save[1];
+            let object=document.getElementById("save_"+i);
+            if(mode){
+                object.href="story/"+now_save[0]+"?p="+now_save[1];
+            }
             object.children[0].innerHTML=now_save[2];
             object.children[1].innerHTML=now_save[3];
         }
