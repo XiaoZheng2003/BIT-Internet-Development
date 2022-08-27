@@ -63,7 +63,7 @@ function reg(){
             user_data.achievement_data=achievement_data;
             //注册存档信息
             var save_tmp=new Array();
-            for(let i=0;i<6;i++){
+            for(let i=0;i<4;i++){
                 save_tmp[i]=0;
             }
             let save_data=JSON.stringify(save_tmp);
