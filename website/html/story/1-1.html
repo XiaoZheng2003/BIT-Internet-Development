@@ -7,6 +7,7 @@
     <link rel="icon" href="../images/favicon.ico">
     <script src="../../js/change.js"></script>
     <script src="../../js/main.js"></script>
+    <script src="../../js/save.js"></script>
     <script>
         let t = [
             //'周围是有形的黑暗，它模糊、污脏、幽闭，让人感到窒息。',
@@ -25,12 +26,14 @@
             //'随着白光渐渐消散，眼前的世界清晰明亮起来，你看到了梦幻般的场景。',
         ]
         
-        let present = 0;
+        let present = getQueryString('p');
+        if(!present) present=0;
         let c=['你','你','你','你','你','你','你','你','你','你','你','你','你','你','']
 
         function run() {
             dialog(t,c,present);
-            present++
+            save(present,0,t[parseInt((present)/2)]);
+            present++;
             changeCharacter(present,3,'character2','../../images/character/steward.png',1)
             if (present > 2*t.length) {
                 document.getElementById('dialog_area').style.opacity = 0;
@@ -49,11 +52,11 @@
 
 </head>
 
-<body onpageshow="chapInit();run();g1init(1,'')" onclick="run()">
+<body onpageshow="chapInit();run();g1init(1,'')">
     <embed src="../../img/character/character_01.png" id="character1" width="45%">
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area">
+        <div id="dialog_area" onclick="run()">
         </div>
         <div id="function_area">
             <button onclick=save()>存档</button>

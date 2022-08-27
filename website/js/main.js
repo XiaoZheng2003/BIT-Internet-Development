@@ -63,31 +63,3 @@ function dialog(t, c, cnt) {
         }
     } else document.getElementById('name_area').style.opacity = 0;
 };
-
-function save() {
-    let obj = {
-        [document.title]: location.pathname
-    }
-    let arr = JSON.parse(localStorage['archive'])
-    console.log(arr)
-    arr.push(JSON.stringify(obj))
-    localStorage.setItem('archive', JSON.stringify(arr))
-    promtshow()
-}
-
-function load() {
-    let arr = JSON.parse(localStorage['archive'])
-    let opt = document.getElementById('storage_area')
-    for (let i = 1; i < arr.length; i++) {
-        let obj = JSON.parse(arr[i])
-        let name = Object.keys(obj)
-        let p = document.createElement('p')
-        opt.appendChild(p)
-        let a = document.createElement('a')
-        p.appendChild(a)
-        a.href = obj[name]
-        let text = document.createTextNode(name)
-        a.appendChild(text)
-    }
-    if (arr.length == 1) promtshow()
-}
