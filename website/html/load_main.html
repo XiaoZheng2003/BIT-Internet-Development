@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!--使用最新的IE进行渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--页面窗口设置，宽度为设备实际宽度；缩放比例为1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>读档</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/save.js"></script>
+    <!--你自己的样式文件 -->
+    <link rel="shortcut icon" href="../img/logo_small.jpg">
+    <link type="text/css" rel="styleSheet" href="../css/main.css" />
+    <link type="text/css" rel="styleSheet" href="../css/text.css" />
+    <link type="text/css" rel="styleSheet" href="../css/save.css" />
+</head>
+
+<body onpageshow="showsave(1)">
+    <div class="container-fluid accordion">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <img id="logo_pic" src="../img/logo.png">
+                </div>
+                <div class="return-btn">
+                    <button onclick="window.open('../index.html','_self');">返回</button>
+                </div>
+            </div>
+            <div class="col-sm-9 title">
+                <h1>读档</h1>
+                <div class="list-group">
+                    <a class="list-group-item active">
+                        <h4 class="list-group-item-heading">自动存档</h4>
+                    </a>
+
+                    <a href="#" class="list-group-item save" id="save_0">
+                        <h4 class="list-group-item-heading">自动保存的时间</h4>
+                        <p class="list-group-item-text">自动保存的游戏进度</p>
+                    </a>
+                </div>
+
+                <div class="list-group">
+                    <a class="list-group-item active">
+                        <h4 class="list-group-item-heading">存档1</h4>
+                    </a>
+                    <a href="#" class="list-group-item save" id="save_1">
+                        <h4 class="list-group-item-heading">存档1时间</h4>
+                        <p class="list-group-item-text">存档1内容</p>
+                    </a>
+                </div>
+
+                <div class="list-group">
+                    <a class="list-group-item active">
+                        <h4 class="list-group-item-heading">存档2</h4>
+                    </a>
+                    <a href="#" class="list-group-item save" id="save_2">
+                        <h4 class="list-group-item-heading">存档2时间</h4>
+                        <p class="list-group-item-text">存档2内容</p>
+                    </a>
+                </div>
+
+                <div class="list-group">
+                    <a class="list-group-item active">
+                        <h4 class="list-group-item-heading">存档3</h4>
+                    </a>
+                    <a href="#" class="list-group-item save" id="save_3">
+                        <h4 class="list-group-item-heading">存档3时间</h4>
+                        <p class="list-group-item-text">存档3内容</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

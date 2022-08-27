@@ -44,6 +44,9 @@ function rtn(){
     let un=localStorage['current-user'];
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data']);
+    if(!save_data[0]){
+        window.history.back();
+    }
     let auto_save=save_data[0].split('@');
     window.location.href="story/"+auto_save[0]+"?p="+auto_save[1];
 }
