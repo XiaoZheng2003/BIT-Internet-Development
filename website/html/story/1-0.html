@@ -1,33 +1,23 @@
 <html>
     <head>
-        <style>
-           
-            a{z-index:99;
-            position: absolute;
-            left: 1vw;
-            top:1vh;
-            background:none;
-            color: white;
-            text-decoration:none;
-            font-family:"zhuangbi","SimSun";
-            }
-            video{z-index: 1;}
-        </style>
-        <span style="font-size:18px;">
-        </span>
-        <span style="font-size:24px;"><meta http-equiv="refresh" content="10;URL=1-1.html"> </span>
-        <span style="font-size:24px;">
-        <style>
-            body{background-color: black;}
-            video:focus {
-            outline: -webkit-focus-ring-color auto 0px;
-}
-        </style>
+        <meta charset="UTF-8">
+        <title>1-0</title>
+        <link rel="shortcut icon" href="../../img/logo_small.jpg">
+        <link type="text/css" rel="styleSheet" href="../../css/main.css" />
+        <link type="text/css" rel="styleSheet" href="../../css/video.css" />
     </head>
-<body>
-<video muted width=100% autoplay>
-<source src="../../video/backgroundvideo1.mp4">
-当前浏览器不支持视频播放.</video>
-<a href="1-1.html">跳过</a>
-</body>
+    <body>
+        <div class="button">
+            <a href="1-1.html"><button>跳过</button></a>
+        </div>
+        <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
+            <source src="../../video/backgroundvideo1.mp4" type="video/mp4">
+        </video>
+        <script>
+            myVid=document.getElementById("video");
+            myVid.addEventListener('ended',function(){
+                window.location.href="1-1.html";
+            });
+        </script>
+    </body>
 </html>

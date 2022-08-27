@@ -1,31 +1,4 @@
-function init() {
-    let str = JSON.stringify({
-        ['EXAM']: 'exam'
-    })
-    let arr = []
-    arr.push(str)
-    localStorage['memory'] = JSON.stringify([0, 0, 0, 0, 0])
-    localStorage['archive'] = JSON.stringify(arr)
-    localStorage['achievement'] = JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-    localStorage['emo'] = '4'
-}
-
-function start() {
-    localStorage['memory'] = JSON.stringify([0, 0, 0, 0, 0])
-    localStorage['emo'] = '4'
-    if (localStorage['achievement'] == undefined) localStorage['achievement'] = JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-    if (localStorage['archive'] == undefined) {
-        let str = JSON.stringify({
-            ['EXAM']: 'exam'
-        })
-        let arr = [str]
-        localStorage['archive'] = JSON.stringify(arr)
-        console.log(localStorage)
-    }
-}
-
 function chapInit() {
-    sessionStorage.setItem('cnt', 1)
     document.getElementById('option_area').style.opacity = 0
     document.getElementById('dialog_area').style.opacity = 1
 }
@@ -63,3 +36,19 @@ function dialog(t, c, cnt) {
         }
     } else document.getElementById('name_area').style.opacity = 0;
 };
+
+//present赋给cnt,想改变的文本的索引赋给aim,背景图的url赋给url,如果后面要再变回来再用一次即可
+function changeBackground(cnt,aim,url) {
+    if(cnt/2==aim||(cnt-1)/2==aim){
+        document.getElementById('wrapper').style.background=`url(${url})`
+    }
+}
+
+//present赋给cnt,想改变的文本的索引赋给aim,想改变的区域赋给characterid,图片源赋给charactersrc，opa表示opacity
+function changeCharacter(cnt,aim,characterid,charactersrc,opa) {
+    if(cnt/2==aim||(cnt-1)/2==aim){
+        let cha=document.getElementById(characterid)
+        cha.src=charactersrc
+        cha.style.opacity=opa
+    }
+}
