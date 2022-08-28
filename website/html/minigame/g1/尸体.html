@@ -15,10 +15,15 @@
         let c=['','','','','','','','','']
 
         function run() {
-            dialog(t,c,present);
-            present++
-            if (present >2*t.length) {
+            dialog(t, c, present);
+            autosave(present, t[parseInt((present) / 2)]);
+            if (present < 2 * t.length) {
+                present++;
+            }
+            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+            if (present == 2 * t.length) {
                 document.getElementById('dialog_area').style.opacity = 0;
+                document.getElementById('name_area').style.opacity = 0;
                 document.getElementById('option_area').style.opacity = 1;
             }
         }
@@ -33,24 +38,16 @@
 
 <body onpageshow="chapInit();run()" onclick="run()">
     <video autoplay muted>
-        <source src="../../../video/chapter2_body.mp4"></source>
+        <source src="../../../video/chapter2body.mp4"></source>
     </video>
-    <div id="prompt_area">
-        <div></div>
-        <div id='prompt_text'>存档成功</div>
-        <div id='prompt_button'>
-            <button type="button" onclick='promtdown()'>确定</button>
-        </div>
-    </div>
-    <embed src="../../images/character/lead.png" id="character1" width="45%">
-    <embed src="../../images/character/lead.png" id="character2" width="45%">
+
     <div id="wrapper">
         <button id='jump' onclick="jump()">跳过剧情</button>
         <div id="dialog_area">
         </div>
         <div id='name_area'></div>
         <div id="function_area">
-            <button onclick="location='../save.html'">存档</button>
+            <button onclick="location='../../save.html'">存档</button>
             <button onclick="location='../../save.html'">读档</button>
             <button onclick="location='../../index.html'">主页</button>
         </div>

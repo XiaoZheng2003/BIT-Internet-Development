@@ -4,61 +4,57 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../../css/main.css">
-    <link rel="stylesheet" href="../../../css/master.css">
+    <link rel="stylesheet" href="../../../css/story.css">
+    <!-- <link rel="stylesheet" href="../../../css/master.css"> -->
     <style type="text/css">
         #wrapper {
             background: url("../../../images/storagebg.png");
         }
     </style>
-    <script src="./g1.js"></script>
+    <script src=".././.js"></script>
     <script>
-        function show() {
-            let arr = JSON.parse(localStorage['g1'])
-            let cnt = 0;
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i][0] != '-1') cnt += 1
-            }
-            if (cnt == 1) {
-                let MyDiv = document.getElementById("buttons");
-                let button = document.createElement("button");
-                button.setAttribute("type", "button");
-                button.setAttribute("onclick", "location='../../chapter1/1-1-g.html'");
-                button.innerHTML = "结束探索"
-                MyDiv.appendChild(button);
-            } else {
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i][0] != '-1') {
-                        let MyDiv = document.getElementById("buttons");
-                        let button = document.createElement("button");
-                        button.setAttribute("type", "button");
-                        button.setAttribute("onclick", `location='${arr[i][0]}'`);
-                        button.innerHTML = arr[i][1]
-                        MyDiv.appendChild(button);
+   
+        // function show() {
+        //     let arr = JSON.parse(localStorage['g1'])
+        //     let cnt = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i][0] != '-1') cnt += 1
+        //     }
+        //     if (cnt == 1) {
+        //         let MyDiv = document.getElementById("buttons");
+        //         let button = document.createElement("button");
+        //         button.setAttribute("type", "button");
+        //         button.setAttribute("onclick", "location='../../story/2-2.html'");
+        //         button.innerHTML = "结束探索"
+        //         MyDiv.appendChild(button);
+        //     } else {
+        //         console.alert("1");
+        //         for (let i = 0; i < arr.length; i++) {
+        //             if (arr[i][0] != '-1') {
+        //                 let MyDiv = document.getElementById("buttons");
+        //                 let button = document.createElement("button");
+        //                 button.setAttribute("type", "button");
+        //                 button.setAttribute("onclick", `location='${arr[i][0]}'`);
+        //                 button.innerHTML = arr[i][1]
+        //                 MyDiv.appendChild(button);
 
-                    }
-                }
-            }
-        }
+        //             }
+        //         }
+        //     }
+        // }
     </script>
-    <title>杂物间</title>
+    <title>调查红色房间</title>
 </head>
 
 <body onpageshow="show()">
     <div id="wrapper">
         <div id="prompt_area">
             <div></div>
-            <div id='prompt_text'>存档成功</div>
-            <div id='prompt_button'>
-                <button type="button" onclick='promtdown()'>确定</button>
-            </div>
+           
         </div>
-        <button id='jump' onclick="jump()">跳过剧情</button>
-        <button id='jumpex' onclick="jumpex('../../chapter1/1-1-g.html')">跳过探索</button>
         <div id="function_area">
-            <button onclick=save()>存档</button>
+            <button onclick="location='../../save.html'">存档</button>
             <button onclick="location='../../storage.html'">读档</button>
-            <button onclick="location='../../acheivement.html'">成就</button>
-            <button onclick="location='../../attribute.html'">记忆</button>
             <button onclick="location='../../../index.html'">主页</button>
         </div>
 
