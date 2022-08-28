@@ -43,6 +43,43 @@ nav a {
     margin: auto 5vw;
 }
 
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+#option_areas {
+
+    display: grid;
+    grid:
+        'header header header header header header'
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
+
+    background-color: #777;
+    grid-template-rows: 1fr auto 1fr;
+    border-radius: 5%;
+
+}
+
+
+
 #option_area {
     grid-area: 3/2/4/3;
     display: grid;
@@ -91,9 +128,11 @@ nav a {
     flex-grow: 1;
     flex-direction: column;
     background: url("../img/dialogbox.png");
+
 }
 
 button {
+
     margin: auto;
     background-color: #ffffff00;
     /* Green background */
@@ -111,6 +150,7 @@ button {
     /* Make the buttons appear below each other */
     font-size: 30px;
     font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    float: left;
 }
 
 button:hover {
@@ -170,10 +210,12 @@ div {
 }
 
 
-*{
-    margin: epx;padding : epx;
-    }
-    video{
+* {
+    margin: epx;
+    padding: epx;
+}
+
+video {
     position: fixed;
     right: epx;
     bottom: epx;
@@ -182,11 +224,15 @@ div {
     height: auto;
     width: auto;
     /*加滤镜*/
-    /*filter: blur(15px); //背景模糊设置*//*-webkit-filter: grayscale(100%);*/
+    /*filter: blur(15px); //背景模糊设置*/
+    /*-webkit-filter: grayscale(100%);*/
     /*filter:grayscale(10e%);//背景灰度设置*/
-    z-index :-1
-    }
-    source{
-    min-width: 180%;min-height: 108%;height: auto;width: auto;
-    }
-    
+    z-index: -1
+}
+
+source {
+    min-width: 180%;
+    min-height: 108%;
+    height: auto;
+    width: auto;
+}
