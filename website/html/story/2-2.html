@@ -10,7 +10,7 @@
   <script src="../../js/save.js"></script>
   <script>
     let t = [
-      '在这个页面内选择杀人还是监禁'
+      
     ]
 
     let present = getQueryString('p');
@@ -55,17 +55,18 @@
       <button onclick="location='../load.html'">读档</button>
       <button onclick="location='../../index.html'">主页</button>
     </div>
-    <div id="prompt_area">
+    <!-- <div id="prompt_area">
       <div></div>
       <div id='prompt_text'>存档成功</div>
       <div id='prompt_button'>
         <button type="button" onclick='promtdown()'>确定</button>
       </div>
-    </div>
+    </div> -->
     <div id="option_area">
       <div class="blank"></div>
       <div id="buttons">
-        <button onclick="window.open('../minigame/minigame2.html','_self')">开始挑战</button>
+        <button onclick="window.open('research/research.html','_self')">杀死他</button>
+        <button onclick="alert('暂未完善！');">监禁他</button>
       </div>
       <div class=" blank">
       </div>
