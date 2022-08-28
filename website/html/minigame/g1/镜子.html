@@ -37,15 +37,10 @@
 </head>
 
 <body onpageshow="chapInit();run()" onclick="run()">
-    <div id="prompt_area">
-        <div></div>
-        <div id='prompt_text'>存档成功</div>
-        <div id='prompt_button'>
-            <button type="button" onclick='promtdown()'>确定</button>
-        </div>
-    </div>
-    <embed src="../../images/character/lead.png" id="character1" width="45%">
-    <embed src="../../images/character/lead.png" id="character2" width="45%">
+    <video autoplay muted>
+        <source src="../../../video/chapter2_mirror.mp4"></source>
+    </video>
+   
     <div id="wrapper">
         <button id='jump' onclick="jump()">跳过剧情</button>
         <div id="dialog_area">
@@ -61,7 +56,7 @@
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button type="button" onclick="location='../g1/choice.html';g1init(0,'c1.html')">继续探索</button>
+                <button type="button" onclick="location='../g1/choice.html';g1init(0,'镜子.html')">继续探索</button>
             </div>
             <div class="blank"></div>
         </div>

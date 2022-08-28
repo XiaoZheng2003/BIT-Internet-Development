@@ -168,3 +168,25 @@ div {
     font-family: "zhuangbi", "SimSun";
     font-size: 2vw;
 }
+
+
+*{
+    margin: epx;padding : epx;
+    }
+    video{
+    position: fixed;
+    right: epx;
+    bottom: epx;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置*//*-webkit-filter: grayscale(100%);*/
+    /*filter:grayscale(10e%);//背景灰度设置*/
+    z-index :-1
+    }
+    source{
+    min-width: 180%;min-height: 108%;height: auto;width: auto;
+    }
+    
