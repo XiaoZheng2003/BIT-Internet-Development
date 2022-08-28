@@ -113,12 +113,12 @@ var changeClearMineNum = function (clearMineNum) {
       if (allNum === all.length) {
         clearInterval(stop)
         if (zz === 0) {
-          alert('你成功啦~！！晚上吃肉~~！')
+          alert('成功逃脱男性的纠缠')
           initializeGame(row, col, num)
 
 
-
-          //这里插入return判断是否成功
+          //跳到2-2
+          location.replace("../story/2-2.html")
         }
 
         initializeGame(row, col, num)
@@ -190,8 +190,9 @@ var clearMine = function (row, col, num) {
             var all = document.querySelectorAll('.col')
             var ff = []
             var allNum = 0
-            //游戏失败 回到游戏页面
-            location.replace("../story/2-1.html")
+            //游戏失败 跳到结局1【这个玩家就是逊了？？】页面
+            //暂时先回到游戏页面
+            location.replace("../story/ed1.html")
 
 
 
@@ -305,11 +306,12 @@ var Btn = function () {
     level[i].addEventListener('click', function (event) {
       var level = event.target.innerHTML
       if (level === '初级') {
-        row = 9
-        col = 9
-        num = 10
+        row = 7
+        col = 7
+        num = 4
         initializeGame(row, col, num)
-      } else if (level === '中级') {
+      }
+      /*else if (level === '中级') {
         row = 16
         col = 16
         num = 40
@@ -320,6 +322,7 @@ var Btn = function () {
         num = 99
         initializeGame(row, col, num)
       }
+      */
     })
   }
   var restart = document.querySelector('.restart')
@@ -332,9 +335,9 @@ Btn()
 // 6，初始数据
 // zz 用来确定是否已经点到地雷
 var zz = 0
-var row = 16
-var col = 16
-var num = 40
+var row = 7
+var col = 7
+var num = 5
 initializeGame(row, col, num)
 
 // 给一个坐标，把四周变成白色
