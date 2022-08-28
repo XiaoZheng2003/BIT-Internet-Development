@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../../css/story.css">
-    <link rel="shortcut icon" href="../../img/logo_small.jpg">
-    <script src="../../js/change.js"></script>
-    <script src="../../js/main.js"></script>
-    <script src="../../js/save.js"></script>
-    <script src="../../js/g1.js"></script>
+    <link rel="stylesheet" href="../../../css/story.css">
+    <link rel="shortcut icon" href="../../../img/logo_small.jpg">
+    <script src="../../../js/change.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/save.js"></script>
+    <script src="../../../js/g1.js"></script>
     <script>
-        let t = ['这是一间没有门的屋子，有一种诡异的方正感。地面、墙壁、物品上找不到一丝灰尘，也没有空气的流动。']
+        let t = ['调查员头顶有一扇从外面封死的小方窗。窗仅有人头大小，由铁质框架和整面玻璃组成，外侧贴了一层黄色窗纸。这扇窗户并不是无法打破的。']
         let present = 0;
         let c=['','','','','','','','','']
-
         function run() {
             dialog(t, c, present);
             autosave(present, t[parseInt((present) / 2)]);
@@ -37,7 +36,10 @@
 </head>
 
 <body onpageshow="chapInit();run()" onclick="run()">
-    
+    <video autoplay muted>
+        <source src="../../../video/chapter2window.mp4"></source>
+    </video>
+
     <div id="wrapper">
         <button id='jump' onclick="jump()">跳过剧情</button>
         <div id="dialog_area">
@@ -45,15 +47,18 @@
         </div>
         <div id='name_area'></div>
         <div id="function_area">
-            <button onclick="location='../save.html'">存档</button>
-            <button onclick="location='../save.html.html'">读档</button>
-            <button onclick="location='../index.html'">主页</button>
+            <button onclick="location='../../save.html'">存档</button>
+            <button onclick="location='../../load.html'">读档</button>
+            <button onclick="location='../../../index.html'">主页</button>
         </div>
+        <!-- <video autoplay muted>
+            <source src="../../../video/chapter2_windowback.mp4"></source>
+        </video> -->
 
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button type="button" onclick="location='../g1/choice.html';g1init(0,'环境.html')">继续探索</button>
+                <button type="button" onclick="location='./choice.html';g1init(0,'窗.html')">继续探索</button>
             </div>
             <div class="blank"></div>
         </div>
