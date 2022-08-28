@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../css/story.css">
+  <link rel="shortcut icon" href="../../img/logo_small.jpg">
+  <script src="../../js/change.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/save.js"></script>
+  <script>
+    let t = [
+      '这是一间极具视觉张力的房间：墙壁被粉刷成艳丽的红色，地面上铺着黑白折线条纹的地砖。邪气诡异的气氛之下，却又拥有极其精致的装饰性。',
+      '你身上没有任何血迹、伤口，没有任何关于这个房间的记忆。你对自己的认知陌生而模糊，甚至不记得自己的身份。',
+      '伴随着猫头鹰的叫声，一个形象粗糙的男性打开了门走进了房间，房门在他身后合上，严丝合缝地融合进墙面之中。他手中拿着一根钢管，朝你露出微笑',
+    ]
+
+    let present = getQueryString('p');
+    if (!present) present = 0;
+    let c = ['你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你'];
+
+    function run() {
+      dialog(t, c, present);
+      autosave(present, t[parseInt((present) / 2)]);
+      if (present < 2 * t.length) {
+        present++;
+      }
+      //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+      if (present == 2 * t.length) {
+        document.getElementById('dialog_area').style.opacity = 0;
+        document.getElementById('name_area').style.opacity = 0;
+        document.getElementById('option_area').style.opacity = 1;
+      }
+    }
+
+
+  </script>
+  <title>1-1</title>
+  <style type="text/css">
+    #wrapper {
+      background: url(../../img/background2.jpg);
+    }
+
+  </style>
+
+</head>
+
+<body onpageshow="chapInit();run();">
+  <embed src="../../img/character/character_01.png" id="character1" width="45%">
+  <div id="wrapper">
+    <div id='name_area'></div>
+    <div id="dialog_area" onclick="run()">
+    </div>
+    <div id="function_area">
+      <button onclick="location='../save.html'">存档</button>
+      <button onclick="location='../load.html'">读档</button>
+      <button onclick="location='../../index.html'">主页</button>
+    </div>
+    <div id="prompt_area">
+      <div></div>
+      <div id='prompt_text'>存档成功</div>
+      <div id='prompt_button'>
+        <button type="button" onclick='promtdown()'>确定</button>
+      </div>
+    </div>
+    <div id="option_area">
+      <div class="blank"></div>
+      <div id="buttons">
+        <button onclick="window.open('../minigame/minigame2.html')">开始挑战</button>
+      </div>
+      <div class=" blank">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
