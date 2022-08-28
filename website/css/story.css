@@ -44,40 +44,6 @@ nav a {
 }
 
 
-.item1 {
-    grid-area: header;
-}
-
-.item2 {
-    grid-area: menu;
-}
-
-.item3 {
-    grid-area: main;
-}
-
-.item4 {
-    grid-area: right;
-}
-
-.item5 {
-    grid-area: footer;
-}
-
-#option_areas {
-
-    display: grid;
-    grid:
-        'header header header header header header'
-        'menu main main main right right'
-        'menu footer footer footer footer footer';
-
-    background-color: #777;
-    grid-template-rows: 1fr auto 1fr;
-    border-radius: 5%;
-
-}
-
 
 
 #option_area {
