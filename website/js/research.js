@@ -6,6 +6,7 @@ function check(){
 }
 
 function init(){
+    let un=localStorage['current-user'];
     let research_tmp=new Array();
     for(let i=0;i<4;i++){
         research_tmp[i]=0;
