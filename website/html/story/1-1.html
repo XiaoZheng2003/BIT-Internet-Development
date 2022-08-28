@@ -25,32 +25,33 @@
             '你心底有一个声音：穿过它！',
             //'随着白光渐渐消散，眼前的世界清晰明亮起来，你看到了梦幻般的场景。',
         ]
-        
+
         let present = getQueryString('p');
-        if(!present) present=0;
-        let c=['你','你','你','你','你','你','你','你','你','你','你','你','你','你'];
+        if (!present) present = 0;
+        let c = ['你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你', '你'];
 
         function run() {
-            dialog(t,c,present);
-            autosave(present,t[parseInt((present)/2)]);
-            if(present<2*t.length){
+            dialog(t, c, present);
+            autosave(present, t[parseInt((present) / 2)]);
+            if (present < 2 * t.length) {
                 present++;
             }
             //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
-            if (present==2*t.length) {
+            if (present == 2 * t.length) {
                 document.getElementById('dialog_area').style.opacity = 0;
                 document.getElementById('name_area').style.opacity = 0;
                 document.getElementById('option_area').style.opacity = 1;
             }
         }
 
-        
+
     </script>
     <title>1-1</title>
     <style type="text/css">
         #wrapper {
             background: url(../../img/background2.jpg);
         }
+
     </style>
 
 </head>
@@ -82,4 +83,5 @@
         </div>
     </div>
 </body>
+
 </html>
