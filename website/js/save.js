@@ -22,9 +22,16 @@ function autosave(present,text)
     let user_data=JSON.parse(localStorage.getItem("gv_"+un));
     let save_data=JSON.parse(user_data['save_data'])
     let locate=location.href.split('/');
-    locate=locate[locate.length-1].split('?');
-    let time = new Date().Format("yyyy年MM月dd日 hh:mm:ss"); 
-    save_data[0]=locate[0]+'@'+present+'@'+time+'@'+text;
+    let time = new Date().Format("yyyy年MM月dd日 hh:mm:ss");
+    if(locate[locate.length-2]==='story'){
+        locate=locate[locate.length-1].split('?');
+        save_data[0]=locate[0]+'@'+present+'@'+time+'@'+text;
+    }
+    else{
+        let address=locate[locate.length-2]+'/';
+        locate=locate[locate.length-1].split('?');
+        save_data[0]=address+locate[0]+'@'+present+'@'+time+'@'+text;
+    }
     user_data['save_data']=JSON.stringify(save_data);
     localStorage["gv_"+un]=JSON.stringify(user_data);
 }
