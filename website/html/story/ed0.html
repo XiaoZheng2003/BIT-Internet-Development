@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ed0</title>
+        <link rel="shortcut icon" href="../../img/logo_small.jpg">
+        <link type="text/css" rel="styleSheet" href="../../css/main.css" />
+        <link type="text/css" rel="styleSheet" href="../../css/video.css" />
+    </head>
+    <body>
+        <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
+            <source src="../../video/ed0.mp4" type="video/mp4">
+        </video>
+        <script>
+            myVid=document.getElementById("video");
+            myVid.addEventListener('ended',function(){
+                window.location.href="../../index.html";
+            });
+        </script>
+    </body>
+</html>
