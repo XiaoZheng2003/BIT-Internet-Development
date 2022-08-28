@@ -1,6 +1,6 @@
 function chapInit() {
-    document.getElementById('option_area').style.opacity = 0
-    document.getElementById('dialog_area').style.opacity = 1
+    document.getElementById('option_area').style.display = "none";
+    document.getElementById('dialog_area').style.display = "";
 }
 
 function dialog(t, c, cnt) {
@@ -30,11 +30,11 @@ function dialog(t, c, cnt) {
     }
     if (name.innerHTML != undefined) {
         if (name.innerHTML != '') {
-            document.getElementById('name_area').style.opacity = 1;
+            document.getElementById('name_area').style.display = "";
         } else {
-            document.getElementById('name_area').style.opacity = 0;
+            document.getElementById('name_area').style.display = "none";
         }
-    } else document.getElementById('name_area').style.opacity = 0;
+    } else document.getElementById('name_area').style.display = "none";
 };
 
 //present赋给cnt,想改变的文本的索引赋给aim,背景图的url赋给url,如果后面要再变回来再用一次即可

@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../css/story.css">
     <link rel="shortcut icon" href="../../img/logo_small.jpg">
-    <script src="../../js/change.js"></script>
     <script src="../../js/main.js"></script>
     <script src="../../js/save.js"></script>
     <script>
@@ -38,9 +37,9 @@
             }
             //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
             if (present == 2 * t.length) {
-                document.getElementById('dialog_area').style.opacity = 0;
-                document.getElementById('name_area').style.opacity = 0;
-                document.getElementById('option_area').style.opacity = 1;
+                document.getElementById('dialog_area').style.display = "none";
+                document.getElementById('name_area').style.display = "none";
+                document.getElementById('option_area').style.display = "";
             }
         }
 
