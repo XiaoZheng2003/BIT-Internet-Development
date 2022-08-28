@@ -2,18 +2,16 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../../../css/story.css">
-    <link rel="stylesheet" href="../../../css/c2bg.css">
     <link rel="shortcut icon" href="../../../img/logo_small.jpg">
-    <script src="../../../js/change.js"></script>
     <script src="../../../js/main.js"></script>
     <script src="../../../js/save.js"></script>
-    <script src="../../../js/g1.js"></script>
     <script>
         let t = ['这是一间没有门的屋子，有一种诡异的方正感。地面、墙壁、物品上找不到一丝灰尘，也没有空气的流动。']
-        let present = 0;
-        let c=['','','','','','','','','']
+        let present = getQueryString('p');
+        if (!present) present = 0;
+        let c=['']
 
         function run() {
             dialog(t, c, present);
@@ -29,22 +27,21 @@
             }
         }
     </script>
-    <title>调查红色房间</title>
+    <title>调查</title>
     <style type="text/css">
         #wrapper {
-            background: url("#");
+            background: url("../../../img/chapter2background.png");
         }
     </style>
 </head>
 
-<body onpageshow="chapInit();run()" onclick="run()">
+<body onpageshow="chapInit();run()">
     
     <div id="wrapper">
-        <button id='jump' onclick="jump()">跳过剧情</button>
-        <div id="dialog_area">
-            
-        </div>
         <div id='name_area'></div>
+        <div id="dialog_area" onclick="run()">
+        </div>
+        
         <div id="function_area">
             <button onclick="location='../../save.html'">存档</button>
             <button onclick="location='../../load.html'">读档</button>
@@ -54,7 +51,7 @@
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button type="button" onclick="location='./choice.html';g1init(0,'环境.html')">继续探索</button>
+                <button onclick="window.open('research.html','_self')">继续探索</button>
             </div>
             <div class="blank"></div>
         </div>
