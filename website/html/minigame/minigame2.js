@@ -88,7 +88,7 @@ var writeHtml = function (map) {
       z[i].innerHTML = z[i].innerHTML + `
                 <li class="col y-${j} num-${m}" data-y="${j}">
                     <span>${m}</span>
-                    <img src="flag.svg" class="img-flag hide">
+                    <img src="../../img/flag.svg" class="img-flag hide">
                 </li>`
     }
   }
