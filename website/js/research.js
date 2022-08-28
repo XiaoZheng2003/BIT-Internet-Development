@@ -1,11 +1,13 @@
 function init(){
     let un=localStorage['current-user'];
-    let research_tmp=new Array();
-    for(let i=0;i<4;i++){
-        research_tmp[i]=0;
+    if(!sessionStorage['rsh_'+un]){
+        let research_tmp=new Array();
+        for(let i=0;i<4;i++){
+            research_tmp[i]=0;
+        }
+        let research_data=JSON.stringify(research_tmp);
+        sessionStorage.setItem('rsh_'+un,research_data);
     }
-    let research_data=JSON.stringify(research_tmp);
-    sessionStorage.setItem('rsh_'+un,research_data);
 }
 
 function mark(id){
