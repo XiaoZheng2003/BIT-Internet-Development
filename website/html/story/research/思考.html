@@ -9,12 +9,13 @@
     <script src="../../../js/save.js"></script>
     <script>
         let t = [
-            '这是一间没有门的屋子，有一种诡异的方正感。',
-            '地面、墙壁、物品上找不到一丝灰尘，也没有空气的流动。'
+            '你站在原地仔细思考，为什么一开始的面孔如此熟悉，为什么会最后会变成鲍勃的脸？',
+            '你的头开始痛了起来，哦！你惊奇的想起内个熟悉的脸，就是你自己！',
+            '剧烈的头痛袭来，你感到一阵眩晕……'
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
-        let c=['']
+        let c=['','','']
 
         function run() {
             dialog(t, c, present);
@@ -54,7 +55,7 @@
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button onclick="window.open('research.html','_self')">继续探索</button>
+                <button onclick="window.open('#','_self')">继续</button>
             </div>
             <div class="blank"></div>
         </div>
