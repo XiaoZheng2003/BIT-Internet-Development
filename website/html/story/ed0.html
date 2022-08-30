@@ -7,7 +7,8 @@
         <link type="text/css" rel="styleSheet" href="../../css/video.css" />
     </head>
     <body>
-        <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
+        <button id="continue" onclick="play()">点击查看</button>
+        <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true">
             <source src="../../video/ed0.mp4" type="video/mp4">
         </video>
         <script>
@@ -16,5 +17,6 @@
                 window.location.href="../../index.html";
             });
         </script>
+        <script src="../../js/video.js" type="text/javascript"></script>
     </body>
 </html>
