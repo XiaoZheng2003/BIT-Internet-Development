@@ -15,15 +15,15 @@
     
 </head>
 
-<body onpageshow="check();showrsh();">
+<body onpageshow="check(0);showrsh(0);">
     <div id="wrapper">
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button id="research0" onclick="mark(0);window.open('环境.html','_self')">观察周围</button>
-                <button id="research1" onclick="mark(1);window.open('窗.html','_self')">调查窗户</button>
-                <button id="research2" onclick="mark(2);window.open('镜子.html','_self')">调查镜子</button>
-                <button id="research3" onclick="mark(3);window.open('尸体.html','_self')">调查尸体</button>
+                <button id="research0" onclick="mark(0,0);window.open('尸体.html','_self')">调查尸体</button>
+                <button id="research1" onclick="mark(1,0);window.open('环境.html','_self')">观察周围</button>
+                <button id="research2" onclick="mark(2,0);window.open('窗.html','_self')">调查窗户</button>
+                <button id="research3" onclick="mark(3,0);window.open('镜子.html','_self')">调查镜子</button>
                 <button id="next" onclick="alert('暂未完善！')" style="display:none;">结束调查</button>
             </div>
             <div class="blank"></div>
