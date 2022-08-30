@@ -1,4 +1,4 @@
-var scene_num=[4,3];
+var scene_num=[4,3,5];
 
 function check(scene){
     let un=localStorage['current-user'];
