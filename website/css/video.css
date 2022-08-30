@@ -3,12 +3,7 @@ video {
     height: 100%;
 }
 
-button {
-    position: fixed;
-    right: 2%;
-    width: 8%;
-    height: 5%;
-    top: 2%;
+button{
     color: rgb(8, 8, 8);
     background-color: rgb(240, 225, 145);
     border-radius: 15px;
@@ -20,3 +15,20 @@ button {
 button:hover {
     color: red
 }
+
+#continue{
+    position: fixed;
+    left: 45%;
+    width: 10%;
+    height: 5%;
+    top: 50%;
+}
+
+#skip {
+    position: fixed;
+    right: 2%;
+    width: 8%;
+    height: 5%;
+    top: 2%;
+}
+
