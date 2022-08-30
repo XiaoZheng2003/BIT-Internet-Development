@@ -7,6 +7,9 @@ function dialog(t, c, cnt) {
     let dialog = document.getElementById("dialog_area")
     let name = document.getElementById("name_area")
     name.innerHTML = c
+    if(!c){
+        document.getElementById('name_area').style.display = "none";
+    }
     if (cnt % 2 == 0) {
         let text = t[cnt / 2]
         dialog.innerHTML = '';
