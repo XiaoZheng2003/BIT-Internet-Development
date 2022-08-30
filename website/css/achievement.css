@@ -4,12 +4,12 @@
   src: url(../font/YSBTH.TTF);
 }
 
-body{
-  overflow:hidden;
+body {
+  overflow: hidden;
 }
 
 /*设置电视机内显示块的属性*/
-.table{
+.table {
   margin-top: 5%;
   z-index: 2;
   width: 65%;
@@ -17,21 +17,21 @@ body{
   background-size: 100%;
 }
 
-.area{
+.area {
   margin-top: 12%;
-  width:90%;
+  width: 90%;
   height: 45%;
   overflow-y: scroll;
 }
 
-.content_1{
+.content_1 {
   padding-bottom: 5%;
   padding-left: 20%;
   width: 70%;
-  text-align :center;
+  text-align: center;
 }
 
-.logo{
+.logo {
   width: 100%;
 }
 
@@ -52,12 +52,12 @@ body{
 }
 
 /*设置所有奖杯的格式*/
-.trophy{
+.trophy {
   z-index: 100;
   width: 80%;
 }
 
-.note{
+.note {
   background: url(../img/card.png) no-repeat;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -66,14 +66,14 @@ body{
   height: 100%;
 }
 
-.reminder{
+.reminder {
   background: url(../img/paper.png) no-repeat;
   background-position: center;
   text-align: center;
   font: 25px 楷体;
 }
 
-.words{
+.words {
   padding-top: 5%;
   text-align: center;
   height: 70%;
@@ -81,10 +81,11 @@ body{
 }
 
 @media (max-width:700px) {
-  .area{
-    height:150px;
+  .area {
+    height: 150px;
   }
-  .words{
+
+  .words {
     font: 20px myfont;
   }
 }
