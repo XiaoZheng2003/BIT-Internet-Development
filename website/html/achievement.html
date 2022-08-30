@@ -4,9 +4,6 @@
 
   <meta charset="UTF-8">
   <title>成就</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
   <link rel="shortcut icon" href="../img/logo_small.jpg">
   <link type="text/css" rel="styleSheet" href="../css/main.css" />
   <link type="text/css" rel="styleSheet" href="../css/text.css" />
@@ -14,116 +11,67 @@
 </head>
 
 <body>
+  <div class="logo">
+    <img id="logo_pic" src="../img/logo.png">
+  </div>
+
   <!--<div class="bord">
     <img id="bord_pic" src="../img/bord.png">
   </div>
 -->
 
-  <div class="container-fluid accordion">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="logo">
-          <img id="logo_pic" src="../img/logo.png">
-        </div>
-        <div class="return-btn">
-          <button onclick="javascript:history.back(-1);">返回</button>
-        </div>
-      </div>
-      <div class="col-sm-9 table">
-        <div class="area">
-
-          <div class="row content_1">
-            <div class="col-sm-3">
-              <img id="trophy1" src="../img/trophy_locked.png">
-            </div>
-            <div class="col-sm-9">
-              <div>
-                <div class="note">
-                    <a class="btn words" data-bs-toggle="collapse" href="#collapseOne">
-                    成就一
-                    </a>
-                </div>
-                <div id="collapseOne" class="collapse reminder" data-bs-parent="#accordion">
-                    <div class="card-body">
-                    成就提示一
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row content_1">
-            <div class="col-sm-3">
-              <img id="trophy2" src="../img/trophy_locked.png">
-            </div>
-            <div class="col-sm-9">
-              <div class="accordion">
-                <div class="note">
-                    <a class="btn words" data-bs-toggle="collapse" href="#collapsetwo">
-                    成就二
-                    </a>
-                </div>
-                <div id="collapsetwo" class="collapse reminder" data-bs-parent="#accordion">
-                    <div class="card-body">
-                    成就提示二
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row content_1">
-            <div class="col-sm-3">
-              <img id="trophy3" src="../img/trophy_locked.png">
-            </div>
-            <div class="col-sm-9">
-              <div class="accordion">
-                <div class="note">
-                    <a class="btn words" data-bs-toggle="collapse" href="#collapsethree">
-                    成就三
-                    </a>
-                </div>
-                <div id="collapsethree" class="collapse reminder" data-bs-parent="#accordion">
-                    <div class="card-body">
-                    成就提示三
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row content_1">
-            <div class="col-sm-3">
-              <img id="trophy3" src="../img/trophy_locked.png">
-            </div>
-            <div class="col-sm-9">
-              <div class="accordion">
-                <div class="note">
-                    <a class="btn words" data-bs-toggle="collapse" href="#collapsefour">
-                    成就四
-                    </a>
-                </div>
-                <div id="collapsefour" class="collapse reminder" data-bs-parent="#accordion">
-                    <div class="card-body">
-                    成就提示四
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+  <img id="bord" src="../img/bord.png">
+  <div id="table1">
+    
+    <div class="line">
+      <img id="trophy1" src="../img/trophy.png">
+      <img class="trophy_locked" src="../img/trophy_locked.png">
+      <p class="p1">成就一</p>
+      <img class="card" src="../img/card.png">
+      <div class="note">
+        <p class="reminder">成就提示1</p>
+        <img class="paper" src="../img/paper.png">
       </div>
     </div>
-  </div>
-  <!--<div class="next-btn">
-    <img id="next-btn_pic" src="../img/right-button.png">
-  </div>
-  <div class="last-btn">
-    <img id="last-btn_pic" src="../img/left-button.png">
+
+    <div class="line">
+      <img id="trophy2" src="../img/trophy.png">
+      <img class="trophy_locked" src="../img/trophy_locked.png">
+      <p class="p1">成就二</p>
+      <img class="card" src="../img/card.png">
+      <div class="note">
+        <p class="reminder">成就提示2</p>
+        <img class="paper" src="../img/paper.png">
+      </div>
+    </div>
+
+    <div class="line">
+      <img id="trophy3" src="../img/trophy.png">
+      <img class="trophy_locked" src="../img/trophy_locked.png">
+      <p class="p1">成就三</p>
+      <img class="card" src="../img/card.png">
+      <div class="note">
+        <p class="reminder">成就提示3</p>
+        <img class="paper" src="../img/paper.png">
+      </div>
+    </div>
+
+    <div class="line">
+      <img id="trophy4" src="../img/trophy.png">
+      <img class="trophy_locked" src="../img/trophy_locked.png">
+      <p class="p1">成就四</p>
+      <img class="card" src="../img/card.png">
+      <div class="note">
+        <p class="reminder">成就提示4</p>
+        <img class="paper" src="../img/paper.png">
+      </div>
+    </div>
+
   </div>
 -->
-  
+<div class="btn-group">
+  <a onclick="javascript:history.back(-1);"><button>返回</button></a>
+</div>
 </body>
 <script type="text/javascript" src="../js/check.js"></script>
 </html>

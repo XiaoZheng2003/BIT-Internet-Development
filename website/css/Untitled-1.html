@@ -1,0 +1,654 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <title>中国气象数据网</title>-->
+        <title>气象科学专业知识服务系统</title>
+        <!--    <meta http-equiv="X-UA-Compatible" content="IE=8">-->
+        <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache" content="no-cache">
+
+<!--       <link rel="stylesheet" type="text/css" href="--><!--/static/css/style.css?ver=9.0">-->
+        <link rel="stylesheet" type="text/css" href="/mekb/static/kbWeb/css/style.css?ver=1.0">
+        <link rel="stylesheet" type="text/css" href="/mekb/static/css/pager.css">
+        <script src="/mekb/static/js/jquery-1.11.0.min.js"></script>
+        <script src="/mekb/static/js/grayscale.js"></script>
+        <script src="/mekb/static/kbWeb/dist/js/jquery.xdomainrequest.min.js"></script>
+        <!--<script src="/static/kbWeb/dist/js/respond.min.js"></script>-->
+<!--        <script src="--><!--/static/kbWeb/dist/js/swiper.min.js"></script>-->
+    <!--    <script src="/static/js/require.js"></script>
+        <script src="/static/js/require-config.js"></script>-->
+        <script type="text/javascript">
+            //js中请求url前需加ctx;yit
+            var ctx = '/mekb/';
+            //js中静态文件中需添加ctxSta
+            var ctxSta = '/mekb';
+            //接口域名
+//            var kbApiUrl = 'http://101.200.76.197:8190/kbweb';
+            var kbApiUrl = '/kbweb';
+
+        </script>
+    </head>
+    <body style="margin: 0 0;">
+                <div>
+            <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>气象科学专业知识服务系统</title>
+    <link href="/mekb/static/kbWeb/css/style-kb.css" rel="stylesheet" type="text/css"/>
+    <link href="/mekb/static/kbWeb/css/resetpage.css" rel="stylesheet" type="text/css"/>
+    <link href="/mekb/static/kbWeb/css/dataresource.css?ver=1.0" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/mekb/static/js/echarts/echarts4.min.js"></script>
+    <style>
+        p {text-indent: 0em;}
+        .common-titleLy{height:14px;position:relative;padding-top:28px;padding-bottom:20px;width:1250px;margin:0 auto 20px auto;border-bottom:1px solid #e4e7ee;}
+        .container-content3{width:1250px;height:auto;padding:0px 25px;position:relative;margin:auto;background-color:white;min-height:936px;overflow-y:auto;overflow-x:hidden;}
+        .common-title-ic-line {clear: both;width: 2px;height: 14px;background: #2997f1;margin-right: 10px;margin-left: 20px;}
+        .common-ti-di span{font-size:16px;}
+        .header-title{width:1250px;height:160px;margin-bottom:20px;background:url("/mekb/static/kbWeb/images/yearbooks/header.png") center 0px no-repeat;}
+
+        .container{width:1250px;}
+        .container .left-menu{float:left;width:200px;margin-bottom:20px;background-color:#f4f7f9;box-shadow:0px 0px 1px #e8e8e8;}
+        .container .left-menu .parent{width:200px;}
+        .container .left-menu .parent .label{width:172px;height:48px;padding: 0 0; padding-left:28px;background:url("/mekb/static/kbWeb/images/yearbooks/icon-cloudy.png") 8px center no-repeat;background-color:#e6e9ea;font:normal 16px/48px 'Microsoft YaHei';color:#333;}
+        .container .left-menu .parent .center{width:174px;padding:18px 13px;}
+        .container .left-menu .parent .center .menu{width:162px;height:18px;padding-left:9px;border-left:solid 3px #ececee;font:normal 14px/18px 'Microsoft YaHei';color:#999;cursor:pointer;}
+        .container .left-menu .parent .center .menu:hover{border-left:solid 3px #638ff9;color:#638ff9;}
+        .container .left-menu .parent .center .menu.active{border-left:solid 3px #638ff9;color:#638ff9;}
+        .container .left-menu .parent .center .left-border-14H{width:162px;height:14px;padding-left:9px;border-left:solid 3px #ececee;}
+
+        .container .right-center{float:left;width:1035px;margin-left:15px;margin-bottom:20px;}
+        .container .right-center.article{display:none;}
+        .container .right-center.article .condition{width:1005px;height:54px;padding:0px 15px;background-color:#fbfbfb;box-shadow:0px 1px 1px #dedede;border-radius:3px;}
+        .container .right-center.article .condition .year{float:left;width:1005px;height:24px;padding:15px 0px 15px 0px;}
+        .container .right-center.article .condition .year .label{float:left;width:30px;height:24px;font:normal 14px/24px 'Microsoft YaHei';color:#333;}
+        .container .right-center.article .condition .year .left-arrow{float:left;width:9px;height:24px;margin-left:15px;background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-l-blue.png") 0px center no-repeat;cursor:pointer;}
+        .container .right-center.article .condition .year .left-arrow.disabled{background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-l-gray.png") 0px center no-repeat;cursor:default;}
+        .container .right-center.article .condition .year .list-box{float:left;width:auto;min-width:80px;max-width:880px;height:24px;margin-left:15px;overflow-x:hidden;}
+        .container .right-center.article .condition .year .list-box .year-list{min-width:80px;height:24px;}
+        .container .right-center.article .condition .year .list-box .year-list div{float:left;width:60px;height:24px;margin-right:20px;border-radius:2px;background-color:#f4f7f9;font:normal 14px/24px 'Microsoft YaHei';color:#849aae;text-align:center;cursor:pointer;}
+        .container .right-center.article .condition .year .list-box .year-list div:hover{background-color:#feece8;color:#ffa627;}
+        .container .right-center.article .condition .year .list-box .year-list .active{background-color:#feece8;color:#ffa627;}
+        .container .right-center.article .condition .year .right-arrow{float:left;width:9px;height:24px;margin-right:17px;background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-r-blue.png") 0px center no-repeat;cursor:pointer;}
+        .container .right-center.article .condition .year .right-arrow.disabled{background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-r-gray.png") 0px center no-repeat;cursor:default;}
+        .container .right-center.article .article{width:979px;min-height:561px;padding:11px 28px;margin-top:15px;background-color:#fbfbfb;box-shadow:0px 1px 1px #dedede;border-radius:3px;}
+        .container .right-center.article .article .title-box{width:979px;height:78px;border-bottom:dashed 1px #ddd;}
+        .container .right-center.article .article .title-box #articleBoxTitle{width:979px;height:48px;font:normal 24px/48px 'Microsoft YaHei';color:#333;text-align:center;}
+        .container .right-center.article .article .title-box .subhead{width:258px;height:30px;margin:0px auto;font:normal 12px/30px 'Microsoft YaHei';color:#a0b0bf;}
+        .container .right-center.article .article .title-box .subhead div{float:left;width:auto;height:30px;}
+        .container .right-center.article .article .title-box .subhead .font-size{height:16px;margin:7px 0px 7px 6px;font:normal 12px/16px 'Microsoft YaHei';cursor:pointer;}
+        .container .right-center.article .article .title-box .subhead .font-size.active{background-color:#e6effe;color:#638ffa;border-radius:3px;}
+        .container .right-center.article .article .title-box .subhead #from{margin-left:12px;margin-right:6px;}
+        .container .right-center.article .article #articleBox{padding:22px 0px;}
+        .container .right-center.article .article #articleBox p{text-indent:2em;font:normal 16px/30px 'Microsoft YaHei';color:#555;padding:7px 0px;}
+        .container .right-center.article .article #articleBox .nodata{width:100%;height:200px;font:normal 16px/200px 'Microsoft YaHei';color:#555;text-align:center;}
+
+        .container .right-center.statistics{display:block;}
+        .container .right-center.statistics .condition{width:1005px;height:169px;padding:0px 15px;background-color:#fbfbfb;box-shadow:0px 1px 1px #dedede;border-radius:3px;}
+        .container .right-center.statistics .condition .year{float:left;width:1005px;height:24px;padding:15px 0px 15px 0px;border-bottom:dashed 1px #ddd;}
+        .container .right-center.statistics .condition .year .label{float:left;width:30px;height:24px;font:normal 14px/24px 'Microsoft YaHei';color:#333;}
+        .container .right-center.statistics .condition .year .left-arrow{float:left;width:9px;height:24px;margin-left:15px;background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-l-blue.png") 0px center no-repeat;cursor:pointer;}
+        .container .right-center.statistics .condition .year .left-arrow.disabled{background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-l-gray.png") 0px center no-repeat;cursor:default;}
+        .container .right-center.statistics .condition .year .list-box{float:left;width:auto;min-width:80px;max-width:880px;height:24px;margin-left:15px;overflow-x:hidden;}
+        .container .right-center.statistics .condition .year .list-box .year-list{float:left;width:1040px;min-width:80px;height:24px;margin-left:-160px;}
+        .container .right-center.statistics .condition .year .list-box .year-list div{float:left;width:60px;height:24px;margin-right:20px;border-radius:2px;background-color:#f4f7f9;font:normal 14px/24px 'Microsoft YaHei';color:#849aae;text-align:center;cursor:pointer;}
+        .container .right-center.statistics .condition .year .list-box .year-list div:hover{background-color:#feece8;color:#ffa627;}
+        .container .right-center.statistics .condition .year .list-box .year-list .active{background-color:#feece8;color:#ffa627;}
+        .container .right-center.statistics .condition .year .right-arrow{float:left;width:9px;height:24px;margin-right:17px;background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-r-blue.png") 0px center no-repeat;cursor:pointer;}
+        .container .right-center.statistics .condition .year .right-arrow.disabled{background:url("/mekb/static/kbWeb/images/yearbooks/icon-arrow-r-gray.png") 0px center no-repeat;cursor:default;}
+        .container .right-center.statistics .condition .city{float:left;width:1005px;height:100px;padding:10px 0px 4px 0px;margin:0px;}
+        .container .right-center.statistics .condition .city .label{float:left;padding: 0 0;width:30px;height:100px;font:normal 14px/24px 'Microsoft YaHei';color:#333;}
+        .container .right-center.statistics .condition .city .city-list{float:left;width:960px;height:100px;margin-left:15px;}
+        .container .right-center.statistics .condition .city .city-list div{float:left;width:60px;height:24px;margin-right:20px;margin-bottom:9px;border-radius:2px;background-color:#f4f7f9;font:normal 14px/24px 'Microsoft YaHei';color:#849aae;text-align:center;cursor:pointer;}
+        .container .right-center.statistics .condition .city .city-list div:hover{background-color:#e8eefe;color:#6490fb;}
+        .container .right-center.statistics .condition .city .city-list .active{background-color:#e8eefe;color:#6490fb;}
+        .container .right-center.statistics .visualize{width:1035px;height:403px;margin-top:18px;box-shadow:0px 1px 1px #dedede;border-radius:3px;}
+        .container .right-center.statistics .visualize #mapBoxTitle{width:1003px;height:31px;padding-left:32px;border-top:solid 1px #cca338;font:normal 16px/31px 'Microsoft YaHei';coler:#333;}
+        .container .right-center.statistics .visualize #mapBoxTitle.rain{background:url("/mekb/static/kbWeb/images/yearbooks/icon-rain.png") 10px center no-repeat #f3f7fa;}
+        .container .right-center.statistics .visualize #mapBox{width:1035px;height:372px;}
+        .container .right-center.statistics .excel{width:1035px;min-height:131px;margin-top:20px;border-radius:3px;}
+        .container .right-center.statistics .excel #tableBoxTitle{width:1003px;height:31px;padding-left:32px;border-top:solid 1px #cca338;font:normal 16px/31px 'Microsoft YaHei';coler:#333;}
+        .container .right-center.statistics .excel #tableBoxTitle.rain{background:url("/mekb/static/kbWeb/images/yearbooks/icon-rain.png") 10px center no-repeat :#f3f7fa;}
+        .container .right-center.statistics .excel #tableBox{width:1035px;min-height:100px;}
+        .container .right-center.statistics .excel #tableBox .unit{width:1035px;height:24px;padding-top:15px;font:normal 14px/24px 'Microsoft YaHei';color:#666;}
+        .container .right-center.statistics .excel #tableBox table{width:1035px;min-height:61px;box-shadow:0px 1px 1px #dedede;}
+        .container .right-center.statistics .excel #tableBox table th{width:78px;height:30px;border-left:solid 1px #f3f7f8;background-color:#e5e9ea;}
+        .container .right-center.statistics .excel #tableBox table th:first-child{width:87px;height:30px;border-left:solid 0px #f3f7f8;border-bottom:solid 1px #f3f7f8;background-color:#e5e9ea;}
+        .container .right-center.statistics .excel #tableBox table td{width:78px;height:30px;border-left:solid 1px #f3f7f8;border-top:solid 1px #f3f7f8;text-align:center;}
+        .container .right-center.statistics .excel #tableBox table td:first-child{width:87px;height:30px;border-left:solid 0px #f3f7f8;}
+    </style>
+    <link href="/mekb/static/kbWeb/css/datail.css" rel="stylesheet" type="text/css"/>
+</head>
+<body >
+
+<div>
+            <div  class="container-content3" style="padding:0px;">
+                <div class="header-title"></div>
+            <div class="container">
+                <div class="left-menu">
+                    <div class="parent article">
+                        <div class="label">全国整体气候</div>
+                        <div class="center">
+                            <div class="menu" id="basic">基本气候概况</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="major">主要气候事件及其灾害</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="farming">气候与农业</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="water">气候与水资源</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="energy">气候与能源</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="plant">气候与植被</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="air">气候与空气质量</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="traffic">气候与交通</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="health">气候与健康</div>
+                        </div>
+                    </div>
+                    <div class="parent statistics">
+                        <div class="label">主要城市气候要素统计</div>
+                        <div class="center">
+                            <div class="menu active" id="PRS">各月本站平均气压</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="TEM">各月平均气温</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="MAXTEM">各月极端最高气温</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="MINTEM">各月极端最低气温</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="PRE">各月降水量</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="SSH">各月日照时数</div>
+                            <div class="left-border-14H"></div>
+                            <div class="menu" id="RHU">各月相对湿度</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-center article">
+                    <div class="condition">
+                        <div class="year">
+                            <div class="label">年份</div>
+                            <div class="list-box">
+                                <div class="year-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="title-box">
+                            <div id="articleBoxTitle">基本气候概况</div>
+                            <div class="subhead">
+                                <div id="fontSize">字体大小:</div>
+                                <div class="font-size" id="small">小号</div>
+                                <div class="font-size active" id="middle">中号</div>
+                                <div class="font-size" id="big">大号</div>
+                                <div id="from">来源:</div>
+                                <div>中国气象年鉴</div>
+                            </div>
+                        </div>
+                        <div class="articleBox" id="articleBox"></div>
+                    </div>
+                </div>
+                <div class="right-center statistics">
+                    <div class="condition">
+                        <div class="year">
+                            <div class="label">年份</div>
+                                                            <div class="left-arrow"></div>
+                                                        <div class="list-box">
+                                <div class="year-list">
+                                                                            <div id="2009" >2009</div>
+                                                                            <div id="2010" >2010</div>
+                                                                            <div id="2011" >2011</div>
+                                                                            <div id="2012" >2012</div>
+                                                                            <div id="2013" >2013</div>
+                                                                            <div id="2014" >2014</div>
+                                                                            <div id="2015" >2015</div>
+                                                                            <div id="2016" >2016</div>
+                                                                            <div id="2017" >2017</div>
+                                                                            <div id="2018" >2018</div>
+                                                                            <div id="2019" >2019</div>
+                                                                            <div id="2020" >2020</div>
+                                                                            <div id="2021" class="active">2021</div>
+                                                                    </div>
+                            </div>
+                                                            <div class="right-arrow disabled"></div>
+                                                    </div>
+                        <div class="city">
+                            <div class="label">城市</div>
+                            <div class="city-list">
+                                                                    <div id="54511" class="active">北京</div>
+                                                                    <div id="54527" >天津</div>
+                                                                    <div id="53789" >石家庄</div>
+                                                                    <div id="53772" >太原</div>
+                                                                    <div id="53463" >呼和浩特</div>
+                                                                    <div id="54342" >沈阳</div>
+                                                                    <div id="54161" >长春</div>
+                                                                    <div id="50953" >哈尔滨</div>
+                                                                    <div id="58367" >上海</div>
+                                                                    <div id="58238" >南京</div>
+                                                                    <div id="58457" >杭州</div>
+                                                                    <div id="58321" >合肥</div>
+                                                                    <div id="58847" >福州</div>
+                                                                    <div id="58606" >南昌</div>
+                                                                    <div id="54823" >济南</div>
+                                                                    <div id="57083" >郑州</div>
+                                                                    <div id="57494" >武汉</div>
+                                                                    <div id="57687" >长沙</div>
+                                                                    <div id="59287" >广州</div>
+                                                                    <div id="59431" >南宁</div>
+                                                                    <div id="59758" >海口</div>
+                                                                    <div id="57516" >重庆</div>
+                                                                    <div id="56290" >成都</div>
+                                                                    <div id="57816" >贵阳</div>
+                                                                    <div id="56778" >昆明</div>
+                                                                    <div id="55493" >拉萨</div>
+                                                                    <div id="57042" >西安</div>
+                                                                    <div id="52884" >兰州</div>
+                                                                    <div id="52866" >西宁</div>
+                                                                    <div id="53614" >银川</div>
+                                                                    <div id="51377" >乌鲁木齐</div>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="visualize">
+                        <div id="mapBoxTitle"></div>
+                        <div class="mapBox" id="mapBox"></div>
+                    </div>
+                    <div class="excel">
+                        <div id="tableBoxTitle"></div>
+                        <div class="tableBox" id="tableBox">
+                            <div class='unit'></div>
+                            <table width="100%" cellspacing="0px" cellpadding="0px">
+                                <thead>
+                                    <tr>
+                                        <th>城市</th>
+                                        <th>一月</th>
+                                        <th>二月</th>
+                                        <th>三月</th>
+                                        <th>四月</th>
+                                        <th>五月</th>
+                                        <th>六月</th>
+                                        <th>七月</th>
+                                        <th>八月</th>
+                                        <th>九月</th>
+                                        <th>十月</th>
+                                        <th>十一月</th>
+                                        <th>十二月</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    var provinceList = {"54511":"\u5317\u4eac","54527":"\u5929\u6d25","53789":"\u77f3\u5bb6\u5e84","53772":"\u592a\u539f","53463":"\u547c\u548c\u6d69\u7279","54342":"\u6c88\u9633","54161":"\u957f\u6625","50953":"\u54c8\u5c14\u6ee8","58367":"\u4e0a\u6d77","58238":"\u5357\u4eac","58457":"\u676d\u5dde","58321":"\u5408\u80a5","58847":"\u798f\u5dde","58606":"\u5357\u660c","54823":"\u6d4e\u5357","57083":"\u90d1\u5dde","57494":"\u6b66\u6c49","57687":"\u957f\u6c99","59287":"\u5e7f\u5dde","59431":"\u5357\u5b81","59758":"\u6d77\u53e3","57516":"\u91cd\u5e86","56290":"\u6210\u90fd","57816":"\u8d35\u9633","56778":"\u6606\u660e","55493":"\u62c9\u8428","57042":"\u897f\u5b89","52884":"\u5170\u5dde","52866":"\u897f\u5b81","53614":"\u94f6\u5ddd","51377":"\u4e4c\u9c81\u6728\u9f50"};
+    var ayear = "";
+    var syear = "";
+    var stationList = "";
+    var cityList = "";
+    var adataType = "";
+    var adataTypeCHN = "";
+    var sdataType = "";
+    var sdataTypeCHN = "";
+    var mapType = "bar";
+    var unit = "";
+    var unitCHN = "";
+    $(function(){
+        syear = $(".right-center.statistics .year-list .active").attr("id");
+        $(".right-center.statistics .city-list .active").each(function(index){
+            if(index==0){
+                stationList += $(this).attr("id");
+                cityList += $(this).html();
+            } else {
+                stationList += ","+$(this).attr("id");
+                cityList += "、"+$(this).html();
+            }
+        });
+
+        $(".parent.article .menu").click(function(){
+            $(".right-center.article").css("display","block");
+            $(".right-center.statistics").css("display","none");
+            if(!$(this).hasClass("active")){
+                $(".menu").removeClass("active");
+                $(this).addClass("active");
+            }
+            adataType = $(this).attr("id");
+            adataTypeCHN = $(this).html();
+            getAllArticleYear();
+        })
+
+        $(".parent.statistics .menu").click(function(){
+            $(".right-center.article").css("display","none");
+            $(".right-center.statistics").css("display","block");
+            if(!$(this).hasClass("active")){
+                $(".menu").removeClass("active");
+                $(this).addClass("active");
+            }
+            sdataType = $(this).attr("id");
+            sdataTypeCHN = $(this).html();
+            mapType = (sdataType=="TEM"||sdataType=="MAXTEM"||sdataType=="MINTEM") ? "line" : "bar";
+
+            if(sdataType=="PRS"){//气压
+                unit = "hPa";
+                unitCHN = "气压";
+                $("#mapBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-air.png') 10px center no-repeat #f3f7fa");
+                $("#tableBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-air.png') 10px center no-repeat #f3f7fa");
+            } else if(sdataType=="TEM"||sdataType=="MAXTEM"||sdataType=="MINTEM"){//温度
+                unit = "℃";
+                unitCHN = "温度";
+                $("#mapBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-temp.png') 10px center no-repeat #f3f7fa");
+                $("#tableBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-temp.png') 10px center no-repeat #f3f7fa");
+            } else if(sdataType=="PRE"){//降水量
+                unit = "mm";
+                unitCHN = "降水量";
+                $("#mapBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-rain.png') 10px center no-repeat #f3f7fa");
+                $("#tableBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-rain.png') 10px center no-repeat #f3f7fa");
+            } else if(sdataType=="SSH"){//日照时数
+                unit = "h";
+                unitCHN = "日照时数";
+                $("#mapBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-sun.png') 10px center no-repeat #f3f7fa");
+                $("#tableBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-sun.png') 10px center no-repeat #f3f7fa");
+            } else if(sdataType=="RHU"){//平均相对湿度
+                unit = "%";
+                unitCHN = "湿度";
+                $("#mapBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-water_drop.png') 10px center no-repeat #f3f7fa");
+                $("#tableBoxTitle").css("background","url('/mekb/static/kbWeb/images/yearbooks/icon-water_drop.png') 10px center no-repeat #f3f7fa");
+            }
+
+            $("#mapBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+(mapType=="bar"?"柱状图":"折线图"));
+            $("#tableBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+"表");
+            getStatistics();
+        })
+
+        $(".right-center.statistics .left-arrow").click(function(){
+            if(!$(this).hasClass("disabled")){
+                var left = parseInt($(".right-center.statistics .year-list").css("margin-left").replace("px"));
+                moveFlash($(".right-center.statistics .year-list"), left, 10, 8);//标签、原来位置、移动像素、移动次数。
+                //$(".right-center.statistics .year-list").css("margin-left",(left+80)+"px");
+                if(left+80 >= 0){
+                    $(this).addClass("disabled");
+                    $(".right-center.statistics .right-arrow").removeClass("disabled");
+                }
+            }
+        });
+
+        $(".right-center.statistics .right-arrow").click(function(){
+            if(!$(this).hasClass("disabled")){
+                var left = parseInt($(".right-center.statistics .year-list").css("margin-left").replace("px"));
+                moveFlash($(".right-center.statistics .year-list"), left, -10, 8);//标签、原来位置、移动像素、移动次数。
+                //$(".right-center.statistics .year-list").css("margin-left",(left-80)+"px");
+                if(left-80 <= -160){
+                    $(this).addClass("disabled");
+                    $(".right-center.statistics .left-arrow").removeClass("disabled");
+                }
+            }
+        });
+
+        $(".right-center.statistics .year-list div").click(function(){
+            if(!$(this).hasClass("active")){
+                $(".right-center.statistics .year-list div").removeClass("active");
+                $(this).addClass("active");
+                syear = $(this).attr("id");
+                $("#mapBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+(mapType=="bar"?"柱状图":"折线图"));
+                $("#tableBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+"表");
+                getStatistics();
+            }
+        })
+
+        $(".right-center.statistics .city-list div").click(function(){
+            if(!$(this).hasClass("active")){
+                if($(".right-center.statistics .city-list .active").length<4){
+                    $(this).addClass("active");
+                } else {
+                    alert("至多同时选择4个城市");
+                }
+            } else {
+                if($(".right-center.statistics .city-list .active").length>1){
+                    $(this).removeClass("active");
+                } else {
+                    alert("至少需要选择一个城市");
+                }
+            }
+            stationList = "";
+            cityList = "";
+            $(".right-center.statistics .city-list .active").each(function(index){
+                if(index==0){
+                    stationList += $(this).attr("id");
+                    cityList += $(this).html();
+                } else {
+                    stationList += ","+$(this).attr("id");
+                    cityList += "、"+$(this).html();
+                }
+            });
+            $("#mapBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+(mapType=="bar"?"柱状图":"折线图"));
+            $("#tableBoxTitle").html(syear+"年"+cityList+sdataTypeCHN+"表");
+            getStatistics();
+        })
+
+        $(".font-size").click(function(){
+            if(!$(this).hasClass("active")){
+                $(".font-size").removeClass("active");
+                $(this).addClass("active");
+                if($(this).attr("id") == "small"){
+                    $("#articleBox p").css("font","normal 14px/30px 'Microsoft YaHei'");
+                } else if($(this).attr("id") == "middle"){
+                    $("#articleBox p").css("font","normal 16px/30px 'Microsoft YaHei'");
+                } else {
+                    $("#articleBox p").css("font","normal 18px/30px 'Microsoft YaHei'");
+                }
+            }
+        });
+
+        $(".parent.statistics .menu").eq(0).click();
+    })
+
+    //JS动画，标签位置移动。jqTag：$(标签)、left:原来位置、px:移动像素、times:移动次数。
+    function moveFlash(jqTag, left, px, times){
+        var t = setInterval(function(){
+            left = left + px;
+            times--;
+            jqTag.css("margin-left",left+"px");
+            clearInterval(t);
+            if(times > 0){
+                moveFlash(jqTag, left, px, times);
+            }
+        }, 10);
+    }
+
+    function getAllArticleYear(){
+        $.ajax({
+            url: "?r=site/ajaxGetYearBooksArticleAllYear",
+            type: "POST",
+            dataType: "json",
+            data: {
+                dataType: adataType
+            },
+            success: function (results) {
+                if(results == -1){
+                    $("#articleBox").html("<div class='nodata'>暂无数据<div>");
+                } else {
+                    $(".right-center.article .year-list").html("");
+                    $(".right-center.article .list-box .year-list").css("width",(results.length*80)+"px");
+                    if(results.length > 11) {
+                        $(".right-center.article .list-box .year-list").css("margin-left","-"+((results.length-11)*80)+"px");
+                        $(".right-center.article .list-box").before("<div class='left-arrow'></div>");
+                        $(".right-center.article .list-box").after("<div class='right-arrow disabled'></div>");
+                    }else{
+                        $(".right-center.article .list-box .year-list").css("margin-left","0px");
+                        $(".right-center.article .left-arrow").remove();
+                        $(".right-center.article .right-arrow").remove();
+                    }
+                    for(var i=0; i<results.length; i++){
+                        if(i == results.length-1){
+                            $(".right-center.article .year-list").append("<div id='"+results[i].year+"' class='active'>"+results[i].year+"</div>");
+                        }else{
+                            $(".right-center.article .year-list").append("<div id='"+results[i].year+"'>"+results[i].year+"</div>");
+                        }
+                    }
+                    ayear = $(".right-center.article .year-list .active").attr("id");
+                    initArticleYearListClick();
+                    getArticle();
+                }
+            }
+        });
+    }
+
+    function initArticleYearListClick(){
+        $(".right-center.article .left-arrow").click(function(){
+            if(!$(this).hasClass("disabled")){
+                var left = parseInt($(".right-center.article .year-list").css("margin-left").replace("px"));
+                moveFlash($(".right-center.article .year-list"), left, 10, 8);//标签、原来位置、移动像素、移动次数。
+                $(".right-center.article .year-list").css("margin-left",(left+80)+"px");
+                if(left+80 >= 0){
+                    $(this).addClass("disabled");
+                    $(".right-center.article .right-arrow").removeClass("disabled");
+                }
+            }
+        });
+
+        $(".right-center.article .right-arrow").click(function(){
+            if(!$(this).hasClass("disabled")){
+                var left = parseInt($(".right-center.article .year-list").css("margin-left").replace("px"));
+                moveFlash($(".right-center.article .year-list"), left, -10, 8);//标签、原来位置、移动像素、移动次数。
+                //$(".right-center.article .year-list").css("margin-left",(left-80)+"px");
+                if(left-80 <= -160){
+                    $(this).addClass("disabled");
+                    $(".right-center.article .left-arrow").removeClass("disabled");
+                }
+            }
+        });
+
+        $(".right-center.article .year-list div").click(function(){
+            if(!$(this).hasClass("active")){
+                $(".right-center.article .year-list div").removeClass("active");
+                $(this).addClass("active");
+                ayear = $(this).attr("id");
+                getArticle();
+            }
+        })
+    }
+
+    function getArticle(){
+        //alert(ayear + ", " + adataType + ", " + adataTypeCHN);
+        $("#articleBoxTitle").html(adataTypeCHN);
+        $.ajax({
+            url: "?r=site/ajaxGetYearBooksArticle",
+            type: "POST",
+            dataType: "json",
+            data: {
+                year: ayear,
+                dataType: adataType
+            },
+            success: function (results) {
+                if(results == -1){
+                    $("#articleBox").html("<div class='nodata'>暂无数据<div>");
+                } else {
+                    $("#articleBox").html(results.Content);
+                }
+            }
+        });
+    }
+
+    function getStatistics(){
+        $.ajax({
+            url: "?r=site/ajaxGetYearBooksStatistics",
+            type: "POST",
+            dataType: "json",
+            data: {
+                year: syear,
+                stationList: stationList,
+                dataType: sdataType
+            },
+            success: function (results) {
+                if(results == -1){
+
+                } else {
+                    getMyCharts(results);
+                    getMyTable(results);
+                    //alert(provinceList[results[0].station])
+                }
+            }
+        });
+    }
+
+    function getMyCharts(data){
+        var myChart = echarts.init(document.getElementById('mapBox'));
+        var series = new Array();
+        var legend = new Array();
+        var yAxis;
+        for(var i=0; i<data.length; i++){
+            var seriesData = data[i].value.concat([]);
+            for(var j=0;j<seriesData.length;j++){
+                if(seriesData[j]==0.0001){
+                    seriesData[j] = 0;
+                }
+            }
+            series[i] = {data:seriesData,name:provinceList[data[i].station],type:mapType,barMaxWidth:20,smooth:true};
+            legend[i] = provinceList[data[i].station]
+        }
+        if(sdataType=="PRS"){//气压
+            yAxis = {
+                name: unitCHN + '：' + unit,
+                type: 'value',
+                minInterval: 5,
+                min: function(value) {
+                    return parseInt(value.min/5)*5 - 5;
+                }
+            }
+        }else{
+            yAxis = {
+                name: unitCHN + '：' + unit,
+                type: 'value'
+            }
+        }
+        var option = {
+            legend:{top:10,right:20,data:legend},
+            grid:{left:'3%', right:'4%', bottom:'3%', containLabel:true},
+            tooltip: {trigger:'axis',axisPointer:{type:'cross',animation:false,label:{show:false}}},
+            xAxis: {
+                type: 'category',
+                data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+            },
+            yAxis: yAxis,
+            series: series
+        };
+        myChart.setOption(option,true);
+    }
+
+    function getMyTable(data){
+        $("#tableBox .unit").html("单位："+unit);
+        var html = "";
+        for(var i=0; i<data.length; i++){
+            var value = data[i].value;
+            for(var j=0;j<value.length;j++){
+                if(value[j]==0.0001){
+                    value[j]='--';
+                }
+            }
+            html += "<tr>" +
+                        "<td>"+provinceList[data[i].station]+"</td>" +
+                        "<td>"+value[0]+"</td><td>"+value[1]+"</td><td>"+value[2]+"</td><td>"+value[3]+"</td><td>"+value[4]+"</td><td>"+value[5]+"</td>" +
+                        "<td>"+value[6]+"</td><td>"+value[7]+"</td><td>"+value[8]+"</td><td>"+value[9]+"</td><td>"+value[10]+"</td><td>"+value[11]+"</td>" +
+                    "</tr>";
+        }
+        $("#tableBox tbody").html(html)
+    }
+</script>        </div>
+            </body>
+</html>

@@ -1,34 +1,16 @@
-/*添加自定义字体*/
-@font-face {
-  font-family: myfont;
-  src: url(../font/YSBTH.TTF);
-}
-
 /*设置电视机内显示块的属性*/
-.table{
-  margin-top: 5%;
-  z-index: 2;
-  width: 65%;
-  background: url(../img/bord.png) no-repeat;
-  background-size: 100%;
-}
-
-.area{
-  margin-top: 12%;
-  width:100%;
-  height: 50%;
+#table1{
+  position: absolute;left: 40%;top: 25%;z-index: 2;
+  width: 35%;
+  height: 45%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.content_1{
-  padding-bottom: 5%;
-  padding-left: 20%;
-  width: 70%;
-  text-align :center;
-}
-
-.logo{
-  width: 100%;
+/*设置电视机图片属性*/
+#bord {
+  position: absolute;left: 31%;top: 10%;
+  width: 60%;
 }
 
 #next-btn_pic {
@@ -48,61 +30,92 @@
 }
 
 .btn-group button {
-  position: absolute;bottom: 5%;left: 10%;
+  position: absolute;
+  bottom: 5%;
   width: 40%;
   /* Set a width if needed */
 }
 
 /*设置所有奖杯的格式*/
+.trophy_locked {
+position:absolute;left: 5%;z-index: 3;
+ width: 16%;
+ }
+
 #trophy1{
+  position: absolute;left: 5%;
   z-index: 100;
-  width: 80%;
+  width: 16%;
+  visibility: hidden;
 }
 
 #trophy2{
+  position: absolute;left: 5%;
   z-index: 100;
-  width: 80%;
+  width: 16%;
+  visibility: hidden;
 }
 
 #trophy3{
-  z-index: 100;
-  width: 80%;
+  position: absolute;left: 5%;
+ z-index: 100;
+  width: 16%;
+  visibility: hidden;
 }
 
 #trophy4{
-  z-index: 100;
-  width: 80%;
+  position: absolute;left: 5%;
+ z-index: 100;
+  width: 16%;
+  visibility: hidden;
 }
 
+.trophy{
+  position: relative;left: 5%;
+}
+
+
+/*设置成就字体下方框线卡片属性*/
+.card{
+  position: absolute;top: 5%;left: 30%;z-index: 20;
+  width: 65%;
+}
+
+/*设置成就字体属性*/
+.p1{
+  position:absolute;left: 55%;z-index: 50;
+  font: bold 38px youshebiaotihei;
+}
+
+
+/*设置单行成就格式*/
+.line{
+  position: relative;
+  padding-bottom: 32%;
+}	
+
+
+/*设置成就提示的格式*/
 .note{
-  background: url(../img/card.png) no-repeat;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  text-align: center;
+  position: absolute;top: 4%;left: 45%;z-index: 19;
   width: 100%;
-  height: 100%;
+  transition: transform 2s;
 }
-
+.line:hover .note{transform: translateY(90px);}
 .reminder{
-  background: url(../img/paper.png) no-repeat;
-  background-position: center;
-  text-align: center;
-  font: 25px 楷体;
+  position: absolute;left: 9%; z-index: 12;
+  font: bold 24px 微软雅黑;
 }
 
-.words{
-  padding-top: 5%;
-  text-align: center;
-  height: 70%;
-  font: 38px myfont;
+.paper{
+  position: absolute;top: 12px;z-index: 10;
+  width: 40%;
+  transition: transform 2s;
+}
+.logo {
+  text-align: left;
 }
 
-@media (max-width:700px) {
-  .area{
-    height:150px;
-  }
-  .words{
-    font: 20px myfont;
-  }
+#logo_pic {
+  width: 30%;
 }
