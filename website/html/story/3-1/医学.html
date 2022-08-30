@@ -7,14 +7,15 @@
     <link rel="shortcut icon" href="../../../img/logo_small.jpg">
     <script src="../../../js/main.js"></script>
     <script src="../../../js/save.js"></script>
+    <script src="../../../js/research.js"></script>
     <script>
         let t = [
-            '这是一间没有门的屋子，有一种诡异的方正感。',
-            '地面、墙壁、物品上找不到一丝灰尘，也没有空气的流动。'
+            '撬棍插入很深，但没有贯穿。除了头部的伤口，没有任何外伤。',
+            '尸体的手掌粗糙，指甲很短，指缝中有黑色灰尘。左手臂比右手臂更为粗壮。',
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
-        let c=['','']
+        let c=''
 
         function run() {
             dialog(t, c, present);
@@ -33,28 +34,26 @@
     <title>3-1 尸体</title>
     <style type="text/css">
         #wrapper {
-            background: url("../../../img/chapter2investigation.png");
+            background: url("../../../img/chapter2body_enlarge.png");
         }
     </style>
 </head>
 
 <body onpageshow="chapInit();run()">
-    
+
     <div id="wrapper">
         <div id='name_area'></div>
         <div id="dialog_area" onclick="run()">
         </div>
-        
         <div id="function_area">
             <button onclick="location='../../save.html'">存档</button>
             <button onclick="location='../../load.html'">读档</button>
             <button onclick="location='../../../index.html'">主页</button>
         </div>
-
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button onclick="window.open('research.html','_self')">继续探索</button>
+                <button onclick="window.open('research2.html','_self')">返回调查</button>
             </div>
             <div class="blank"></div>
         </div>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3-2 现实</title>
+        <link rel="shortcut icon" href="../../../img/logo_small.jpg">
+        <link type="text/css" rel="styleSheet" href="../../../css/main.css" />
+        <link type="text/css" rel="styleSheet" href="../../../css/video.css" />
+    </head>
+    <body>
+        <div class="button">
+            <a href="3-2-1.html"><button>跳过</button></a>
+        </div>
+        <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
+            <source src="../../../video/backgroundvideo1.mp4" type="video/mp4">
+        </video>
+        <script>
+            myVid=document.getElementById("video");
+            myVid.addEventListener('ended',function(){
+                window.location.href="3-2-1.html";
+            });
+        </script>
+    </body>
+</html>

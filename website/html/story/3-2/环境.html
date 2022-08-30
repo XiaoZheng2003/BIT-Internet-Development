@@ -7,14 +7,16 @@
     <link rel="shortcut icon" href="../../../img/logo_small.jpg">
     <script src="../../../js/main.js"></script>
     <script src="../../../js/save.js"></script>
+    <script src="../../../js/research.js"></script>
     <script>
         let t = [
-            '调查员头顶有一扇从外面封死的小方窗。',
-            '窗仅有人头大小，由铁质框架和整面玻璃组成，外侧贴了一层黄色窗纸。这扇窗户并不是无法打破的。'
+            '屋子里有两张破沙发，一台老旧电视机，一台收音机，几幅挂画和一扇门。',
+            '尸体和你自己所处位置的下方，有一个诡异的，难以理解的红色带着黑色十字的矩阵。',
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
-        let c=['','']
+        let c=''
+
         function run() {
             dialog(t, c, present);
             autosave(present, t[parseInt((present) / 2)]);
@@ -29,14 +31,15 @@
             }
         }
     </script>
-    <title>3-1 尸体</title>
+    <style type="text/css">
+        #wrapper {
+            background: url("../../../img/chapter3background.png");
+        }
+    </style>
+    <title>3-2 真实</title>
 </head>
 
 <body onpageshow="chapInit();run()">
-    <video autoplay muted>
-        <source src="../../../video/chapter2window.mp4"></source>
-    </video>
-
     <div id="wrapper">
         <div id='name_area'></div>
         <div id="dialog_area" onclick="run()">
@@ -46,11 +49,10 @@
             <button onclick="location='../../load.html'">读档</button>
             <button onclick="location='../../../index.html'">主页</button>
         </div>
-
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button onclick="window.open('research.html','_self')">继续探索</button>
+                <button onclick="window.open('research.html','_self')">继续调查</button>
             </div>
             <div class="blank"></div>
         </div>
