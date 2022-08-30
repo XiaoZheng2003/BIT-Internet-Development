@@ -12,7 +12,7 @@ a {
 
 .btn-group button,.return-btn button{
     margin: auto;
-    background-color: #ffffff00;
+    background-color: transparent;
     /* Green background */
     border: 0px;
     /* Green border */

@@ -4,88 +4,37 @@
   src: url(../font/YSBTH.TTF);
 }
 
-body {
-  overflow: hidden;
-}
-
-/*设置电视机内显示块的属性*/
-.table {
-  margin-top: 5%;
-  z-index: 2;
-  width: 65%;
-  background: url(../img/bord.png) no-repeat;
-  background-size: 100%;
-}
-
-.area {
-  margin-top: 12%;
-  width: 90%;
-  height: 45%;
-  overflow-y: scroll;
-}
-
-.content_1 {
-  padding-bottom: 5%;
-  padding-left: 20%;
-  width: 70%;
-  text-align: center;
-}
-
 .logo {
   width: 100%;
-}
-
-#next-btn_pic {
-  position: absolute;
-  right: 17%;
-  bottom: 15%;
-  height: 10%;
-  width: 10%;
-}
-
-#last-btn_pic {
-  position: absolute;
-  left: 53%;
-  bottom: 15%;
-  height: 10%;
-  width: 10%;
 }
 
 /*设置所有奖杯的格式*/
 .trophy {
   z-index: 100;
-  width: 80%;
+  width: 70%;
+}
+
+.card-body {
+  font: x-large "华文行楷", "方正舒体", "华文新魏", "楷体";
 }
 
 .note {
+  padding-top: 5%;
+  font: 38px myfont;
   background: url(../img/card.png) no-repeat;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   text-align: center;
-  width: 100%;
   height: 100%;
 }
 
-.reminder {
-  background: url(../img/paper.png) no-repeat;
-  background-position: center;
-  text-align: center;
-  font: 25px 楷体;
+.btn {
+  width:70%;
 }
 
-.words {
-  padding-top: 5%;
-  text-align: center;
-  height: 70%;
-  font: 38px myfont;
+#accordion {
+  color:#9d0017;
 }
 
-@media (max-width:700px) {
-  .area {
-    height: 150px;
-  }
-
-  .words {
-    font: 20px myfont;
-  }
+.card{
+  background-color: transparent;
 }
