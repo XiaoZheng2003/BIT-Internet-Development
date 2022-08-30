@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../css/story.css">
+    <link rel="shortcut icon" href="../../../img/logo_small.jpg">
+    <script src="../../../js/research.js"></script>
+    <title>3-1 尸体</title>
+    <style type="text/css">
+        #wrapper {
+            background: url("../../../img/chapter2body_enlarge.png");
+        }
+    </style>
+    
+</head>
+
+<body onpageshow="check(1);showrsh(1);">
+    <div id="wrapper">
+        <div id="option_area">
+            <div class="blank"></div>
+            <div id="buttons">
+                <button id="research0" onclick="mark(0,1);window.open('身份.html','_self')">调查尸体身份</button>
+                <button id="research1" onclick="mark(1,1);window.open('医学.html','_self')">勘察死亡原因</button>
+                <button id="research2" onclick="mark(2,1);window.open('联想.html','_self')">进行深入思考</button>
+                <button id="next" onclick="window.open('research.html','_self')" style="display:none;">结束调查尸体</button>
+            </div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>

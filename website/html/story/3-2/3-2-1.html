@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../css/story.css">
+    <link rel="shortcut icon" href="../../../img/logo_small.jpg">
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/save.js"></script>
+    <script>
+        let t = [
+            '你感受到身体的沉重、僵硬、不协调，仿佛这副身体不属于自己。',
+            '接着，你闻到了一种气味。这是一种排泄物混杂着血液和呕吐物的味道，是一种生物体的味道。只不过散发味道的是死亡的生物体，早已没有了生命的气息。',
+            '这股气味最终促使你睁开了眼睛。',
+            '你张开眼，看着这眼前熟悉的场景，你想起来了！这里是你的家，你刚刚应该正在家中休息！',
+            '但你好像不是你了，你循着气味看去，那是你的尸体！到底发生了什么？'
+        ]
+        let present = getQueryString('p');
+        if (!present) present = 0;
+        let c='';
+
+        function run() {
+            dialog(t, c, present);
+            autosave(present, t[parseInt((present) / 2)]);
+            if (present < 2 * t.length) {
+                present++;
+            }
+            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+            if (present == 2 * t.length) {
+                document.getElementById('dialog_area').style.display = "none";
+                document.getElementById('name_area').style.display = "none";
+                document.getElementById('option_area').style.display = "";
+            }
+        }
+    </script>
+    <title>3-2 现实</title>
+    <style type="text/css">
+        #wrapper {
+            background: url("../../../img/chapter3background.png");
+        }
+    </style>
+</head>
+
+<body onpageshow="chapInit();run()">
+    
+    <div id="wrapper">
+        <div id='name_area'></div>
+        <div id="dialog_area" onclick="run()">
+        </div>
+        
+        <div id="function_area">
+            <button onclick="location='../../save.html'">存档</button>
+            <button onclick="location='../../load.html'">读档</button>
+            <button onclick="location='../../../index.html'">主页</button>
+        </div>
+
+        <div id="option_area">
+            <div class="blank"></div>
+            <div id="buttons">
+                <button onclick="window.open('research.html','_self')">开始调查</button>
+            </div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>

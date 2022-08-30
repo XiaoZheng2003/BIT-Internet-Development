@@ -6,9 +6,12 @@ function chapInit() {
 function dialog(t, c, cnt) {
     let dialog = document.getElementById("dialog_area")
     let name = document.getElementById("name_area")
+    name.innerHTML = c
+    if(!c){
+        document.getElementById('name_area').style.display = "none";
+    }
     if (cnt % 2 == 0) {
         let text = t[cnt / 2]
-        name.innerHTML = c[cnt / 2]
         dialog.innerHTML = '';
         let timer = null;
         if (text == undefined) return
@@ -26,15 +29,7 @@ function dialog(t, c, cnt) {
         }, 30);
     } else {
         dialog.innerHTML = t[(cnt - 1) / 2]
-        name.innerHTML = c[(cnt - 1) / 2]
     }
-    if (name.innerHTML != undefined) {
-        if (name.innerHTML != '') {
-            document.getElementById('name_area').style.display = "";
-        } else {
-            document.getElementById('name_area').style.display = "none";
-        }
-    } else document.getElementById('name_area').style.display = "none";
 };
 
 //present赋给cnt,想改变的文本的索引赋给aim,背景图的url赋给url,如果后面要再变回来再用一次即可
