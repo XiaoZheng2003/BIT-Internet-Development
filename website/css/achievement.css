@@ -54,22 +54,7 @@
 }
 
 /*设置所有奖杯的格式*/
-#trophy1{
-  z-index: 100;
-  width: 80%;
-}
-
-#trophy2{
-  z-index: 100;
-  width: 80%;
-}
-
-#trophy3{
-  z-index: 100;
-  width: 80%;
-}
-
-#trophy4{
+.trophy{
   z-index: 100;
   width: 80%;
 }
