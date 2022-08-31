@@ -19,7 +19,7 @@
           let present = getQueryString('p');
           if (!present) present = 0;
           let c = '你';
-      
+          let f=1;
           function run() {
             dialog(t, c, present);
             autosave(present, t[parseInt((present) / 2)]);
@@ -36,7 +36,7 @@
       
           var player = new Audio("../../music/sound effect/猫头鹰.mp3");
         </script>
-  <title>4-1</title>
+  <title>落幕</title>
   <style type="text/css">
     #wrapper {
       background-image: url(../../img/background4.jpeg);
@@ -50,7 +50,7 @@
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
-    <div id="dialog_area" onclick="run();player.play()">
+    <div id="dialog_area" onclick="if(f){player.play()};run();f=0">
     </div>
     <div id="function_area">
       <button onclick="location='../save.html'">存档</button>
@@ -68,8 +68,8 @@
       <div class="blank"></div>
       <div id="buttons">
         <button onclick="window.open('./ed4.html')">接受</button>
-        <button onclick="window.open('结局五')">不接受</button>
-        <button onclick="window.open('结局五')">逃离这里</button>
+        <button onclick="window.open('ed5.html')">不接受</button>
+        <button onclick="window.open('ed5.html')">逃离这里</button>
       </div>
       <div class=" blank">
       </div>
