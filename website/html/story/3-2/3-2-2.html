@@ -33,6 +33,7 @@
                 document.getElementById('option_area').style.display = "";
             }
         }
+        var player = new Audio("../../../music/bgm/调查.mp3.mp3");
     </script>
     <title>3-2 现实</title>
     <style type="text/css">
@@ -46,7 +47,7 @@
     
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area" onclick="run()">
+        <div id="dialog_area" onclick="run();player.play()">
         </div>
         
         <div id="function_area">

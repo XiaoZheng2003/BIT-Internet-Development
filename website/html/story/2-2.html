@@ -30,7 +30,7 @@
       }
     }
 
-
+    var player = new Audio("../../music/bgm/第一幕.mp3.mp3");
   </script>
   <title>2-2
   </title>
@@ -47,7 +47,7 @@
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
-    <div id="dialog_area" onclick="run()">
+    <div id="dialog_area" onclick="run();player.play()">
     </div>
     <div id="function_area">
       <button onclick="location='../save.html'">存档</button>

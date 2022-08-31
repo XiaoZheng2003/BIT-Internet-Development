@@ -30,6 +30,7 @@
                 document.getElementById('option_area').style.display = "";
             }
         }
+        var player = new Audio("../../../music/bgm/调查.mp3.mp3");
     </script>
     <style type="text/css">
         #wrapper {
@@ -40,9 +41,10 @@
 </head>
 
 <body onpageshow="chapInit();run()">
+    <audio autoplay src="../../../music/bgm/调查.mp3"></audio>
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area" onclick="run()">
+        <div id="dialog_area" onclick="run();player.play()">
         </div>
         <div id="function_area">
             <button onclick="location='../../save.html'">存档</button>
