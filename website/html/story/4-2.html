@@ -8,14 +8,14 @@
     </head>
     <body>
         <button id="continue" onclick="play()"></button>
-        <button id="skip" onclick="window.open('4-2.html','_self')">跳过</button>
+        <button id="skip" onclick="window.open('4-3.html','_self')">跳过</button>
         <video  id="video" x-webkit-airplay="true" webkit-playsinline="true">
             <source src="../../video/chapter4contact.mp4" type="video/mp4">
         </video>
         <script>
             myVid=document.getElementById("video");
             myVid.addEventListener('ended',function(){
-                window.location.href="4-2.html";
+                window.location.href="4-3.html";
             });
             myVid.addEventListener('play', function () { //播放开始执行的函数
                 document.getElementById("continue").style.display="none";
