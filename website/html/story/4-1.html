@@ -4,10 +4,13 @@
 <head>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/story.css">
         <link rel="shortcut icon" href="../../img/logo_small.jpg">
         <script src="../../js/main.js"></script>
         <script src="../../js/save.js"></script>
+        <script src="../../js/achievement.js" type="text/javascript"></script>
+        <script src="../../bootstrap/js/jquery-3.6.0.min.js" type="text/javascript"></script>
         <script>
           let t = [
             '一阵熟悉的眩晕闪过，你回到了原来的房间，你发觉体内鲍勃的意识在逐渐减弱，你掌控了他的身体。',
@@ -35,7 +38,7 @@
       
         //   var player = new Audio("../../music/bgm/第一幕.mp3");
         </script>
-  <title>落幕</title>
+  <title>4-1 落幕</title>
   <style type="text/css">
     #wrapper {
       background-image: url(../../img/background4.jpeg);
@@ -45,7 +48,11 @@
 
 </head>
 
-<body onpageshow="chapInit();run();">
+<body onpageshow="chapInit();run();achieve(3)">
+  <div id="achv_bar" style="display: none;">
+    <img src="../../img/trophy.png" id="achv_pic">
+     获得成就：脱离梦境
+  </div>
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
