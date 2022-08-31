@@ -7,11 +7,18 @@
   <link rel="shortcut icon" href="../../img/logo_small.jpg">
   <script src="../../js/main.js"></script>
   <script src="../../js/save.js"></script>
+
   <script>
+
     let t = [
-      '这是一间极具视觉张力的房间：墙壁被粉刷成艳丽的红色，地面上铺着黑白折线条纹的地砖。邪气诡异的气氛之下，却又拥有极其精致的装饰性。',
+      '醒来后，你发现你处在一间极具视觉张力的房间',
+      '墙壁贴着带有诡异图案的壁纸，地面上铺着米色的地砖。',
+      '邪气诡异的气氛之下，却又拥有极其精致的装饰性。天花板上有着格子形状的白色灯光在不断闪烁。',
+      '远处有着一具骨架，猩红的血迹从地板蔓延到墙上，形成诡异的笑脸形状。',
       '你身上没有任何血迹、伤口，没有任何关于这个房间的记忆。你对自己的认知陌生而模糊，甚至不记得自己的身份。',
-      '伴随着猫头鹰的叫声，一个形象粗糙的男性打开了门走进了房间，房门在他身后合上，严丝合缝地融合进墙面之中。他手中拿着一根钢管，朝你露出微笑',
+      '这时你听见了一个男人诡异的笑声，直觉驱使着你朝声音的来源走去，一阵强光后，你眼前的场景发生变化。',
+      ' 一个形象粗糙的男性出现在了你的视野中，房门在你身后合上，严丝合缝地融合进墙面之中。他手中拿着一根撬棍，朝你露出微笑。',
+
     ]
 
     let present = getQueryString('p');
@@ -31,9 +38,7 @@
         document.getElementById('option_area').style.display = "";
       }
     }
-
-    var player = new Audio("../../music/bgm/第一幕.mp3");
-  </script>
+    var player = new Audio("../../music/bgm/第一幕.mp3"); </script>
   <title>不速之客</title>
   <style type="text/css">
     #wrapper {
@@ -65,7 +70,7 @@
     <div id="option_area">
       <div class="blank"></div>
       <div id="buttons">
-        <button onclick="window.open('../minigame/战斗小游戏/index.html','_self')">开始挑战</button>
+        <button onclick="window.open('./2-3.html')">开始挑战</button>
       </div>
       <div class=" blank">
       </div>
