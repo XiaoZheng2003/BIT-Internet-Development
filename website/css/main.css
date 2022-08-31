@@ -34,3 +34,21 @@ a {
 .btn-group button:hover,.return-btn button:hover {
     color: #9d0017;
 }
+
+#achv_bar{
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    height: 10%;
+    width: 30%;
+    background-color: black;
+    color:white;
+    font-size: 150%;
+    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    text-align: center;
+}
+
+#achv_pic{
+    height:100%;
+    vertical-align: middle;
+}
