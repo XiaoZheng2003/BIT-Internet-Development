@@ -56,7 +56,7 @@ function reg(){
             user_data["pw"]=pw1;
             //注册成就信息
             var achievement_tmp=new Array();
-            for(let i=0;i<6;i++){
+            for(let i=0;i<7;i++){
                 achievement_tmp[i]=0;
             }
             let achievement_data=JSON.stringify(achievement_tmp);
@@ -99,6 +99,7 @@ function log(){
 
 function reset(){
     localStorage.clear();
+    sessionStorage.clear();
     alert("登录信息重置成功！请重新登录！");
     window.open('html/account.html','_self');
 }

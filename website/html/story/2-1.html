@@ -32,12 +32,12 @@
       }
     }
 
-
+    var player = new Audio("../../music/bgm/第一幕.mp3");
   </script>
-  <title>2-1</title>
+  <title>2-1 不速之客</title>
   <style type="text/css">
     #wrapper {
-      background: url(../../img/background3.jpg);
+      background-image: url(../../img/background3.jpg);
     }
 
   </style>
@@ -48,7 +48,7 @@
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
-    <div id="dialog_area" onclick="run()">
+    <div id="dialog_area" onclick="run();player.play()">
     </div>
     <div id="function_area">
       <button onclick="location='../save.html'">存档</button>
@@ -65,7 +65,7 @@
     <div id="option_area">
       <div class="blank"></div>
       <div id="buttons">
-        <button onclick="window.open('../minigame/minigame2.html','_self')">开始挑战</button>
+        <button onclick="window.open('../minigame/战斗小游戏/index.html','_self')">开始挑战</button>
       </div>
       <div class=" blank">
       </div>

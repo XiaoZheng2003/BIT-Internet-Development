@@ -14,7 +14,11 @@
             '与之前不同的是，在听到那个声音的刹那，你立刻明白了，这是一种超越语言的思维形式。',
             '这种思维跟地球上的思维形式完全不同。这种思维既立体又及时，不模糊、不虚幻、不抽象，它是有温度和湿度的，当你接收到这种思维的时候，你可以毫不费力地立刻明白它的含义。',
             '你看到猫头鹰在夜色里低空飞行，震动的翅膀逐渐变为鲍勃挥舞的手臂，你看到那些被他杀死的人的尸体，猩红色的血液在地面上流淌，一种陌生但又熟悉的喜悦冲进了你的胸腔。',
-            '你仿佛回到了胎儿时期，被温暖的羊水所包围。你和鲍勃正在融为一体。'
+            '你仿佛回到了胎儿时期，被温暖的羊水所包围。你和鲍勃正在融为一体。',
+            '通过矩阵的信息，你得知了之前发生的事情。',
+            '原来这个凶残的连环杀人犯正在进行一次神秘的精神转移术，想要占有你的身体从而逃脱警察的追捕。',
+            '但这个倒霉蛋却被你在梦境中伤害了，你能感到他的精神在不断地侵占你的精神，',
+            '一场争夺肉体的对决，就此展开！'
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
@@ -33,6 +37,7 @@
                 document.getElementById('option_area').style.display = "";
             }
         }
+        var player = new Audio("../../../music/bgm/调查.mp3");
     </script>
     <title>3-2 现实</title>
     <style type="text/css">
@@ -46,7 +51,7 @@
     
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area" onclick="run()">
+        <div id="dialog_area" onclick="run();player.play()">
         </div>
         
         <div id="function_area">
@@ -58,7 +63,7 @@
         <div id="option_area">
             <div class="blank"></div>
             <div id="buttons">
-                <button onclick="window.open('#','_self')">继续</button>
+                <button onclick="window.open('#','_self')">开始挑战</button>
             </div>
             <div class="blank"></div>
         </div>
