@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/story.css">
+        <link rel="shortcut icon" href="../../img/logo_small.jpg">
+        <script src="../../js/main.js"></script>
+        <script src="../../js/save.js"></script>
+        <script>
+          let t = [
+          
+            '你是否要接受7272493的邀请呢？'
+          ]
+      
+          let present = getQueryString('p');
+          if (!present) present = 0;
+          let c = '你';
+          let f=1;
+          function run() {
+            dialog(t, c, present);
+            autosave(present, t[parseInt((present) / 2)]);
+            if (present < 2 * t.length) {
+              present++;
+            }
+            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+            if (present == 2 * t.length) {
+              document.getElementById('dialog_area').style.display = "none";
+              document.getElementById('name_area').style.display = "none";
+              document.getElementById('option_area').style.display = "";
+            }
+          }
+        </script>
+  <title>4-1 落幕</title>
+  <style type="text/css">
+    #wrapper {
+      background-image: url(../../img/background4.jpeg);
+    }
+
+  </style>
+
+</head>
+
+<body onpageshow="chapInit();run();">
+  <embed src="../../img/character/character_01.png" id="character1" width="45%">
+  <div id="wrapper">
+    <div id='name_area'></div>
+    <div id="dialog_area" onclick="run();">
+    </div>
+    <div id="function_area">
+      <button onclick="location='../save.html'">存档</button>
+      <button onclick="location='../load.html'">读档</button>
+      <button onclick="location='../../index.html'">主页</button>
+    </div>
+    <!-- <div id="prompt_area">
+      <div></div>
+      <div id='prompt_text'>存档成功</div>
+      <div id='prompt_button'>
+        <button type="button" onclick='promtdown()'>确定</button>
+      </div>
+    </div> -->
+    <div id="option_area">
+      <div class="blank"></div>
+      <div id="buttons">
+        <button onclick="window.open('ed4.html','_self')">接受</button>
+        <button onclick="window.open('ed5.html','_self')">不接受</button>
+        <button onclick="window.open('ed5.html','_self')">逃离这里</button>
+      </div>
+      <div class=" blank">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
