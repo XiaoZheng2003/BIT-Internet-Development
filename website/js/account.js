@@ -99,6 +99,7 @@ function log(){
 
 function reset(){
     localStorage.clear();
+    sessionStorage.clear();
     alert("登录信息重置成功！请重新登录！");
     window.open('html/account.html','_self');
 }
