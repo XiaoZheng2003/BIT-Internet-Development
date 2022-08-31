@@ -18,17 +18,17 @@
 	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/viewmodel.js"></script>
 	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/controller.js"></script>
 	<script>
-		function restart(){
+		function restart() {
 			document.querySelector('#newGameConfirm').click()
 			console.log('suc')
 		}
 
 		function check() {
-			
+
 			let cur = document.getElementsByClassName('currLevel')[0]
 			let text = cur.innerHTML
 			if (text[text.length - 5] == '5') {
-				window.open('../story/2-1.html','_self')
+				window.open('../story/2-1.html', '_self')
 			}
 		}
 	</script>
@@ -48,6 +48,7 @@
 		.comments_warp {
 			margin-top: 650px;
 		}
+
 	</style>
 
 </head>
