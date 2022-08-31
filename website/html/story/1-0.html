@@ -1,36 +1,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>1-0 幽暗梦境</title>
+        <title>1-0</title>
         <link rel="shortcut icon" href="../../img/logo_small.jpg">
         <link type="text/css" rel="styleSheet" href="../../css/main.css" />
         <link type="text/css" rel="styleSheet" href="../../css/video.css" />
         
     </head>
     <body>
-<<<<<<< HEAD
         
         <audio autoplay src="../../music/bgm/导入.mp3"></audio>
         <div class="button">
             <a href="1-1.html"><button>跳过</button></a>
         </div>
-        <!-- <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
-=======
-        <button id="continue" onclick="play()"></button>
-        <button id="skip" onclick="window.open('1-1.html','_self')">跳过</button>
         <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="muted">
->>>>>>> fb373c31b4cc6222b42c0f66363761d61c6d9b0e
             <source src="../../video/backgroundvideo1.mp4" type="video/mp4">
-        </video> -->
+        </video>
         <script>
             myVid=document.getElementById("video");
             myVid.addEventListener('ended',function(){
                 window.location.href="1-1.html";
             });
-            myVid.addEventListener('play', function () { //播放开始执行的函数
-                document.getElementById("continue").style.display="none";
-            });
         </script>
-        <script src="../../js/video.js" type="text/javascript"></script>
     </body>
 </html>
