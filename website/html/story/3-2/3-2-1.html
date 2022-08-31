@@ -18,7 +18,7 @@
         let present = getQueryString('p');
         if (!present) present = 0;
         let c='';
-
+        let flag=0;
         function run() {
             dialog(t, c, present);
             autosave(present, t[parseInt((present) / 2)]);
@@ -31,22 +31,28 @@
                 document.getElementById('name_area').style.display = "none";
                 document.getElementById('option_area').style.display = "";
             }
+            var Myvideo = document.querySelector("video");
+            if (present == 5){
+                Myvideo.play();
+            }
+            Myvideo.addEventListener('play', function () { //播放开始执行的函数
+                flag=1;
+            });
+            if (present>5&&!flag){
+                document.getElementById('wrapper').style.backgroundImage = "url('../../../img/chapter3background.png')";
+            }
         }
-        var player = new Audio("../../../music/bgm/调查.mp3");
     </script>
     <title>3-2 现实</title>
-    <style type="text/css">
-        #wrapper {
-            background: url("../../../img/chapter3background.png");
-        }
-    </style>
 </head>
 
 <body onpageshow="chapInit();run();">
-    
+    <video>
+        <source src="../../../video/chapter3start.mp4"></source>
+    </video>
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area" onclick="run();player.play()">
+        <div id="dialog_area" onclick="run()">
         </div>
         
         <div id="function_area">
