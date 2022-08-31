@@ -10,10 +10,8 @@
         <script src="../../js/save.js"></script>
         <script>
           let t = [
-            '当你再次触摸矩阵，试图跟他联络时，电视中发出来奇怪的白噪音，就像是有猫头鹰在里头呜鸣一样。',
-            '白噪音之后，是几分钟的雪花黑屏，随着诡异的音乐缓缓响起，屏幕上出现了一个外形可爱的少女。',
-            '「您好，先生。初次见面，我是7272493，您可以叫我人类名玛莎。您现在的状况是错误使用精神转移术之后的结果，如您所见到的一样，施法者已经死翘翘了呢~要回到自己的身体可能会有一些麻烦，尚未有夺舍死者之躯，不产生遗留问题的实咳咳、案例出现。」',
-            '在简单介绍完情况之后，7272493 向你发出邀请，希望调查员能前往伊斯人的星球，协助他们。你是否要接受7272493的邀请呢？'
+            '在简单介绍完情况之后，7272493 向你发出邀请，希望调查员能前往伊斯人的星球，协助他们。',
+            '你是否要接受7272493的邀请呢？'
           ]
       
           let present = getQueryString('p');
@@ -33,8 +31,6 @@
               document.getElementById('option_area').style.display = "";
             }
           }
-      
-          var player = new Audio("../../music/sound effect/猫头鹰.mp3");
         </script>
   <title>落幕</title>
   <style type="text/css">
@@ -50,7 +46,7 @@
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
-    <div id="dialog_area" onclick="if(f){player.play()};run();f=0">
+    <div id="dialog_area" onclick="run();">
     </div>
     <div id="function_area">
       <button onclick="location='../save.html'">存档</button>
