@@ -2,7 +2,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
     <link rel="shortcut icon" href="../../img/logo_small.jpg">
     <link type="text/css" rel="styleSheet" href="../../css/main.css" />
     <link type="text/css" rel="styleSheet" href="../../css/menu.css" />
@@ -10,11 +14,34 @@
 
 <body>
     <div class="logo"><img id="logo_pic" src="../../img/logo.png"></div>
-    <div class="btn-group">
-        <a href="intro.html"><button>游戏说明</button></a>
-        <a href="../../intro/index.html"><button>小组介绍</button></a>
-        <a href="video.html"><button>宣传视频</button></a>
-        <a href="../../index.html"><button>返回</button></a>
+    <div class="menu">
+        <button data-bs-toggle="modal" data-bs-target="#myModal">游戏说明</button>
+        <button onclick="window.location.href='../../intro/index.html'">小组介绍</button>
+        <button onclick="window.location.href='video.html'">宣传视频</button>
+        <button onclick="window.location.href='../../index.html'">返回</button>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">警告</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- 模态框内容 -->
+                <div class="modal-body">
+                    该部分可能<strong>涉及剧透</strong>，请确认是否继续？
+                </div>
+
+                <!-- 模态框底部 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-danger" onclick="window.location.href='intro.html'">确定</button>
+                </div>
+
+            </div>
+        </div>
     </div>
 </body>
 

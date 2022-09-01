@@ -15,16 +15,14 @@ a {
     text-decoration: none;
 }
 
-.btn-group button,.return-btn button{
-    margin: auto;
+.menu button,.return-btn button{
+    margin: 5px 0;
     background-color: transparent;
     /* Green background */
     border: 0px;
     /* Green border */
     color: white;
     /* White text */
-    padding: 15px 24px;
-    /* Some padding */
     cursor: pointer;
     /* Pointer/hand icon */
     width: 100%;
@@ -36,7 +34,7 @@ a {
 }
 
 /* Add a background color on hover */
-.btn-group button:hover,.return-btn button:hover {
+.menu button:hover,.return-btn button:hover {
     color: #9d0017;
 }
 
