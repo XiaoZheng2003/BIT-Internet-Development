@@ -203,10 +203,10 @@ var bj = {
       alert(message);
     }
     if (winner == 1) {
-      window.location.href = "../../story/ed1.html"
+      window.location.href = "../../story/2-4.html"
     }
     else if (winner == 0) {
-      window.location.href = "../../story/2-1.html"
+      window.location.href = "../../story/2-3.html"
     }
 
 

@@ -176,19 +176,13 @@ div {
     font-size: 2vw;
 }
 
-
-* {
-    margin: epx;
-    padding: epx;
-}
-
 video {
     position: fixed;
-    right: epx;
-    bottom: epx;
     width: 100%;
     height: 100%;
     object-fit: fill;
+    top:0;
+    left:0;
     /*加滤镜*/
     /*filter: blur(15px); //背景模糊设置*/
     /*-webkit-filter: grayscale(100%);*/
