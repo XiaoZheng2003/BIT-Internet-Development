@@ -149,15 +149,15 @@ var bj = {
     if (bj.player.length == 2 && bj.dealer.length == 2) {
       // TIE
       if (bj.ppoints == 21 && bj.dpoints == 21) {
-        winner = 2; message = "It's a tie with Blackjacks";
+        winner = 2; message = "双方以二十一点达成平局！";
       }
       // PLAYER WINS
       if (winner == null && bj.ppoints == 21) {
-        winner = 0; message = "Player wins with a Blackjack!";
+        winner = 0; message = "玩家以二十一点获胜！";
       }
       // DEALER WINS
       if (winner == null && bj.dpoints == 21) {
-        winner = 1; message = "Dealer wins with a Blackjack!";
+        winner = 1; message = "庄家以二十一点获胜!";
       }
     }
 
@@ -165,12 +165,12 @@ var bj = {
     if (winner == null) {
       // PLAYER GONE BUST
       if (bj.ppoints > 21) {
-        winner = 1; message = "Player has gone bust - Dealer wins!";
+        winner = 1; message = "玩家手牌超过二十一点 —— 庄家获胜！";
 
       }
       // DEALER GONE BUST
       if (bj.dpoints > 21) {
-        winner = 0; message = "Dealer has gone bust - Player wins!";
+        winner = 0; message = "庄家手牌超过二十一点 —— 玩家获胜！";
       }
     }
 
@@ -178,15 +178,15 @@ var bj = {
     if (winner == null && bj.dstand && bj.pstand) {
       // DEALER HAS MORE POINTS
       if (bj.dpoints > bj.ppoints) {
-        winner = 1; message = "Dealer wins with " + bj.dpoints + " points!";
+        winner = 1; message = "庄家以" + bj.dpoints + "分获胜！";
       }
       // PLAYER HAS MORE POINTS
       else if (bj.dpoints < bj.ppoints) {
-        winner = 0; message = "Player wins with " + bj.ppoints + " points!";
+        winner = 0; message = "玩家以" + bj.ppoints + "分获胜！";
       }
       // TIE
       else {
-        winner = 2; message = "It's a tie.";
+        winner = 2; message = "双方达成平局！";
       }
     }
 

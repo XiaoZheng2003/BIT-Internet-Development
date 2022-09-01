@@ -2,57 +2,62 @@
 <html>
 
 <head>
-  <title>Javascript Blackjack</title>
+  <meta charset="utf-8">
+  <title>21点小游戏</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="blackjack.css">
   <script src="blackjack.js"></script>
-
 </head>
 
 <body>
-  <!-- (A) DEALER -->
-  <!-- (A1) DEALER'S POINTS + STAND -->
-  <div id="deal-data">
-    <span id="deal-stand">STAND</span>
-    Dealer's Hand - <span id="deal-points">?</span>
+  <div class="container">
+    <!-- (A) DEALER -->
+    <!-- (A1) DEALER'S POINTS + STAND -->
+    <div id="deal-data">
+      <span id="deal-stand">STAND</span>
+      庄家 - <span id="deal-points">?</span>
+    </div>
+
+    <!-- (A2) DEALER'S CARDS -->
+    <div id="deal-cards"></div>
+
+    <!-- (B) PLAYER -->
+    <!-- (B1) PLAYERS'S POINTS + STAND -->
+    <div id="play-data">
+      <span id="play-stand">STAND</span>
+      你 - <span id="play-points">0</span>
+    </div>
+
+    <!-- (B2) PLAYER'S CARDS -->
+    <div id="play-cards"></div>
+
+    <!-- (C) PLAY! -->
+    <div id="play-control">
+      <!-- (C1) START -->
+      <button type="button" class="btn btn-primary" id="playc-start">开始游戏</button>
+
+      <!-- (C2) HIT OR STAND -->
+      <button type="button" class="btn btn-primary" id="playc-hit">要牌</button>
+      <button type="button" class="btn btn-primary" id="playc-stand">停止</button>
+    </div>
+    <p><strong>这是一个21点小游戏。</strong></p>
+    <p>你可以通过点击《要牌》按钮要牌，《停止》按钮来停止要牌。</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#rule">游戏规则</button>
+    <div id="rule" class="collapse">
+      <p>2、3、4、5、6、7、8、9：按照牌面的实际大小计算分值。</p>
+      <p>10、J、Q、K：均以10点为计算分值。</p>
+      <p>A：11点和1点两种记分方式。
+      <p>如果A计算为11点，手中牌的总分值大于21点；A则计算为1点。</p>
+      <p>例如：（A，9）=10点 / 20点，A可以算作11点和1点。</p>
+      <p>（A，7，J）=18点，A只能算作1点。</p>
+      <p>21点：玩家手中牌的点数相加，总数为21点。</p>
+      <p>玩家根据自己牌面分值，选择是否要牌。选择要牌，系统随机发送一张明牌。玩家根据自己牌面分值，选择不再要牌。</p>
+      <p>玩家牌面分值总和超过21点，输掉本局。</p>
+      <p>如果玩家没有超过或者等于21点，将跟庄家进行对比。越接近于21点的一方赢。</p>
+    </div>
   </div>
-
-  <!-- (A2) DEALER'S CARDS -->
-  <div id="deal-cards"></div>
-
-  <!-- (B) PLAYER -->
-  <!-- (B1) PLAYERS'S POINTS + STAND -->
-  <div id="play-data">
-    <span id="play-stand">STAND</span>
-    Your Hand - <span id="play-points">0</span>
-  </div>
-
-  <!-- (B2) PLAYER'S CARDS -->
-  <div id="play-cards"></div>
-
-  <!-- (C) PLAY! -->
-  <div id="play-control">
-    <!-- (C1) START -->
-    <input type="button" id="playc-start" value="Play!" />
-
-    <!-- (C2) HIT OR STAND -->
-    <input type="button" id="playc-hit" value="Hit" />
-    <input type="button" id="playc-stand" value="Stand" />
-  </div>
-  <div></div>
-  <div><strong>这是一个BlackJack小游戏</strong></div>
-  <div>你可以通过点击《hit》按钮要牌，《stand》按钮来停止要牌，进行对战</div>
-  <div>2、3、4、5、6、7、8、9：按照牌面的实际大小计算分值。</div>
-  <div>10、J、Q、K：均以10点为计算分值。</div>
-  <div>A：11点和1点2种记分方式。
-    如果A计算为11点，手中牌的总分值大于21点；A则计算为1点。
-    例如：（A，9）=10点 / 20点，A可以算作
-    11点和1点 （A，7，J）=18点,A只能算作1点。</div>
-  <div>21点：玩家手中牌的点数相加，总数为21点。</div>
-  <div>玩家根据自己牌面分值，选择是否要牌。选择要牌，系统随机发送一张明牌。玩家根据自己牌面分值，选择不再要牌。</div>
-  <div>玩家牌面分值总和超过21点，输掉本局。</div>
-  <div>如果玩家没有超过或者等于21点，将跟庄家进行对比。哪家点数越靠近21点，哪家赢。</div>
-
-
 </body>
 
 </html>
