@@ -4,16 +4,42 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(../../../img/background1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.text {
+  color:white;
+  margin-bottom: 20px;
+  border-radius: 1%;
+  background-color: rgba(60, 60, 60, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow:inset 0 0 6px rgba(60, 60, 60, 0.2);
+  padding:20px;
+}
+
+.container{
+  margin-top:40px;
+}
+
+button {
+  margin:0 2px;
+}
 /* (B) DEALER & PLAYER */
 /* (B1) CONTAINERS */
-#deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 20px; }
+#deal-data, #play-data, #deal-cards, #play-cards { padding: 20px; }
 #deal-data, #play-data { font-weight: 700; }
 #deal-cards, #play-cards { min-height: 120px; }
-#deal-data { background: #c9e1ff; }
-#deal-cards { background: #e4f0ff; }
-#play-data { background: #ffcfcf; }
-#play-cards { background: #ffe7e7; }
-#play-control { background: #f2daff; }
+#deal-data { background: #d74854; }
+#deal-cards { background: #adb5bd80; }
+#play-data { background: #4e95ff; }
+#play-cards { background: #adb5bd80; }
+/* #play-control { background: #f2daff; } */
 #deal-stand, #play-stand {
   display: none; padding: 5px;
   color: #fff; background: #ab2323;
@@ -39,14 +65,6 @@
 #deal-first.show .front { display: block; }
 
 /* (C) PLAY CONTROLS */
-#play-control input {
-  cursor: pointer;
-  font-weight: 700;
-  padding: 10px 20px;
-  border: 0;
-  color: #fff;
-  background: #4381de;
-}
 #playc-hit, #playc-stand { display: none; }
 #play-control.started #playc-start { display: none; }
 #play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }

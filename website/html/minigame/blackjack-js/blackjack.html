@@ -13,6 +13,19 @@
 
 <body>
   <div class="container">
+    <div class="text">
+      <h3>21点小游戏</h3>
+      <p>你可以通过点击《要牌》按钮要牌，《停止》按钮来停止要牌。</p>
+      <!-- (C) PLAY! -->
+      <div id="play-control">
+        <!-- (C1) START -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">游戏规则</button>
+        <button type="button" class="btn btn-primary" id="playc-start">开始游戏</button>
+        <!-- (C2) HIT OR STAND -->
+        <button type="button" class="btn btn-primary" id="playc-hit">要牌</button>
+        <button type="button" class="btn btn-primary" id="playc-stand">停止</button>
+      </div>
+    </div>
     <!-- (A) DEALER -->
     <!-- (A1) DEALER'S POINTS + STAND -->
     <div id="deal-data">
@@ -32,30 +45,38 @@
 
     <!-- (B2) PLAYER'S CARDS -->
     <div id="play-cards"></div>
+  </div>
+  <div class="modal modal-lg fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">游戏规则</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
 
-    <!-- (C) PLAY! -->
-    <div id="play-control">
-      <!-- (C1) START -->
-      <button type="button" class="btn btn-primary" id="playc-start">开始游戏</button>
+        <!-- 模态框内容 -->
+        <div class="modal-body">
+          <p>21点：将玩家手牌的点数相加，总数为21点。玩家可根据自己牌面分值，选择是否要牌。选择要牌，系统将随机发放一张明牌。玩家也可根据自己牌面分值，选择不再要牌。</p>
+          <p>如果玩家牌面分值总和超过21点，则输掉本局。如果玩家没有超过或者等于21点，将跟对方进行比较。越接近于21点的一方获胜。</p>
+          <hr>
+          <h5>计分规则</h5>
+          <p>2-9：按照牌面的实际大小计算分值。</p>
+          <p>10,J,Q,K：均以10点为计算分值。</p>
+          <p>A：分为11点和1点两种记分方式。如果A计算为11点，手中牌的总分值大于21点，则A计算为1点。</p>
+          <p>例如：</p>
+          <ul>
+            <li>(A,9)=10点/20点，A可以算作1点或11点。</li>
+            <li>(A,7,J)=18点，A只能算作1点。</li>
+          </ul>
+        </div>
 
-      <!-- (C2) HIT OR STAND -->
-      <button type="button" class="btn btn-primary" id="playc-hit">要牌</button>
-      <button type="button" class="btn btn-primary" id="playc-stand">停止</button>
-    </div>
-    <p><strong>这是一个21点小游戏。</strong></p>
-    <p>你可以通过点击《要牌》按钮要牌，《停止》按钮来停止要牌。</p>
-    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#rule">游戏规则</button>
-    <div id="rule" class="collapse">
-      <p>2、3、4、5、6、7、8、9：按照牌面的实际大小计算分值。</p>
-      <p>10、J、Q、K：均以10点为计算分值。</p>
-      <p>A：11点和1点两种记分方式。
-      <p>如果A计算为11点，手中牌的总分值大于21点，则A计算为1点。</p>
-      <p>例如：（A，9）=10点/20点，A可以算作11点或1点。</p>
-      <p>（A，7，J）=18点，A只能算作1点。</p>
-      <p>21点：玩家手中牌的点数相加，总数为21点。</p>
-      <p>玩家根据自己牌面分值，选择是否要牌。选择要牌，系统随机发送一张明牌。玩家根据自己牌面分值，选择不再要牌。</p>
-      <p>玩家牌面分值总和超过21点，输掉本局。</p>
-      <p>如果玩家没有超过或者等于21点，将跟对方进行对比。越接近于21点的一方赢。</p>
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">确定</button>
+        </div>
+
+      </div>
     </div>
   </div>
 </body>
