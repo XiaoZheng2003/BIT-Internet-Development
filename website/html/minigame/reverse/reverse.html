@@ -7,49 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>反转迷局</title>
-	<meta name="description"
-		content="这是一个用HTML5制作的智力游戏，有相当的难度。每个方块一面橙色，一面蓝色。点击一个方块，这个方块的颜色会翻转，并且，与它邻接的方块的颜色也会翻转。使拼板全部变成蓝色， 你就算过关了。" />
 
-	<link rel="stylesheet" type="text/css" href="https://www.webhek.com/apps/inverter/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://www.webhek.com/apps/inverter/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="reverse.css">
 
-	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/viewmodel.js"></script>
-	<script type="text/javascript" src="https://www.webhek.com/apps/inverter/js/controller.js"></script>
-	<script>
-		function restart() {
-			document.querySelector('#newGameConfirm').click()
-			console.log('suc')
-		}
-
-		function check() {
-
-			let cur = document.getElementsByClassName('currLevel')[0]
-			let text = cur.innerHTML
-			if (text[text.length - 5] == '5') {
-				window.open('../story/2-1.html', '_self')
-			}
-		}
-	</script>
-	<style type="text/css">
-		.form,
-		.comments {
-			display: block;
-			clear: both;
-			margin: 0 auto;
-			width: 600px;
-		}
-
-		code {
-			white-space: normal;
-		}
-
-		.comments_warp {
-			margin-top: 650px;
-		}
-
-	</style>
+	<script type="text/javascript" src="jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="reverse.js"></script>
 
 </head>
 
@@ -69,7 +33,7 @@
 			<a class="reset btn btn-primary">重置级别</a>
 			<a class="newgame btn btn-primary">重新开始</a>
 			<a class="instruct btn btn-primary">玩法说明</a>
-			<a class="btn btn-primary" href="../story/ed0.html">放弃游戏</a>
+			<a class="btn btn-primary" href="../../story/ed0.html">放弃游戏</a>
 		</div>
 		<div class="board"></div>
 	</div>
