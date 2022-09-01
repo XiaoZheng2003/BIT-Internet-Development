@@ -202,11 +202,12 @@ var bj = {
       // WINNER IS...
       alert(message);
     }
+
     if (winner == 1) {
-      window.location.href = "../../story/2-4.html"
+      setTimeout("window.location.href = '../../story/2-4.html'",2000);
     }
     else if (winner == 0) {
-      window.location.href = "../../story/2-3.html"
+      setTimeout("window.location.href = '../../story/2-3.html'",2000);
     }
 
 
