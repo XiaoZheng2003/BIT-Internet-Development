@@ -56,7 +56,7 @@ function reg(){
             user_data["pw"]=pw1;
             //注册成就信息
             var achievement_tmp=new Array();
-            for(let i=0;i<7;i++){
+            for(let i=0;i<8;i++){
                 achievement_tmp[i]=0;
             }
             let achievement_data=JSON.stringify(achievement_tmp);
