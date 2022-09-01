@@ -1,9 +1,16 @@
 .title {
     color: #ffffff;
-    font-family:  "华文行楷";
-    margin-top:2%;
+    font-family: "华文行楷";
+    margin-top: 2%;
 }
 
-.save:hover{
-    color:#9d0017;
+.save:hover {
+    color: #9d0017;
+}
+
+.list-group {
+    --bs-list-group-color: #adb5bd;
+    --bs-list-group-bg: #21252938;
+    --bs-list-group-active-bg: #842029;
+    --bs-list-group-active-border-color: #84202952;
 }
