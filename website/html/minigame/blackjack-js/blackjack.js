@@ -157,7 +157,7 @@ var bj = {
       }
       // DEALER WINS
       if (winner == null && bj.dpoints == 21) {
-        winner = 1; message = "庄家以二十一点获胜!";
+        winner = 1; message = "对方以二十一点获胜!";
       }
     }
 
@@ -165,12 +165,12 @@ var bj = {
     if (winner == null) {
       // PLAYER GONE BUST
       if (bj.ppoints > 21) {
-        winner = 1; message = "玩家手牌超过二十一点 —— 庄家获胜！";
+        winner = 1; message = "玩家手牌超过二十一点 —— 对方获胜！";
 
       }
       // DEALER GONE BUST
       if (bj.dpoints > 21) {
-        winner = 0; message = "庄家手牌超过二十一点 —— 玩家获胜！";
+        winner = 0; message = "对方手牌超过二十一点 —— 玩家获胜！";
       }
     }
 
@@ -178,7 +178,7 @@ var bj = {
     if (winner == null && bj.dstand && bj.pstand) {
       // DEALER HAS MORE POINTS
       if (bj.dpoints > bj.ppoints) {
-        winner = 1; message = "庄家以" + bj.dpoints + "分获胜！";
+        winner = 1; message = "对方以" + bj.dpoints + "分获胜！";
       }
       // PLAYER HAS MORE POINTS
       else if (bj.dpoints < bj.ppoints) {

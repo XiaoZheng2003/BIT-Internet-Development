@@ -16,8 +16,8 @@
     <!-- (A) DEALER -->
     <!-- (A1) DEALER'S POINTS + STAND -->
     <div id="deal-data">
-      <span id="deal-stand">STAND</span>
-      庄家 - <span id="deal-points">?</span>
+      <span id="deal-stand">停止</span>
+      对方 - <span id="deal-points">?</span>
     </div>
 
     <!-- (A2) DEALER'S CARDS -->
@@ -26,7 +26,7 @@
     <!-- (B) PLAYER -->
     <!-- (B1) PLAYERS'S POINTS + STAND -->
     <div id="play-data">
-      <span id="play-stand">STAND</span>
+      <span id="play-stand">停止</span>
       你 - <span id="play-points">0</span>
     </div>
 
@@ -49,13 +49,13 @@
       <p>2、3、4、5、6、7、8、9：按照牌面的实际大小计算分值。</p>
       <p>10、J、Q、K：均以10点为计算分值。</p>
       <p>A：11点和1点两种记分方式。
-      <p>如果A计算为11点，手中牌的总分值大于21点；A则计算为1点。</p>
-      <p>例如：（A，9）=10点 / 20点，A可以算作11点和1点。</p>
+      <p>如果A计算为11点，手中牌的总分值大于21点，则A计算为1点。</p>
+      <p>例如：（A，9）=10点/20点，A可以算作11点或1点。</p>
       <p>（A，7，J）=18点，A只能算作1点。</p>
       <p>21点：玩家手中牌的点数相加，总数为21点。</p>
       <p>玩家根据自己牌面分值，选择是否要牌。选择要牌，系统随机发送一张明牌。玩家根据自己牌面分值，选择不再要牌。</p>
       <p>玩家牌面分值总和超过21点，输掉本局。</p>
-      <p>如果玩家没有超过或者等于21点，将跟庄家进行对比。越接近于21点的一方赢。</p>
+      <p>如果玩家没有超过或者等于21点，将跟对方进行对比。越接近于21点的一方赢。</p>
     </div>
   </div>
 </body>
