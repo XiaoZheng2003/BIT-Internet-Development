@@ -3,6 +3,7 @@ window.onload=function(){
         localStorage.setItem('volume','60');
     }
     document.getElementById('volume').value=localStorage['volume'];
+    player.volume=localStorage['volume']/100;
 }
 
 function changeVolume(){
