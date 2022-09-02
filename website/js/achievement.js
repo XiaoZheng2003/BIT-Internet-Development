@@ -16,10 +16,9 @@ function achieve(id){
     let achv_data=JSON.parse(user_data['achievement_data']);
     if(!achv_data[id]){
         let object=document.getElementById("achv_bar");
-        object.style.display="";
         achv_data[id]=1;
         user_data['achievement_data']=JSON.stringify(achv_data);
         localStorage["gv_"+un]=JSON.stringify(user_data);
-        $("#achv_bar").delay(3000).fadeOut(3000);
+        $("#achv_bar").fadeIn(1500).delay(3000).fadeOut(1500);
     }
 }
