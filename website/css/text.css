@@ -5,13 +5,14 @@
 
 .text {
     color: white;
-    margin-top:2%;
+    margin-top:90px;
 }
 
 .text h1 {
     text-align: center;
     font-family: "黑体";
     font-size: 250%;
+    font-weight: bold;
     line-height: 200%;
     color: #9d0017;
 }
