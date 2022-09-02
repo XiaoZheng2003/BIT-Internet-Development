@@ -1,3 +1,15 @@
+window.onload=function(){
+    if(!localStorage['volume']){
+        localStorage.setItem('volume','60');
+    }
+    document.getElementById('volume').value=localStorage['volume'];
+}
+
+function changeVolume(){
+    localStorage['volume']=document.getElementById('volume').value;
+    player.volume=localStorage['volume']/100;
+}
+
 function chapInit() {
     document.getElementById('option_area').style.display = "none";
     document.getElementById('dialog_area').style.display = "";
