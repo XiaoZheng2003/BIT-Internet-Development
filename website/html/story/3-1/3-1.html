@@ -17,7 +17,7 @@
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
-        let c='';
+        let c='你';
 
         function run() {
             dialog(t, c, present);
@@ -25,7 +25,6 @@
             if (present < 2 * t.length) {
                 present++;
             }
-            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
             if (present == 2 * t.length) {
                 location='research.html'
             }
@@ -48,6 +47,7 @@
 </head>
 
 <body onpageshow="chapInit();run();achieve(2)">
+    <embed src="../../../img/character/character_02.png" id="character1" width="45%">
     <div id="achv_bar" style="display: none;">
         <img src="../../../img/trophy.png" id="achv_pic">
          获得成就：武斗大师

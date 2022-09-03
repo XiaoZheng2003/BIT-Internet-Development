@@ -15,7 +15,7 @@
         ]
         let present = getQueryString('p');
         if (!present) present = 0;
-        let c=''
+        let c='你'
 
         function run() {
             dialog(t, c, present);
@@ -23,7 +23,7 @@
             if (present < 2 * t.length) {
                 present++;
             }
-            //changeCharacter(present,3,'character2','../../images/character/steward.png',1)
+            changeCharacter(present,1,'../../../img/character/character_03.png')
             if (present == 2 * t.length) {
                 document.getElementById('dialog_area').style.display = "none";
                 document.getElementById('name_area').style.display = "none";
@@ -50,6 +50,7 @@
 <body onpageshow="chapInit();run()">
    
     <div id="wrapper">
+        <embed src="../../../img/character/character_02.png" id="character1" width="45%">
         <div id='name_area'></div>
         <div id="dialog_area" onclick="run();">
         </div>
