@@ -96,16 +96,3 @@ function log(){
         }
     }
 }
-
-function reset(){
-    localStorage.clear();
-    sessionStorage.clear();
-    alert("登录信息重置成功！请重新登录！");
-    window.open('html/account.html','_self');
-}
-
-function logout(){
-    localStorage.removeItem('current-user');
-    alert("成功退出登录！即将进入登录界面！");
-    window.open('html/account.html','_self');
-}
