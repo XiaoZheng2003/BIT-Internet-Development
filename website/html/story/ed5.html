@@ -9,7 +9,7 @@
         <script src="../../bootstrap/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <button id="continue" onclick="play();achieve(7);"></button>
+        <button id="continue" onclick="play();setTimeout('achieve(7)',duration-6000);"></button>
         <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true">
             <source src="../../video/ed5.mp4" type="video/mp4">
         </video>
@@ -24,6 +24,9 @@
             });
             myVid.addEventListener('play', function () { //播放开始执行的函数
                 document.getElementById("continue").style.display="none";
+            });
+            myVid.addEventListener("loadedmetadata", function () {
+                duration = myVid.duration*1000; 
             });
         </script>
         <script src="../../js/video.js" type="text/javascript"></script>

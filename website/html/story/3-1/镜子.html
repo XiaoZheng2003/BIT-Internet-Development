@@ -7,7 +7,7 @@
         <link type="text/css" rel="styleSheet" href="../../../css/video.css" />
     </head>
     <body>
-        <button id="continue" onclick="play();player.play();"></button>
+        <button id="continue" onclick="play();"></button>
         <button id="skip" onclick="window.open('research.html','_self')">跳过</button>
         <video autoplay="autoplay" id="video" x-webkit-airplay="true" webkit-playsinline="true">
             <source src="../../../video/chapter2mirror_1.mp4" type="video/mp4">
@@ -20,7 +20,6 @@
             myVid.addEventListener('play', function () { //播放开始执行的函数
                 document.getElementById("continue").style.display="none";
             });
-            var player = new Audio("../../../music/bgm/调查.mp3");
         </script>
         <script src="../../../js/video.js" type="text/javascript"></script>
     </body>

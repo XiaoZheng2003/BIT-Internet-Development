@@ -1,3 +1,16 @@
+window.onload=function(){
+    if(!localStorage['volume']){
+        localStorage.setItem('volume','60');
+    }
+    document.getElementById('volume').value=localStorage['volume'];
+    player.volume=localStorage['volume']/100;
+}
+
+function changeVolume(){
+    localStorage['volume']=document.getElementById('volume').value;
+    player.volume=localStorage['volume']/100;
+}
+
 function chapInit() {
     document.getElementById('option_area').style.display = "none";
     document.getElementById('dialog_area').style.display = "";
@@ -40,10 +53,9 @@ function changeBackground(cnt,aim,url) {
 }
 
 //present赋给cnt,想改变的文本的索引赋给aim,想改变的区域赋给characterid,图片源赋给charactersrc，opa表示opacity
-function changeCharacter(cnt,aim,characterid,charactersrc,opa) {
-    if(cnt/2==aim||(cnt-1)/2==aim){
-        let cha=document.getElementById(characterid)
-        cha.src=charactersrc
-        cha.style.opacity=opa
+function changeCharacter(cnt,aim,charactersrc) {
+    if(cnt==aim*2+1){
+        let cha=document.getElementById('character1');
+        cha.src=charactersrc;
     }
 }
