@@ -14,19 +14,6 @@
     </style>
     <script>
         var player = new Audio("../../../music/bgm/调查.mp3");
-        window.onload = function (){
-            setInterval(function(){
-                if (player.paused) {
-                    player.play();
-                }
-            }, 100);
-            if(sessionStorage['researchbgm']){
-                player.currentTime=sessionStorage['researchbgm'];
-            }
-        }
-        player.ontimeupdate = function(){
-            sessionStorage.setItem('researchbgm',player.currentTime);
-        }
     </script> 
 </head>
 

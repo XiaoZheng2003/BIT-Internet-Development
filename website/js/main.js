@@ -1,9 +1,27 @@
+let locate=location.href.split('/');
+var researchMode=locate[locate.length-2]!=='story';
+
 window.onload=function(){
-    if(!localStorage['volume']){
-        localStorage.setItem('volume','60');
+    if(typeof player !== "undefined"){
+        setInterval(function(){
+            if (player.paused) {
+                player.play();
+            }
+        }, 100);
+        if(!localStorage['volume']){
+            localStorage.setItem('volume','60');
+        }
+        document.getElementById('volume').value=localStorage['volume'];
+        player.volume=localStorage['volume']/100;
+        if(researchMode&&sessionStorage['researchbgm']){
+            player.currentTime=sessionStorage['researchbgm'];
+        }
     }
-    document.getElementById('volume').value=localStorage['volume'];
-    player.volume=localStorage['volume']/100;
+    if(researchMode){
+        player.ontimeupdate = function(){
+            sessionStorage.setItem('researchbgm',player.currentTime);
+        }
+    }
 }
 
 function changeVolume(){

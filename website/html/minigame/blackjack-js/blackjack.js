@@ -283,4 +283,8 @@ window.onload = function (){
       player.play();
     }
   }, 100);
+  if(!localStorage['volume']){
+		localStorage.setItem('volume','60');
+	}
+	player.volume=localStorage['volume']/100;
 }

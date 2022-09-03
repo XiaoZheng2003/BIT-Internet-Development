@@ -344,3 +344,16 @@ function check() {
 		window.open('../../story/2-1.html', '_self')
 	}
 }
+
+var player = new Audio("../../../music/bgm/导入.mp3");
+window.onload=function(){
+	setInterval(function(){
+		if (player.paused) {
+			player.play();
+		}
+	}, 100);
+	if(!localStorage['volume']){
+		localStorage.setItem('volume','60');
+	}
+	player.volume=localStorage['volume']/100;
+}
