@@ -32,6 +32,13 @@
             }
           }
           var player = new Audio("../../music/bgm/第一幕.mp3");
+          window.onload = function (){
+            setInterval(function(){
+                if (player.paused) {
+                    player.play();
+                }
+            }, 100);
+          }
         </script>
   <title>4-2 落幕</title>
   <style type="text/css">

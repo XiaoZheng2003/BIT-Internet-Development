@@ -37,6 +37,13 @@
           }
       
           var player = new Audio("../../music/bgm/第一幕.mp3");
+          window.onload = function (){
+            setInterval(function(){
+                if (player.paused) {
+                    player.play();
+                }
+            }, 100);
+          }
         </script>
   <title>4-1 落幕</title>
   <style type="text/css">
@@ -56,7 +63,7 @@
   <embed src="../../img/character/character_01.png" id="character1" width="45%">
   <div id="wrapper">
     <div id='name_area'></div>
-    <div id="dialog_area" onclick="run();player.play()">
+    <div id="dialog_area" onclick="run();">
     </div>
     <button id="setting_icon" onclick="document.getElementById('setting_area').style.display=''"></button>
     <div id="setting_area" style="display:none">

@@ -31,6 +31,13 @@
             }
         }
         var player = new Audio("../../../music/bgm/调查.mp3");
+        window.onload = function (){
+            setInterval(function(){
+                if (player.paused) {
+                    player.play();
+                }
+            }, 100);
+        }
     </script>
     <title>3-2 真实</title>
 </head>
@@ -44,7 +51,7 @@
 
     <div id="wrapper">
         <div id='name_area'></div>
-        <div id="dialog_area" onclick="run();player.play()">
+        <div id="dialog_area" onclick="run();">
         </div>
         <button id="setting_icon" onclick="document.getElementById('setting_area').style.display=''"></button>
         <div id="setting_area" style="display:none">
