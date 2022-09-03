@@ -98,9 +98,9 @@
                             b.status = 0;
                             score++;
                             if (score == brickRowCount * brickColumnCount) {
-                                alert("YOU WIN, CONGRATS!");
+                                alert("恭喜你，你获得了胜利！");
                                 //这里是胜利分歧
-                                setTimeout("window.location.href = '../story/2-4.html'", 2000);
+                                window.location.href = '../story/4-0.html';
                             }
                         }
                     }
@@ -172,9 +172,9 @@
                 else {
                     lives--;
                     if (!lives) {
-                        alert("GAME OVER");
+                        alert("你失败了！");
                         //这里是失败分歧
-                        setTimeout("window.location.href = '../story/2-4.html'", 2000);
+                        window.location.href = '../story/ed2.html';
                     }
                     else {
                         x = canvas.width / 2;
