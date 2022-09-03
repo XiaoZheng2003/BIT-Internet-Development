@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop - lesson 10: finishing up</title>
+    <script language="javascript">
+
+        alert("即将开始游戏")
+
+    </script>
     <style>
         * {
             padding: 0;
@@ -25,9 +30,14 @@
         }
 
     </style>
+    <script type="text/javascript">
+        function display_alert() {
+            alert("I am an alert box!!")
+        }
+    </script>
 </head>
 
-<body>
+<body onload="javascript:window.alert('开始？')">
 
     <canvas id="myCanvas" width="480" height="320"></canvas>
 
