@@ -1,3 +1,8 @@
+@font-face {
+    font-family: mainfont;
+    src: url(../font/STXINGKA.TTF);
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -30,7 +35,7 @@ a:visited {
     background-position: center;
     background-size: cover;
     font-size: 30px;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
 }
 
 .wrapper a:hover {
@@ -107,7 +112,7 @@ nav a {
     overflow: hidden;
     background: url("../img/dialogbox.png");
     color: aliceblue;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
     font-size: xx-large;
     padding: 3vh 3vw;
     line-height: 50px;
@@ -116,14 +121,12 @@ nav a {
 #name_area {
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 2vw;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
     color: white;
     position: absolute;
     text-align: center;
     height: 10vh;
-    /*就是这两个属性*/
     width: 10vw;
-    /*这两个加上后显示会出问题*/
     line-height: 10vh;
     bottom: 25vh;
 }
@@ -131,21 +134,14 @@ nav a {
 button {
     margin: auto;
     background-color: #ffffff00;
-    /* Green background */
     border: 0px;
-    /* Green border */
     color: white;
-    /* White text */
     padding: 5px 0px;
-    /* Some padding */
     cursor: pointer;
-    /* Pointer/hand icon */
     width: 100%;
-    /* Set a width if needed */
     display: block;
-    /* Make the buttons appear below each other */
     font-size: 30px;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
 }
 
 button:hover {
@@ -193,16 +189,5 @@ video {
     object-fit: fill;
     top:0;
     left:0;
-    /*加滤镜*/
-    /*filter: blur(15px); //背景模糊设置*/
-    /*-webkit-filter: grayscale(100%);*/
-    /*filter:grayscale(10e%);//背景灰度设置*/
     z-index: -1
-}
-
-source {
-    min-width: 180%;
-    min-height: 108%;
-    height: auto;
-    width: auto;
 }

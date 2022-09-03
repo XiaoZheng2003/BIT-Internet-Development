@@ -1,3 +1,8 @@
+@font-face {
+    font-family: mainfont;
+    src: url(../font/STXINGKA.TTF);
+}
+
 body {
     background: url(../img/background1.jpg);
     background-repeat: no-repeat;
@@ -18,22 +23,15 @@ a {
 .menu button,.return-btn button{
     margin: 5px 0;
     background-color: transparent;
-    /* Green background */
     border: 0px;
-    /* Green border */
     color: white;
-    /* White text */
     cursor: pointer;
-    /* Pointer/hand icon */
     width: 100%;
-    /* Set a width if needed */
     display: block;
-    /* Make the buttons appear below each other */
     font-size: 250%;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
 }
 
-/* Add a background color on hover */
 .menu button:hover,.return-btn button:hover {
     color: #9d0017;
 }
@@ -47,7 +45,7 @@ a {
     background-color: black;
     color:white;
     font-size: 150%;
-    font-family: "华文行楷", "方正舒体", "华文新魏", "楷体";
+    font-family: mainfont;
     text-align: center;
 }
 

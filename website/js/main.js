@@ -11,7 +11,10 @@ window.onload=function(){
         if(!localStorage['volume']){
             localStorage.setItem('volume','60');
         }
-        document.getElementById('volume').value=localStorage['volume'];
+        let obj=document.getElementById('volume');
+        if(obj){
+            document.getElementById('volume').value=localStorage['volume'];
+        }
         player.volume=localStorage['volume']/100;
         if(researchMode&&sessionStorage['researchbgm']){
             player.currentTime=sessionStorage['researchbgm'];
