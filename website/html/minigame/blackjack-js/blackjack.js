@@ -275,3 +275,12 @@ var bj = {
   }
 };
 window.addEventListener("DOMContentLoaded", bj.init);
+
+var player = new Audio("../../../music/bgm/对战.mp3");
+window.onload = function (){
+  setInterval(function(){
+    if (player.paused) {
+      player.play();
+    }
+  }, 100);
+}
