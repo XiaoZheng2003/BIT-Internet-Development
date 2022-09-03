@@ -39,6 +39,12 @@
                     player.play();
                 }
             }, 100);
+            if(sessionStorage['researchbgm']){
+                player.currentTime=sessionStorage['researchbgm'];
+            }
+        }
+        player.ontimeupdate = function(){
+            sessionStorage.setItem('researchbgm',player.currentTime);
         }
     </script>
     <title>3-2 真实</title>
