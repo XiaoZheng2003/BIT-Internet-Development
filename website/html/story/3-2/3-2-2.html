@@ -40,16 +40,14 @@
         var player = new Audio("../../../music/bgm/调查.mp3");
     </script>
     <title>3-2 现实</title>
-    <style type="text/css">
-        #wrapper {
-            background-image: url("../../../img/chapter3background.png");
-        }
-    </style>
 </head>
 
 <body onpageshow="chapInit();run()">
     
     <div id="wrapper">
+        <video autoplay muted>
+            <source src="../../../video/chapter3contact.mp4"></source>
+        </video>
         <div id='name_area'></div>
         <div id="dialog_area" onclick="run()">
         </div>
