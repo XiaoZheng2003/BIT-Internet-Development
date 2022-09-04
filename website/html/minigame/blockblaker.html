@@ -4,11 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>破砖游戏</title>
-    <script language="javascript">
-
-        alert("即将开始游戏")
-
-    </script>
     <style>
         * {
             padding: 0;
@@ -29,16 +24,57 @@
             font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
         }
 
-    </style>
-    <script type="text/javascript">
-        function display_alert() {
-            alert("I am an alert box!!")
+        #option_area {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -300px;
+            height: 300px;
+            width: 600px;
+            border-radius: 5%;
+            background-color: rgba(60, 60, 60, 0.2);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            border-radius: 25px;
+            box-shadow: inset 0 0 6px rgba(60, 60, 60, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-    </script>
+
+        @font-face {
+            font-family: mainfont;
+            src: url(../../font/STXINGKA.TTF);
+        }
+
+        button {
+            margin: auto;
+            background-color: #ffffff00;
+            border: 0px;
+            color: white;
+            padding: 5px 0px;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            font-size: 30px;
+            font-family: mainfont;
+        }
+
+        button:hover {
+            color: red;
+        }
+    </style>
 </head>
 
-<body onload="javascript:window.alert('开始？')">
-
+<body>
+    <div id="option_area">
+        <div class="blank"></div>
+        <div id="buttons">
+            <button onclick="draw();document.getElementById('option_area').style.display='none'">开始挑战</button>
+        </div>
+        <div class="blank"></div>
+    </div>
     <canvas id="myCanvas" width="900" height="600"></canvas>
 
     <script>
@@ -47,8 +83,8 @@
         var ballRadius = 10;
         var x = canvas.width / 2;
         var y = canvas.height - 30;
-        var dx = 2;
-        var dy = -2;
+        var dx = 4;
+        var dy = -4;
         var paddleHeight = 10;
         var paddleWidth = 75;
         var paddleX = (canvas.width - paddleWidth) / 2;
@@ -189,8 +225,8 @@
                     else {
                         x = canvas.width / 2;
                         y = canvas.height - 30;
-                        dx = 2;
-                        dy = -2;
+                        dx = 4;
+                        dy = -4;
                         paddleX = (canvas.width - paddleWidth) / 2;
                     }
                 }
@@ -208,7 +244,18 @@
             requestAnimationFrame(draw);
         }
 
-        draw();
+        var player = new Audio("../../music/bgm/对战.mp3");
+        window.onload = function () {
+            setInterval(function () {
+                if (player.paused) {
+                    player.play();
+                }
+            }, 100);
+            if (!localStorage['volume']) {
+                localStorage.setItem('volume', '60');
+            }
+            player.volume = localStorage['volume'] / 100;
+        }
     </script>
 
 </body>
